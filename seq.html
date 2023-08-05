@@ -1,0 +1,3544 @@
+
+<!DOCTYPE html>
+<html  lang="en">
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="generator" content="MindTouch"/>
+        <meta name="robots" content="index,follow"/>
+        <meta property="og:title" content="9.1: Sequências"/>
+        <meta property="og:site_name" content="Mathematics LibreTexts"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:url" content="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/09%3A_Sequences_and_Series/9.01%3A_Sequences"/>
+        <meta property="og:image" content="https://a.mtstatic.com/@public/production/site_4425/1641605859-social-share.png"/>
+        <meta property="og:description" content="Nesta seção, we introduce sequences and define what it means for a sequence to converge or diverge. We show how to find limits of sequences that converge, often by using the properties of limits &hellip;"/>
+        <meta property="article:published_time" content="2016-07-11T18:13:13Z"/>
+        <meta property="article:modified_time" content="2022-09-07T19:55:52Z"/>
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:title" content="9.1: Sequences"/>
+        <meta name="twitter:description" content="Nesta seção, we introduce sequences and define what it means for a sequence to converge or diverge. We show how to find limits of sequences that converge, often by using the properties of limits &hellip;"/>
+        <meta name="twitter:image" content="https://a.mtstatic.com/@public/production/site_4425/1641605859-social-share.png"/>
+        <meta name="description" content="Nesta seção, we introduce sequences and define what it means for a sequence to converge or diverge. We show how to find limits of sequences that converge, often by using the properties of limits &hellip;"/>
+        <link rel="canonical" href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/09%3A_Sequences_and_Series/9.01%3A_Sequences"/>
+        <link rel="search" type="application/opensearchdescription+xml" title="Mathematics LibreTexts Search" href="https://math.libretexts.org/@api/deki/site/opensearch/description"/>
+        <link rel="apple-touch-icon" href="https://a.mtstatic.com/@public/production/site_4425/1474932902-apple-touch-icon.png"/>
+        <link rel="shortcut icon" href="https://a.mtstatic.com/@public/production/site_4425/1478289362-favicon.ico"/>
+
+        <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Article","name":"9.1: Sequences","url":"https:\/\/math.libretexts.org\/Bookshelves\/Calculus\/Calculus_(OpenStax)\/09%3A_Sequences_and_Series\/9.01%3A_Sequences","image":{"@type":"ImageObject","url":"https:\/\/a.mtstatic.com\/@public\/production\/site_4425\/1641605859-social-share.png","height":{"@type":"QuantitativeValue","maxValue":315},"width":{"@type":"QuantitativeValue","maxValue":600}},"datePublished":"2016-07-11T18:13:13Z","dateModified":"2022-09-07T19:55:52Z","description":"Nesta seção, we introduce sequences and define what it means for a sequence to converge or diverge. We show how to find limits of sequences that converge, often by using the properties of limits for functions discussed earlier. We close this section with the Monotone Convergence Theorem, a tool we can use to prove that certain types of sequences converge.","thumbnailUrl":"https:\/\/math.libretexts.org\/@api\/deki\/pages\/2562\/thumbnail?default=https%3A%2F%2Fmath.libretexts.org%2F%40style%2Fcommon%2Fimages%2Fimage-placeholder.png","mainEntityofPage":{"@type":"WebPage","@id":"https:\/\/math.libretexts.org\/Bookshelves\/Calculus\/Calculus_(OpenStax)\/09%3A_Sequences_and_Series\/9.01%3A_Sequences"},"headline":"9.1: Sequences","author":{"@type":"Organization","name":"Libretexts","logo":{"@type":"ImageObject","url":"http:\/\/chem.libretexts.org\/@api\/deki\/files\/98015\/libretexts.Logo600.png","height":{"@type":"QuantitativeValue","maxValue":60},"width":{"@type":"QuantitativeValue","maxValue":600}}},"publisher":{"@type":"Organization","name":"Libretexts","logo":{"@type":"ImageObject","url":"http:\/\/chem.libretexts.org\/@api\/deki\/files\/98015\/libretexts.Logo600.png","height":{"@type":"QuantitativeValue","maxValue":60},"width":{"@type":"QuantitativeValue","maxValue":600}}}}</script>
+        <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebPage","name":"9.1: Sequences","url":"https:\/\/math.libretexts.org\/Bookshelves\/Calculus\/Calculus_(OpenStax)\/09%3A_Sequences_and_Series\/9.01%3A_Sequences","relatedLink":["https:\/\/math.libretexts.org\/Courses\/Mission_College\/Mission_College_MAT_003B\/05%3A_Sequences_and_Series\/5.01%3A_Sequences","https:\/\/math.libretexts.org\/Courses\/SUNY_Schenectady_County_Community_College\/Calculus_2\/05%3A_Sequences_and_Series\/5.02%3A_Sequences","https:\/\/math.libretexts.org\/Courses\/Monroe_Community_College\/MTH_211_Calculus_II\/Chapter_9%3A_Sequences_and_Series\/9.1%3A_Sequences","https:\/\/math.libretexts.org\/Courses\/Coastline_College\/Math_C185%3A_Calculus_II_(Tran)\/06%3A_Sequences_and_Series\/6.02%3A_Sequences","https:\/\/math.libretexts.org\/Courses\/Coastline_College\/Math_C185%3A_Calculus_II_(Everett)\/06%3A_Sequences_and_Series\/6.02%3A_Sequences"]}</script>
+        <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/math.libretexts.org\/Bookshelves","name":"Bookshelves"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/math.libretexts.org\/Bookshelves\/Calculus","name":"Calculus"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/math.libretexts.org\/Bookshelves\/Calculus\/Calculus_(OpenStax)","name":"Calculus (OpenStax)"}},{"@type":"ListItem","position":4,"item":{"@id":"https:\/\/math.libretexts.org\/Bookshelves\/Calculus\/Calculus_(OpenStax)\/09%3A_Sequences_and_Series","name":"9: Sequences and Series"}}]}</script>
+
+        <title>9.1: Sequências - Mathematics LibreTexts</title>
+
+
+    <style type="text/css">/*<![CDATA[*/
+#mt-toc-container {
+    display: none !important;
+}/*]]>*/</style><style type="text/css">/*<![CDATA[*/
+dt {
+    color: #0372a6;
+    cursor: pointer;
+}
+@media only screen{
+    dd {
+        display: none;
+        text-align: left !important;
+    }
+    dd.mt-listing-detailed-overview {
+        display: block;
+        text-align: left !important;
+}/*]]>*/</style><style type="text/css">/*<![CDATA[*/
+.mt-video-widget:not(.cke_widget_element) {
+    margin: 0 auto !important;
+}/*]]>*/</style><style type="text/css">/*<![CDATA[*/
+.Headertext{
+display:none;
+}/*]]>*/</style><style type="text/css">/*<![CDATA[*/
+/* CSS pseudo-element styling https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements */
+
+/* general reset/setup styling for icons - needed on all */
+
+.lt-icon-default::before, .lt-icon-brain::before, .lt-icon-pin::before , .lt-icon-hand::before, .lt-icon-pathway::before, .lt-icon-logic::before, .lt-icon-check::before, .lt-icon-question::before, .lt-icon-exclamation::before    {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block; 
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1.5;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  margin-right: 0.5rem;
+}
+
+/*default */
+
+.box-example .lt-icon-default::before {
+  content: "\f00c";
+}
+.box-exercise .lt-icon-default::before {
+  content: "\f128";
+}
+.box-query .lt-icon-default::before {
+  content: "\f126";
+}
+.box-adapt .lt-icon-default::before {
+  content: "\f126";
+}
+.box-interactive .lt-icon-default::before{
+  content: "\f542";
+}
+.box-note .lt-icon-default::before {
+  content: "\f08d";
+}
+.box-objectives .lt-icon-default::before {
+  content: "\f5dc";
+}
+.box-definition .lt-icon-default::before {
+  content: "\f303";
+}
+.box-theorem .lt-icon-default::before {
+  content: "\f1b3";
+}
+.box-warning .lt-icon-default::before {
+  content: "\f256";    
+}
+
+
+/*specific icons*/
+.lt-icon-brain::before  {
+  content: "\f5dc";
+}
+
+.lt-icon-pin::before {
+  content: "\f08d";
+}
+
+.lt-icon-pathway::before, {
+  content: "\f126";
+}
+
+.lt-icon-logic::before, {
+  content: "\f1b3";
+}
+
+.lt-icon-hand::before, {
+  content: "\f126";
+}
+
+.lt-icon-pathway::before, {
+  content: "\f256";
+}
+
+.lt-icon-check::before, {
+  content: "\f00c";
+}
+
+.lt-icon-question::before, {
+  content: "\f128";
+}
+
+.lt-icon-exclamation::before, {
+  content: "\f12a";
+}/*]]>*/</style><style type="text/css">/*<![CDATA[*/
+/* Partner Area CSS */
+.partners-logo {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	position: relative;
+	z-index: 1;
+}
+
+.partners-logo a {
+	display: inline-block;
+	max-width: 15%;
+	margin-bottom: 15px;
+}
+#topHeader {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#topHeader > ol {
+	display: flex;
+	justify-content: space-around;
+	flex: 1;
+}
+
+#topHeader > ol > li > a {
+	display: flex;
+	align-items: center;
+	border: 2px solid white;
+	border-radius: 10px;
+	padding: 2px;
+	color: #127bc4;
+	/* font-size: 0px; */
+	transition-duration: .5s;
+	flex-direction: column;
+	text-align: center;
+}
+
+#topHeader > ol > li:last-child {
+	margin-right: 1rem;
+}
+
+#topHeader > ol > li > a:hover {
+	font-size: medium;
+}
+
+#topHeader > ol > li > a > img {
+	width: 23px;
+	height: 23px;
+	margin-right: 2px;
+	object-fit: contain;
+	max-width: unset;
+}
+
+@media only screen and (max-width: 767px) {
+	.partners-logo a {
+		max-width: 30%;
+	}
+}
+@media only screen and (max-width: 1350px) {
+	#topHeader > ol {
+		font-size: 0px;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.partners-logo a {
+		max-width: 150px;
+	}
+}
+div.elm-nav-container > a > img {
+	max-width: unset;
+}
+
+nav.elm-nav.my-custom-class {
+	padding: .25rem 0;
+}
+
+#bottomFooter p.mt-align-center {
+    margin: 5px;
+    line-height: initial;
+}
+
+.LTBranding {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: min-content;
+}
+
+.LTBranding img{
+	object-fit: contain;
+}/*]]>*/</style><style type="text/css">/*<![CDATA[*/
+/**
+ * Accessibility 
+*/
+.elm-skip-link {
+    position: absolute !important;
+    overflow: hidden;
+    clip: rect(1px,1px,1px,1px);
+    width: 1px;
+    height: 1px;
+    word-wrap: normal;
+    right: 30px;
+}
+.elm-skip-link:focus,
+.elm-skip-link:active {
+    position: static !important;
+    overflow: visible;
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+    color: black;
+    background: unset;
+    font-weight: bold;
+}
+
+a:focus-visible {
+    outline-offset: 2px;
+    outline: black solid 2px;
+}
+
+/**
+ * Darkmode 
+*/
+.darkMode {
+   background-color:#252525; 
+    color: white;
+}
+
+.darkMode .mt-content-container p {
+    color: white;
+}
+
+.darkMode .mt-content-container .boxexample,
+.darkMode .mt-content-container .boxexercise,
+.darkMode .mt-content-container .boxlemma,
+.darkMode .mt-content-container .boxnotation,
+.darkMode .mt-content-container .boxnotewithlegend,
+.darkMode .mt-content-container .boxnotewithoutlegend,
+.darkMode .mt-content-container .boxprocedure,
+.darkMode .mt-content-container .boxproposition,
+.darkMode .mt-content-container .boxquery,
+.darkMode .mt-content-container .boxtheorem,
+.darkMode .mt-content-container .boxobjectives, 
+.darkMode .mt-content-container .box-example,
+.darkMode .mt-content-container .box-exercise,
+.darkMode .mt-content-container .box-lemma,
+.darkMode .mt-content-container .box-notation,
+.darkMode .mt-content-container .box-warning,
+.darkMode .mt-content-container .box-note,
+.darkMode .mt-content-container .box-notewithlegend,
+.darkMode .mt-content-container .box-notewithoutlegend,
+.darkMode .mt-content-container .box-procedure,
+.darkMode .mt-content-container .box-proposition,
+.darkMode .mt-content-container .box-query,
+.darkMode .mt-content-container .box-theorem,
+.darkMode .mt-content-container .box-objectives 
+{
+    background: #f0f5ff24;
+    box-shadow: 3px 3px 4px #00000085;
+}
+
+.darkMode p.boxtitle {
+    color:white;
+}
+
+.darkMode th {
+    background:#00629a;
+}
+
+
+.darkMode tr, .darkMode tr td {
+    background:none;
+}
+
+.darkMode tr:nth-child(even), .darkMode tr:nth-child(even) td {
+    background:#555555;
+}
+
+.optimize {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* Hide header if in iframe*/
+.contentOnly .elm-header,
+.contentOnly .elm-meta-icons,
+.contentOnly div.annotator-frame,
+.adaptView .elm-footer,
+/*.contentOnly article#elm-main-content > *:not(:first-child, .mt-content-container), */
+.adaptView article#elm-main-content > header, 
+.contentOnly hypothesis-sidebar,
+.contentOnly #custom_open,
+.contentOnly .sbHeader {
+    display:none;
+}
+
+.sidebar-container > div > ul.sidebar-collapsed\:bg-black\/\[\.08\] {
+    background-color: transparent !important;
+}
+
+.contentOnly #mt-summary {
+    display:none!important;
+}
+
+iframe.imathas_problem, iframe.webwork_problem {
+    border: none;
+    width: 100%;
+}
+
+/*GeoGebra fix*/
+article.elm-content-container, section.mt-content-container {
+	height: auto !important;
+	width: auto !important;
+}
+
+
+.elm-meta-top .mt-article-pagination a {
+	width: auto;
+	color: #30b3f6;
+}
+
+.elm-meta-top .mt-article-pagination a:hover {
+	color: #b4b4b4;
+}
+
+.elm-meta-top .elm-article-pagination {
+	float: unset;
+}
+
+#elm-main-content ol.elm-meta-data .elm-social-share {
+	margin: 0;
+}
+
+#MathJax_Zoom {
+ color: black;   
+}
+
+#donate {
+	background-color: green;
+	color: white;
+	display: flex;
+	padding: 5px;
+	align-items: center;
+}
+
+#donate:hover {
+	background-color: #005E00;
+}
+
+.youtubeImageContainer {
+    position: relative;
+}
+
+a.notSS {
+	width: auto;
+	height: auto;
+	margin-top: 0;
+}
+
+.toc-button.mt-icon-hierarchy-trigger-closed:before {
+	content: "\e8a6";
+	font-size: 150%;
+}
+
+span.fancytree-icon:before {
+	content: "\e8aa";
+}
+
+.mt-icon-hierarchy-trigger-open:before {
+	font-size: 150%;
+}
+
+span.fancytree-has-children > span.fancytree-icon:before {
+	content: "\e8b3";
+}
+
+span.fancytree-title > a {
+	color: #666;
+}
+
+span.fancytree-selected .fancytree-title, span.fancytree-selected .fancytree-icon {
+	color: #1a9003;
+}
+
+.toc-hierarchy > div {
+	display: none;
+}
+
+.toc-hierarchy h6 {
+	margin-top: 0;
+	color: #137ac3
+}
+
+.pageInfo {
+	float: left;
+	margin: 0 1em 0 0;
+}
+
+.cc {
+	color: black;
+}
+
+.glossarizer_replaced {
+    border-bottom: 1px #333 dotted;
+}
+
+#pageTagsHolder {
+	display: none;
+}
+
+#batchPrint {
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+}
+
+#TOCbutton {
+	margin: 2px;
+	display: flex;
+	line-height: 2.4;
+	justify-content: center;
+	align-items: center;
+	color: #127bc4;
+	font-size: 100%;
+	height: 100%;
+}
+
+@media (min-width: 1000px) {
+	nav.elm-header-global-nav ol.mt-breadcrumbs {
+		max-width: 85% !important;
+	}
+	#TOCbutton {
+		width: auto;
+	}
+}
+
+div.propagatorLoader {
+	display: flex;
+	margin: 10px;
+	justify-content: center;
+}
+
+.loaderStatus {
+	/* flex: 1; */
+	justify-content: center;
+	text-align: center;
+}
+
+/* Modal Foundation*/
+#warningModal {
+    
+  position: fixed ;
+  left: 0px;
+  top: 0px;
+  bottom:0px;
+  right:0px;
+  margin:0px;
+
+  display: none; /* Hidden by default */
+  z-index: 10000; 
+  padding-top: 0px; /* Location of the box */
+  
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgb(0,0,0,0);/* Black w/ opacity */
+}
+
+/* Modal Content */
+#warningModalSlide {
+
+  font-family: 'Roboto';
+  font-size: 14px;
+  background-color: #EFEFEF ;
+  margin: auto;
+  padding: 15px;
+  /*border: 0px solid #888;*/
+  width: 40%;
+  box-shadow: -2px 8px 10px #c7c7c7;
+}
+
+
+#elm-main-content figure {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+    margin: 0;
+    page-break-inside: avoid;
+    margin-bottom: 0.3em !important;
+}
+
+.mt-video-widget:not(.cke_widget_element) {
+	margin: 0 auto !important;
+}
+
+.glmol{
+    text-align: left;
+}
+
+
+
+
+#copyResults img {
+	width: 30px;
+	height: 30px;
+	object-fit: contain;
+}
+
+#LTform, #LTPreview {
+	display: flex;
+	flex-direction: column;
+}
+
+#LTFormContainer, .LTFormHeader, #LTFormFooter {
+	display: flex;
+}
+
+#LTFormContainer .fancytree-container, #LTPreviewForm .fancytree-container {
+	background: #f3f3f3;
+	border-radius: 10px;
+	overflow: auto;
+	flex: 1;
+}
+
+#LTLeft, #LTRight, #LTPreviewForm, #LTTutorial {
+	/*flex: 1;*/
+	align-items: stretch;
+	height: 60vh;
+	max-width: 45vw;
+	overflow: hidden;
+	width: 100%;
+	background: #f3f3f3;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+#LTLeft, #LTTutorial {
+	border-radius: 0 0 10px 10px;
+}
+
+select.LTFormSubdomain {
+	border-radius: 10px 10px 0 0;
+}
+
+#LTFormFooter {
+	flex-direction: column;
+}
+
+.LTFormHeader {
+	justify-content: flex-end;
+	margin-top: 30px;
+	background-color: #127bc4;
+	padding: 10px;
+	border-radius: 5px;
+	color: white
+}
+
+ul.ui-fancytree.fancytree-container.fancytree-plain.fancytree-ext-dnd5 {
+}
+
+#LTFormContainer > div {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 10px;
+	max-width: 45vw;
+}
+
+.LTTitle {
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+
+div#LTPreviewForm {
+	max-width: unset;
+	margin: 10px;
+	width: auto;
+}
+
+div#LTLeftAlert, div#LTRightAlert {
+	height: 30px;
+	background-color: rgba(18, 122, 196, 0.61);
+	width: inherit;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+select#LTFormSubdomain {
+	border-radius: 10px 10px 0 0;
+}
+
+#mt-site-search-input {
+    max-width: 40vw;
+}
+
+#getTOCLink {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: slategrey;
+	color: white;
+	width: fit-content;
+	padding: 0 3px;
+}
+
+.annotator-frame.annotator-collapsed > div.annotator-bucket-bar {
+	background: none;
+}
+
+.mobileOnly {
+	display: none;
+}
+
+#RemixerIcon, #DownloadIcon, #SSOInstructorIcon {
+	width: auto;
+}
+
+#RemixerIcon:before, #DownloadIcon:before, #SSOInstructorIcon:before {
+	vertical-align: middle;
+}
+
+.elm-header-user-nav .mt-user-menu li.mt-user-quick-login {
+	margin-left: 0;
+}
+
+.mt-user-menu {
+    display: flex;
+    justify-content: center;
+}
+li.elm-social-share a {
+    height: unset;
+    width: auto;
+    margin: 0 2px 0 0;
+}
+
+#LTRight > ul > li {
+	min-height: 100%;
+}
+
+.react-toggle {
+	height: 24px;
+}
+
+.buttonsetForm > button:first-child {
+	background: #525050;
+	color: white;
+}
+
+/*Added to make a hyperlink position below the breadcrumb bar and is viewable */
+/*#pageText > .mt-section > span:first-child {
+    top: -50px;
+    display: block;
+    position: relative;
+}*/
+
+.elm-header-notice.fixed {
+position: static;
+}
+
+.elm-fixed-header {
+position: static;
+}
+
+/* Dropdown Button */
+.LTdropdown > .dropbtn {
+    color: inherit;
+	background-color: inherit;
+	border: none;
+	height: 100%;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.LTdropdown a:visited {
+    color: inherit;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.LTdropdown {
+	position: relative;
+	display: inline-block;
+	margin-right: 2px;
+    color: white;
+    background: black;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.LTdropdown-content {
+    color: inherit;
+	display: none;
+	position: absolute;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background: inherit;
+	z-index: 5;
+	flex-direction: column;
+	align-items: stretch;
+	width: max-content;
+	width: -moz-max-content;
+}
+
+/* Links inside the dropdown */
+.LTdropdown > .LTdropdown-content a {
+    color: inherit;
+    background: inherit;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	width: initial;
+	text-align: center;
+	font-size: 12px;
+    margin: 0;
+}
+
+/* Change color of dropdown links on hover */
+.LTdropdown > .LTdropdown-content a:hover  {
+    filter: brightness(85%);
+	transition-duration: 250ms;
+    color: white;
+}
+
+.LTdropdown-content a:before  {
+    margin-right: 2px;
+}
+
+.LTdropdown-content a:not(:first-child) {
+	border-top: 1px solid white;
+}
+
+/* Show the dropdown menu on hover */
+.LTdropdown:hover .LTdropdown-content {
+	display: flex;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.LTdropdown:hover .dropbtn {
+    filter: brightness(85%);
+}
+
+nav.elm-header-user-nav > div.elm-nav-container > ol {
+	display: flex;
+}
+
+
+nav.elm-header-user-nav > div.elm-nav-container > ol > li {
+	display: flex;
+}
+
+li.elm-global-search {
+	flex: 1
+}
+
+#mt-site-search-input {
+	width: auto;
+}
+
+
+.mt-breadcrumbs a span.nb-comment-highlight {
+   font-size: unset;
+   margin-right: unset;
+   vertical-align: unset;
+}
+
+@font-face {
+    font-family: 'moreicons';
+    src: url(https://cdn.libretexts.net/github/LibreTextsMain/Miscellaneous/icosso.woff) format("woff");
+    font-weight: normal;
+    font-style: normal
+}
+.icon-SSO:before {
+    font-family: 'moreicons' !important;
+    content: "\e95d";
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 0.25em;
+}
+.sso-user {
+    border: 2px solid white;
+    border-radius: 5px; 
+    vertical-align: middle;  
+}
+.sso-user:hover:after {
+    content: " (Logout)";
+}
+
+.authenticated-sso.elm-header-user-nav {
+    background-color: #0f67a6;
+        
+}
+.authenticated-sso.elm-header-user-nav .mt-user-menu-user  {
+    background: #323232;
+    border-radius: 5px;
+}
+.authenticated-sso.elm-header-user-nav .mt-user-menu > li > a {
+    color: white;
+}
+
+/*Media Queries*/
+@media (max-width: 600px) {
+	.mobileOnly {
+		display: block;
+	}
+
+	.mobileHide {
+		display: none;
+	}
+
+	.LTBranding {
+		flex-direction: column;
+	}
+
+}
+
+@media (max-width: 875px) {
+	#RemixerIcon, #DownloadIcon, #SSOInstructorIcon {
+		width: 1.95em;
+	}
+}
+
+@media (min-width: 1000px) {
+	nav.elm-header-global-nav ol.mt-breadcrumbs {
+		max-width: 85% !important;
+	}
+
+	#TOCbutton {
+		width: auto;
+	}
+}
+
+@media (max-width: 1001px) {
+
+	#TOCbutton {
+		width: 20px;
+		justify-content: flex-start;
+	}
+}
+/*
+@media (min-width: 83em) {
+   article.elm-content-container {
+      min-width: unset;
+   }
+}
+*/
+/*
+@media (min-width: 37.5em){
+    .elm-header-user-nav {
+        z-index: 1;
+    }
+}
+*/
+
+.mt-content-container img {
+    height: auto!important;
+    object-fit: contain;
+}
+.mt-content-container .mt-sortable-listing-link img {
+    height: 150px!important;
+}
+
+.mt-video-widget > p {
+    text-align: center;
+}
+
+option[value="article:topic-portfolio"] {
+    display: none;
+}
+option[value="article:howto"] {
+    display: none;
+}
+option[value="article:reference"] {
+    display: none;
+}
+
+.live-tag-link {
+    white-space: normal;
+    user-select: text;
+    -webkit-user-drag: none;
+}
+
+span.mt-font-ma-shan-zheng{
+    font-family: 'Ma Shan Zheng';
+        
+}
+
+.cke_librebox .cke_combo_open {
+    margin-left: 0;
+}
+
+.cke_librebox .cke_combo_inlinelabel {
+    padding-left: 2px;
+    padding-right: 0;
+}
+
+.cke_librequery .cke_combo_open {
+    margin-left: 0;
+}
+
+.cke_librequery .cke_combo_inlinelabel {
+    padding-left: 2px;
+    padding-right: 0;
+}
+
+.cke_button_icon.cke_button__librequeryoptions_icon {
+  background-image: url('https://cdn.libretexts.net/Icons/query.ico') !important;
+  background-position: 0px !important;
+  background-size: 16px !important;
+}
+
+
+/** AutoAttribution **/ 
+#librelens-attribution-list li {
+    font-size: 1rem !important;
+}/*]]>*/</style><style type="text/css">/*<![CDATA[*/
+.printOnly {
+	display: none;
+}
+
+.hideprint {
+	visibility: visible !important;
+	display: block !important;
+}
+
+.showprint {
+	visibility: hidden !important;
+	display: none !important;
+}
+
+@media print {
+	h1#title {
+		margin-top: 0!important
+	}
+	.box-interactive,
+	.box-query,
+	.box-adapt {
+		visibility: hidden !important;
+		display: none !important;
+	}
+	table.mt-responsive-table {
+		/*table-layout: auto;
+        */
+	}
+	.elm-meta-top .mt-article-pagination * {
+		display: none;
+	}
+	.mt-author-container {
+		background: #f0f0f0;
+		border-radius: .5em;
+		visibility: hidden !important;
+		display: none !important;
+	}
+	#elm-main-content {
+		padding-bottom: 0;
+	}
+	main.elm-skin-container {
+		display: inline;
+	}
+	.mt-video-widget:not(.cke_widget_element) {
+		margin: 0 auto !important;
+		width: 60% !important;
+		page-break-inside: avoid;
+	}
+	.elm-skin-container {
+		background-color: #ffffff !important;
+	}
+	.mt-sortable-listing {
+		background-color: #ffffff !important;
+	}
+	.twocolumn {
+		-webkit-column-count: 2;
+		/* Chrome, Safari, Opera */
+		-moz-column-count: 2;
+		/* Firefox */
+		column-count: 2;
+	}
+	.threecolumn {
+		-webkit-column-count: 3;
+		/* Chrome, Safari, Opera */
+		-moz-column-count: 3;
+		/* Firefox */
+		column-count: 3;
+	}
+	.hideprint {
+		visibility: hidden !important;
+		display: none !important;
+	}
+	.showprint {
+		visibility: visible !important;
+		display: block !important;
+	}
+	.printOnly {
+		display: block;
+	}
+	.printHide {
+		display: none;
+	}
+	img {
+		zoom: 0.60;
+		page-break-inside: avoid;
+	}
+	.mt-author-container img {
+		zoom: 1;
+	}
+	.MathJax_Display {
+		margin-top: 0.7em !important;
+		margin-bottom: 0.7em !important;
+	}
+	#flash-messages {
+		visibility: hidden !important;
+		display: none !important;
+	}
+	blockquote {
+		display: block;
+		font-size: 120%;
+		color: black;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		margin-left: 40px;
+		padding-left: 15px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		border-left: 3px solid #0f67a6;
+		border-top: 0px;
+		border-bottom: 0px;
+		border-right: 0px;
+	}
+	p {
+		text-align: justify;
+		orphans: 2;
+		widows: 2;
+		margin-block-start: 0.5em;
+		margin-block-end: 0.5em;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;
+	}
+	.definition,
+	.note1,
+	.example,
+	.exercise,
+	.skills {
+		border: solid 1px hsla(0, 0%, 0%, 0.5);
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		padding-left: 7px;
+		padding-right: 7px;
+		padding-bottom: 0px;
+		padding-top: 0px;
+		margin-bottom: 5px;
+		margin-top: 5px;
+	}
+	.definition {
+		background-color: hsla(7, 93%, 41%, 0.03);
+	}
+	.example {
+		background-color: hsla(215, 93%, 39%, 0.03);
+	}
+	.note1 {
+		background-color: hsla(78, 93%, 39%, 0.03);
+	}
+	.exercise {
+		background-color: hsla(283, 93%, 24%, 0.03);
+	}
+	.skills {
+		background-color: hsla(7, 93%, 41%, 0.03);
+	}
+	ol.elm-meta-top {
+		display: none;
+	}
+	body:not(.cke_editable) .mt-responsive-table th,
+	body:not(.cke_editable) .mt-responsive-table td,
+	body:not(.cke_editable) table th[data-th] {
+		display: table-cell !important;
+		background-image: none !important;
+		font-size: 95%;
+	}
+	#mt-page-health-container,
+	header.elm-header,
+	#mt-toc-container,
+	#mt-content-side,
+	div#mt-summary,
+	li.elm-pdf-export,
+	li.elm-social-share,
+	footer.elm-footer,
+	footer.elm-content-footer,
+	li.elm-meta-icons,
+	li.elm-last-modified,
+	li.elm-page-restriction,
+	body:not(.cke_editable) .mt-responsive-table td:before {
+		display: none !important;
+	}
+	body {
+		font-size: 0.80em !important;
+		font-family: 'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif !important;
+	}
+	.mt-content-container ol,
+	.mt-content-container p,
+	.mt-content-container ul {
+		font-family: 'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif !important;
+		font-size: 100%;
+		line-height: 1.4;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		color: hsl(205, 82%, 42%) !important;
+		align-content: left;
+		font-family: "Tahoma", Arial, serif !important;
+		text-align: left !important;
+		margin: 0.8em 0 0 0 !important;
+		page-break-after: avoid !important;
+		page-break-inside: avoid !important;
+		break-after: avoid !important;
+		break-after: avoid-page !important;
+		orphans: 1;
+		margin-block-end: -3px !important;
+	}
+	h1 {
+		font-size: 18px !important;
+	}
+	h2 {
+		font-size: 15px !important;
+	}
+	h3 {
+		font-size: 13px !important;
+	}
+	h4 {
+		font-size: 11px !important;
+	}
+	h5 {
+		font-size: 10px !important;
+	}
+	.mt-new-features-container {
+		display: none;
+	}
+	/*https://stackoverflow.com/questions/9238868/how-do-i-avoid-a-page-break-immediately-after-a-heading/53742871#53742871*/
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-inside: avoid;
+	}
+	h2::after {
+		content: "";
+		display: block;
+		height: 2.5rem;
+		/* pretend that the header is at least 8rem high so this header cannot fit near the end of page */
+		margin-bottom: -2.5rem;
+		/* however, reduce the margin the same amount so that the following content can stay in its usual place */
+	}
+	h3::after {
+		content: "";
+		display: block;
+		height: 2.5rem;
+		/* pretend that the header is at least 8rem high so this header cannot fit near the end of page */
+		margin-bottom: -2.5rem;
+		/* however, reduce the margin the same amount so that the following content can stay in its usual place */
+	}
+	h4::after {
+		content: "";
+		display: block;
+		height: 2.5rem;
+		/* pretend that the header is at least 8rem high so this header cannot fit near the end of page */
+		margin-bottom: -2.5rem;
+		/* however, reduce the margin the same amount so that the following content can stay in its usual place */
+	}
+	.box-legend::before {
+		content: "";
+		display: block;
+		height: 5rem;
+		/* pretend that the header is at least 8rem high so this header cannot fit near the end of page */
+		margin-bottom: -5rem;
+		/* however, reduce the margin the same amount so that the following content can stay in its usual place */
+		page-break-inside: avoid;
+		break-inside: avoid;
+	}
+	p.boxtitle {
+		font-style: normal;
+		font-size: 120%;
+		color: DarkSlateGray;
+		line-height: 80% !important;
+		background: none;
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+		padding: 0 !important;
+		text-align: left !important;
+		border-bottom: 1px solid DarkSlateGray;
+		font-family: "Tahoma", Arial, serif !important;
+		page-break-after: avoid;
+		page-break-inside: avoid;
+		break-after: avoid-page;
+		orphans: 1;
+	}
+	dt {
+		color: initial;
+	}
+	dl,
+	dt {
+		text-align: left !important;
+	}
+	.row {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		justify-content: center;
+		break-inside: avoid;
+	}
+	#elm-main-content figcaption {
+		caption-side: bottom;
+		text-align: justify;
+		font-size: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-top: 0.3em;
+		break-inside: avoid-page;
+	}
+	.rightfig {
+		display: table;
+		float: right;
+		margin: 0em 0 0em 1em;
+	}
+	.rightfigcaption {
+		display: table-caption;
+		caption-side: bottom;
+		margin: 0.3em 0 0 0;
+		text-align: justify;
+		font-size: 90%;
+	}
+	/**************************** table bar ***************************/
+	caption {
+		display: table-caption;
+		text-align: center;
+		font-family: 'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif !important;
+	}
+	body:not(.cke_editable) .mt-responsive-table td,
+	body:not(.cke_editable) .mt-responsive-table th {
+		padding: 0.4em !important;
+		padding-top: 0.3em !important;
+		padding-right: 0.4em !important;
+		padding-bottom: 0.3em !important;
+		padding-left: 0.4em !important;
+		vertical-align: middle;
+	}
+	body:not(.cke_editable) .mt-responsive-table p {
+		margin: 0em !important;
+	}
+	body:not(.cke_editable) .mt-responsive-table tr td:last-child {
+		border: none !important;
+	}
+	body:not(.cke_editable) .mt-responsive-table tr th:last-child {
+		border-bottom-width: 0.15em !important;
+	}
+	table {
+		margin-top: 0.5em !important;
+		margin-bottom: 1em !important;
+		-webkit-print-color-adjust: exact;
+		page-break-inside: none;
+	}
+	.mt-content-container table p {
+		margin: 0em !important;
+	}
+	th,
+	td {
+		font-family: 'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif !important;
+		/*text-align: center;
+        */
+		/*vertical-align: middle;
+        */
+	}
+	/**************************** lists ***************************/
+	ul,
+	ol {
+		text-align: left !important;
+		margin: 0.3em 0 0.5em 0;
+	}
+	ol li,
+	ul li {
+		text-align: left !important;
+		font-family: 'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif !important;
+		margin-top: 0em !important;
+		margin-bottom: 0em !important;
+	}
+	.attributions li,
+	.attributions p {
+		line-height: 1.25 !important;
+		margin-block-start: 0em !important;
+		margin-block-end: 0em !important;
+  		font-size: 80% !important;
+
+	}
+	/**************************** author bar ***************************/
+	.mt-author-container {
+		/*background: @secondary-container-background-color;*/
+		/*border: 1px solid @secondary-container-border-color;*/
+		/*border-radius: @border-radius-default;*/
+		clear: both;
+		/*color: @tertiary-font-color;*/
+		font-size: 85%;
+		margin: 0 0 1em;
+		overflow: hidden;
+		padding: .5em 1em;
+	}
+	.mt-author-container ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.mt-author-container .mt-author-image {
+		float: left;
+		margin: 0 1em 0 0;
+	}
+	.mt-author-container .mt-author-image-crop {
+		/*border: 1px solid @primary-container-border-color;*/
+		border-radius: 50%;
+		height: 3em;
+		overflow: hidden;
+		position: relative;
+		width: 3em;
+	}
+	.mt-author-container .mt-author-image-crop img {
+		display: inline;
+		height: 100%;
+		margin: 0 auto;
+		width: auto;
+	}
+	.mt-author-container img {
+		max-height: 3em;
+		max-width: 3em;
+		vertical-align: middle;
+	}
+	elm-skin-container {
+		display: block !important;
+	}
+	hypothesis-sidebar,
+	hypothesis-adder,
+	.h-sidebar-iframe,
+	.annotator-frame {
+		display: none;
+	}
+	/* canvas, img, object, video {
+         max-width: 100%;
+         max-height: 500px;
+    }
+     */
+	/**************** Box container styles *******************/
+	.mt-content-container .boxobjectives,
+	.boxexample,
+	.boxexercise,
+	.boxquery,
+	.boxnotewithlegend,
+	.boxnotewithoutlegend,
+	.boxprocedure,
+	.boxdefinition,
+	.boxtheorem,
+	.boxlemma,
+	.boxnotation,
+	.boxproposition {
+		-moz-border-radius: 8px;
+		-webkit-border-radius: 8px;
+		border-radius: 8px;
+		padding-top: 0em;
+		padding-bottom: 0em;
+		padding-left: 1em;
+		padding-right: 1em;
+		margin-bottom: 1em;
+		overflow: visible;
+		border: 0px;
+		orphans: 2;
+	}
+	.mt-content-container .boxnotewithlegend,
+	.boxprocedure,
+	.notation {
+		background-color: hsla(20, 0%, 93%, 1);
+	}
+	.mt-content-container .boxexample,
+	.boxexercise {
+		background-color: hsla(220, 100%, 97%, 1);
+	}
+	.mt-content-container .boxwarning {
+		background-color: hsla(0, 100%, 96%, 1);
+	}
+	.mt-content-container .boxdefinition,
+	.boxtheorem,
+	.boxlemma,
+	.boxnotation,
+	.boxproposition {
+		background-color: hsla(28, 80%, 95%, 1);
+	}
+	.mt-content-container .boxobjectives {
+		background-color: hsla(0, 0%, 90%, 1);
+	}
+	.mt-content-container .boxnotewithoutlegend {
+		background-color: hsla(20, 0%, 93%, 1);
+		padding-right: 1em;
+		padding-left: 1em;
+		padding-top: 0.5em !important;
+		padding-bottom: 0.5em !important;
+		margin-right: 1em;
+		margin-left: 1em;
+	}
+	.mt-content-container .boxquery {
+		border: 2px solid green;
+		page-break-inside: avoid;
+		visibility: hidden !important;
+		display: none !important;
+	}
+	/**************** Box legend container styles *******************/
+	.mt-content-container .boxlegend {
+		font-style: normal !important;
+		font-size: 1.1em !important;
+		font-weight: normal !important;
+		font-family: "Tahoma", Arial, serif !important;
+		padding-top: 0.2em !important;
+		padding-bottom: 0.2em !important;
+		padding-left: 0.3em !important;
+		padding-right: 0.3em !important;
+		margin-left: 0.35em;
+		color: white;
+		border-radius: 3px;
+		overflow: visible;
+		break-inside: avoid !important;
+	}
+	.boxnotewithlegend .boxlegend {
+		background-color: hsla(20, 0%, 45%, 1);
+	}
+	.boxnotewithoutlegend .boxlegend {
+		background-color: hsla(20, 0%, 45%, 1);
+		font-size: 0em !important;
+		visibility: hidden !important;
+	}
+	.boxprocedure .boxlegend {
+		background-color: hsla(20, 0%, 45%, 1);
+	}
+	.boxnotation .boxlegend {
+		background-color: hsla(20, 0%, 45%, 1);
+	}
+	.boxexample .boxlegend {
+		background-color: hsla(220, 100%, 60%, 1);
+	}
+	.boxexercise .boxlegend {
+		background-color: hsla(0, 100%, 56%, 1);
+	}
+	.boxquery .boxlegend {
+		background-color: hsl(120, 100%, 25%, 1);
+	}
+	.boxobjectives .boxlegend {
+		background-color: hsla(0, 0%, 10%, 1);
+	}
+	.boxdefinition .boxlegend {
+		background-color: hsla(28, 80%, 52%, 1);
+	}
+	.boxtheorem .boxlegend {
+		background-color: hsla(28, 80%, 52%, 1);
+	}
+	.boxlemma .boxlegend {
+		background-color: hsla(28, 80%, 52%, 1);
+	}
+	.boxnotation .boxlegend {
+		background-color: hsla(28, 80%, 52%, 1);
+	}
+	.boxproposition .boxlegend {
+		background-color: hsla(28, 80%, 52%, 1);
+	}
+	/****************************************** Current New boxes **********************************************************************/
+	.box-objectives,
+	.box-emphasis,
+	.box-structure,
+	.box-example,
+	.box-exercise,
+	.box-warning,
+	.box-query,
+	.box-note,
+	.box-procedure,
+	.box-definition,
+	.box-theorem,
+	.box-lemma,
+	.box-notation,
+	.box-proposition,
+	.box-interactive {
+		display: block;
+		border-top: none;
+		border-bottom: none;
+		border-right: none;
+		padding: 0px 10px 1px 8px;
+		margin-bottom: 0.8em !important;
+		margin-top: 0.8em !important;
+		orphans: 3;
+		border-radius: 4px 8px 8px 4px;
+		-moz-border-radius: 4px 8px 8px 4px;
+		-webkit-border-radius: 4px 8px 8px 4px;
+	}
+	.box-emphasis {
+		padding: 5px 10px 5px 10px;
+	}
+	/**************** Tuning the box colors ***************/
+	.box-objectives {
+		background-color: hsla(204, 83%, 97%, 1);
+		border-left: 4px solid hsla(204, 83%, 41%, 1);
+	}
+	.box-example {
+		background-color: hsla(204, 83%, 97%, 1);
+		border-left: 4px solid hsla(204, 83%, 41%, 1);
+	}
+	.box-exercise {
+		background-color: hsla(204, 83%, 97%, 1);
+		border-left: 4px solid hsla(204, 83%, 41%, 1);
+	}
+	.box-warning {
+		background-color: hsl(0, 100%, 96%);
+		border-left: 4px solid hsl(0, 100%, 31%);
+	}
+	.box-note {
+		background-color: hsl(180, 8%, 94%);
+		border-left: 4px solid hsl(180, 8%, 40%);
+	}
+	.box-emphasis {
+		background-color: hsl(180, 8%, 94%);
+		border-left: 4px solid hsl(180, 8%, 40%);
+	}
+	.box-structure {
+		background-color: hsl(240, 67%, 97%);
+		border-left: 4px solid hsl(240, 67%, 62%);
+	}
+	.box-query {
+		border: 3px solid hsla(220, 100%, 60%, 1);
+	}
+	.box-interactive {
+		border: 3px solid black;
+	}
+	.box-definition,
+	.box-theorem,
+	.box-lemma,
+	.box-notation,
+	.box-proposition {
+		background-color: hsl(124, 33%, 94%);
+		border-left: 4px solid hsl(132, 36%, 27%);
+	}
+	.boxprocedure,
+	.notation {
+		background-color: hsla(20, 0%, 93%, 1);
+		border-left: 4px solid hsl(43, 81%, 36%, 1)
+	}
+	/************** Defining the Legends ******************/
+	.box-legend {
+		display: block;
+		overflow: hidden;
+		margin: 0 0 5px 0;
+		transform: translate(-11px, 0px);
+		break-inside: avoid-page !important;
+		page-break-inside: avoid !important;
+	}
+	.box-legend>span {
+		float: left;
+		font-family: "Tahoma", Arial, serif !important;
+		font-size: 13px !important;
+		font-weight: normal !important;
+		color: white;
+		padding: 3px 5px 3px 5px !important;
+		margin: 0 0 3px 0;
+		line-height: 0.8em;
+		border-radius: 1px;
+	}
+	.box-legend p {
+		float: left;
+		font-family: "Tahoma", Arial, serif !important;
+		font-size: 14px !important;
+		font-weight: normal !important;
+		color: white;
+		font-size: 14px !important;
+		padding: 4px 5px 4px 5px !important;
+		margin: 0 3px 3px 0;
+		line-height: 0.8em;
+		border-radius: 1px;
+	}
+	/************** Tuning the Legends ******************/
+	.box-objectives .box-legend>span {
+		background-color: hsl(212, 77%, 47%, 1);
+	}
+	.box-example .box-legend>span {
+		background-color: hsl(212, 77%, 47%, 1);
+	}
+	.box-exercise .box-legend>span {
+		background-color: hsl(212, 77%, 47%, 1);
+	}
+	.box-query .box-legend>span {
+		background-color: hsl(212, 77%, 47%, 1);
+	}
+	.box-interactive .box-legend>span {
+		background-color: black;
+	}
+	.box-note .box-legend>span {
+		background-color: hsl(180, 8%, 40%);
+	}
+	.box-warning .box-legend>span {
+		background-color: hsl(0, 100%, 31%);
+	}
+	.box-structure .box-legend>span {
+		background-color: hsl(240, 67%, 62%);
+	}
+	.box-procedure .box-legend>span {
+		background-color: hsla(39, 100%, 58%, 1);
+	}
+	.box-definition .box-legend>span {
+		background-color: hsl(132, 36%, 27%);
+	}
+	.box-theorem .box-legend>span {
+		background-color: hsl(132, 36%, 27%);
+	}
+	.box-lemma .box-legend>span {
+		background-color: hsl(132, 36%, 27%);
+	}
+	.box-notation .box-legend>span {
+		background-color: hsl(132, 36%, 27%);
+	}
+	.box-proposition .box-legend>span {
+		background-color: hsl(132, 36%, 27%);
+	}
+	.box-definition>header,
+	.box-structure>header,
+	.box-note>header,
+	.box-theorem>header,
+	.box-example>header,
+	.box-exercise>header,
+	.box-query>header,
+	.box-adapt>header,
+	.box-objectives>header,
+	.box-warning>header {
+		display: inline-flex;
+		overflow: hidden;
+		break-inside: avoid-page;
+		page-break-inside: avoid;
+		text-align: left;
+		width: auto;
+		margin: 0 0px 2px 0px !important;
+		padding: 2px 6px 2px 4px !important;
+		transform: translate(-11px, 0px) !important;
+		border-radius: 3px 5px 5px 0;
+		-moz-border-radius: 3px 5px 5px 0;
+		-webkit-border-radius: 3px 5px 5px 0;
+	}
+	.box-definition>header *,
+	.box-structure>header *,
+	.box-note>header *,
+	.box-theorem>header *,
+	.box-example>header *,
+	.box-exercise>header *,
+	.box-query>header *,
+	.box-adapt>header *,
+	.box-objectives>header *,
+	.box-warning>header * {
+		font-family: "Tahoma", Arial, serif !important;
+		font-size: 14px !important;
+		font-weight: 400 !important;
+		color: white !important;
+		;
+		width: auto !important;
+		;
+		float: left !important;
+		;
+		line-height: 1 !important;
+		;
+		margin-block-start: 0 !important;
+		margin-block-end: 0 !important;
+	}
+	.box-definition>header,
+	.box-theorem>header {
+		background-color: hsl(132, 36%, 27%);
+	}
+	.box-definition>header * {
+		background-color: hsl(132, 36%, 27%);
+	}
+	.box-example>header,
+	.box-exercise>header,
+	.box-query>header,
+	.box-objectives>header,
+	.box-adapt>header {
+		background-color: hsla(204, 83%, 41%, 1);
+	}
+	.box-note>header {
+		background-color: hsl(180, 8%, 40%);
+	}
+	.box-example>header *,
+	.box-objectives>header *,
+	.box-exercise>header * {
+		background-color: hsla(204, 83%, 41%, 1);
+	}
+	.box-note>header * {
+		background-color: hsl(180, 8%, 40%);
+	}
+	.box-structure>header {
+		background-color: hsl(240, 67%, 62%);
+	}
+	.box-structure>header * {
+		background-color: hsl(240, 67%, 62%);
+	}
+	.box-warning>header {
+		background-color: hsl(0, 100%, 31%);
+	}
+	.box-warning>header * {
+		background-color: hsl(0, 100%, 31%);
+	}
+	.mt-content-container::before {
+		content: none;
+	}
+	section::before {
+		content: "";
+		display: block;
+		height: 4 rem;
+		/* pretend that the header is at least 8rem high so this header cannot fit near the end of page */
+		margin-bottom: -4 rem;
+		/* however, reduce the margin the same amount so that the following content can stay in its usual place */
+		page-break-inside: avoid;
+		break-inside: avoid;
+	}
+    
+	/* AutoAttribution */
+	.mt-content-container .autoattribution p {
+		font-size: 90% !important;
+	}
+	#librelens-attribution-list li {
+		font-size: 90% !important;
+	}
+}/*]]>*/</style><style type="text/css">/*<![CDATA[*/
+ul.jmolPopupMenu {
+overflow: initial;
+float: initial;
+max-height: none;
+opacity: initial;
+}
+ul.jmolPopupMenu .ui-menu, .ui-selectmenu-button {
+overflow: initial;
+}
+
+ul.jmolPopupMenu .ui-menu, ul.jmolPopupMenu .ui-menu-item {
+float: initial;
+max-height: none;
+}
+
+ul.jmolPopupMenu .ui-state-disabled {
+opacity: initial;
+}
+
+div.iCn3D .icn3d-mn.ui-menu {
+    overflow: visible;
+    max-height: unset;
+}
+div.iCn3D .icn3d-mn.ui-menu .ui-menu-item{
+    padding: 0;
+    overflow: visible;
+    float: none;
+}
+
+div.iCn3D label:after{
+     content: unset;   
+}
+
+div.iCn3D div {
+    word-wrap: normal;
+}/*]]>*/</style><style type="text/css">/*<![CDATA[*/
+@media print {
+     
+.lt-table {
+  border-collapse: collapse;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-responsive-table {
+  width: 98% !important;  
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid lightgray;
+}
+
+.mt-responsive-table tr {
+  page-break-inside:avoid; 
+  page-break-after:auto;
+}
+    
+.mt-responsive-table td {
+  border: 1px solid #E8E8E8;
+  page-break-inside: avoid !important;
+  page-break-before: avoid;
+}
+    
+.mt-responsive-table th {
+  border-bottom: 1px solid #E8E8E8 !important;
+}
+    
+}/*]]>*/</style><style type="text/css">/*<![CDATA[*/
+.elm-header nav.elm-nav.my-custom-class > .elm-nav-container {
+    display: flex;
+    justify-content: space-between;
+}
+#header-buttons {
+    align-self: center;
+}
+
+#menu {
+    width: 953px;
+    height: 28px;
+    font-size: 14px;
+    font-family: Arial, Tahoma, Geneva, sans-serif;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #6384A6;
+    overflow:hidden;
+    margin-top:5px;
+    margin-bottom:0px;
+    margin-left:0px;
+    margin-right:00px;
+
+}
+#menu ul {
+    padding: 4px 0px;
+    margin: 0px;
+}
+#menu li {
+    display: inline;
+}
+#menu a {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 32px 32px 32px 32px;
+}
+#menu a:hover {
+    color: #000000;
+}
+
+p.center { text-align: center; }
+div.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+img.center {
+  display: block;
+}
+
+}/*]]>*/</style><style type="text/css">/*<![CDATA[*/
+#menu2 {
+    width: 953px;
+    height: 24px;
+    font-size: 12px;
+    font-family: Arial, Tahoma, Geneva, sans-serif;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #888888;
+    overflow:hidden;
+    margin-top:5px;
+    margin-bottom:5px;
+    margin-left:0px;
+    margin-right:00px;
+}
+#menu2 ul {
+    padding: 4px 0px;
+    margin: 0px;
+}
+#menu2 li {
+    display: inline;
+}
+#menu2 a {
+    text-decoration: none;
+    color: #000000;
+    padding: 32px 32px 32px 32px;
+}
+#menu2 a:hover {
+    color: #FFFFFF;
+}
+
+
+p.center { text-align: center; }
+div.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+img.center {
+  display: block;
+}
+
+}/*]]>*/</style>
+
+        <link media="screen" type="text/css" rel="stylesheet" href="https://a.mtstatic.com/@cache/layout/anonymous.css?_=425bb8ebd183535724b0ef507cd2b0f9_bWF0aC5saWJyZXRleHRzLm9yZw==:site_4425" id="mt-screen-css" />
+
+    
+        <link media="print" type="text/css" rel="stylesheet" href="https://a.mtstatic.com/@cache/layout/print.css?_=d223e3aada3f588ca51f2a766fabf81e:site_4425" id="mt-print-css" />
+
+
+    <script type="application/json" id="mt-localizations-draft">
+{"Draft.JS.alert.cancel.button":"OK","Draft.JS.alert.cancel.message":"You can not cancel a draft when the live page is unpublished.","Draft.JS.alert.cancel.title":"This draft cannot be canceled","Draft.JS.alert.publish.button":"OK","Draft.JS.alert.publish.message":"You can not publish a draft of a page with an unpublished parent","Draft.JS.alert.publish.title":"This draft cannot be published","Draft.JS.alert.unpublish.button":"OK","Draft.JS.alert.unpublish.message":"You can not unpublish a page when published subpages are present.","Draft.JS.alert.unpublish.title":"This page cannot be unpublished","Draft.JS.success.cancel":"The draft was successfully deleted.","Draft.JS.success.publish":"The draft was successfully published.","Draft.JS.success.unpublish":"The page was successfully unpublished.","Draft.JS.success.schedule.publish":"Publication schedule successfully created.","Draft.error.cancel":"There was an error cancelling the draft.","Draft.error.publish":"There was an error publishing the draft.","Draft.error.unpublish":"There was an error unpublishing the page.","Dialog.ConfirmSave.StrictIdf.title":"Oops!","Dialog.ConfirmSave.StrictIdf.error.missing-template-reference":"This article type requires a template reference widget. Not having one may negatively impact your site and SEO. Please contact CXone Expert support.","Dialog.ConfirmSave.StrictIdf.label.continue":"Proceed anyway","Dialog.ConfirmSave.StrictIdf.label.cancel":"Cancel","Dialog.ConfirmSave.StrictIdf.label.missing-template-reference-help-link":"Learn more about required references","Dialog.ConfirmSave.StrictIdf.error.invalid-idf":"This type of article should not exist at the requested location in the site hierarchy. Proceeding with the requested move may negatively impact site navigation and SEO.","Dialog.ConfirmSave.StrictIdf.label.invalid-idf-help-link":"Learn more about IDF structure","Dialog.Scheduler.Publish.button-save":"Save publish schedule","Dialog.Scheduler.Publish.page-title":"Publish","Dialog.Scheduler.Unpublish.button-save":"Save unpublish schedule","Dialog.Scheduler.Unpublish.page-title":"Unpublish"}    </script>    <script type="application/json" id="mt-localizations-editor">
+{"Article.Attach.file.upload.toobig":"The file you selected is too large.  The maximum allowed file size is {0}.","Article.Attach.file.upload.notAllowed":"The selected file can not be uploaded because you do not have permission to upload files of that type.","Article.Attach.file.upload.fileExtension":"You picked a file with an unsupported extension.  Please try again with a valid file.","Article.Common.page-is-restricted-login":"You do not have permission to view this page - please try signing in.","Article.Common.page-save-conflict":"You may have overwritten a concurrent editor's changes. Use this page's <a title=\"Revision History\" target=\"_blank\" href=\"{0}\" >Revision History<\/a> to review.","Article.Edit.extensions-list":"[MISSING: article.edit.extensions-list]","Article.Error.page-couldnt-be-loaded":"The requested page's contents could not be loaded.","Article.Error.page-save-conflict":"A page already exists at {0}. Navigate to the existing page and edit the page if you wish to modify its contents.","Article.Error.page-save-forbidden":"Your session has expired or you do not have permission to edit this page.","Article.edit.summary":"Edit summary","Article.edit.summary-reason":"Why are you making this edit?","Article.edit.enter-reason":"Enter reason (viewable in Site History Report)","Component.YoutubeSearch.error.key-invalid":"Your YouTube API Key was improperly configured. Please review the article at the","Component.YoutubeSearch.error.key-missing":"Your CXone Expert deployment needs to update your YouTube API Key. Details on how to update can be found at the","Component.YoutubeSearch.error.search-failed":"Search failed","Component.YoutubeSearch.info.not-found":"No videos found","Component.YoutubeSearch.label.video-url":"Video URL","Component.YoutubeSearch.placeholder.query":"Video URL or YouTube search query","Dialog.ConfirmDeleteRedirects.label.delete-redirects-help-link":"Learn more about deleting redirects","Dialog.ConfirmSave.error.redirect":"A redirect exists at this location and will be deleted if you continue. This may negatively impact your site and SEO. Please contact CXone Expert support.","Dialog.ConfirmSave.label.cancel":"Cancel","Dialog.ConfirmSave.label.continue":"Continue","Dialog.ConfirmSave.title":"Delete redirect?","Dialog.ConfirmSave.StrictIdf.error.invalid-idf":"This type of article should not exist at the requested location in the site hierarchy. Proceeding with the requested move may negatively impact site navigation and SEO.","Dialog.ConfirmSave.StrictIdf.error.missing-template-reference-insert":"You've removed the template reference, which is required for this page. Click Insert to reinsert the template reference.","Dialog.ConfirmSave.StrictIdf.label.cancel":"Cancel","Dialog.ConfirmSave.StrictIdf.label.continue":"Proceed anyway","Dialog.ConfirmSave.StrictIdf.label.insert":"Insert","Dialog.ConfirmSave.StrictIdf.label.missing-template-reference-help-link":"Learn more about required references","Dialog.ConfirmSave.StrictIdf.label.invalid-idf-help-link":"Learn more about IDF structure","Dialog.ConfirmSave.StrictIdf.title":"Oops!","Dialog.JS.wikibits-edit-section":"Edit section","Draft.error.save-unpublished":"You cannot save an unpublished draft at {0}. A published page already exists at that location.","GUI.Editor.alert-changes-made-without-saving":"You have made changes to the content without saving your changes. Are you sure you want to exit this page?","GUI.Editor.error.copy-hint":"To avoid losing your work, copy the page contents to a new file and retry saving again.","GUI.Editor.error.server-error":"A server error has occurred.","GUI.Editor.error.unable-to-save":"We are unable to save this page","System.API.Error.invalid-redirect":"Cannot create a redirect on a page with sub-pages.","System.API.Error.invalid-redirect-target":"The redirect does not point at a valid page."}    </script>    <script type="application/json" id="mt-localizations-file-uploader">
+{"Dialog.Attach.allowed-types":"Allowed file types:","Dialog.Attach.button.upload":"Upload","Dialog.Attach.choose-files-dad":"Choose files to upload or drag and drop files into this window.","Dialog.Attach.max-size":"Maximum upload file size: {0}"}    </script>    <script type="application/json" id="mt-localizations-grid-widget">
+{"Article.Common.page-is-restricted-login":"You do not have permission to view this page - please try signing in.","MindTouch.Help.Page.search-unavailable":"Sorry, search is currently unavailable.","Page.StructuredTags.error-update":"An unknown error occurred."}    </script>    <script type="application/json" id="mt-localizations-tree-widget">
+{"Skin.Common.home":"Home","Dialog.Common.error.path-not-found":"The requested page or section could not be loaded. Please update the link.","Dialog.JS.loading":"Loading...","Dialog.JS.loading.copy":"Copying page(s)...","Dialog.JS.loading.insertImage":"Inserting image...","Dialog.JS.loading.move":"Moving page(s)...","Dialog.JS.loading.moveFile":"Moving file...","Dialog.JS.loading.search":"Searching...","MindTouch.Help.Page.in":"in","MindTouch.Help.Page.no-search-results":"Sorry, we can't find what you are looking for.","MindTouch.Help.Page.no-search-try":"Try searching for something else, selecting a category, or try creating a ticket.","MindTouch.Help.Page.retrysearch":"Click here to search the whole site.","MindTouch.Help.Page.search-error-try":"Please try again later.","MindTouch.Help.Page.search-unavailable":"Sorry, search is currently unavailable."}    </script>    <script type="application/json" id="mt-localizations-dialog">
+{"Dialog.Common.button.cancel":"Cancel","Dialog.Common.button.ok":"OK"}    </script>
+    <script type="text/javascript" data-mindtouch-module="true" src="https://a.mtstatic.com/deki/javascript/out/globals.jqueryv2.2.4.js?_=c7437db715ec311e13ed6012fc856b62f237e74b:site_4425"></script><script type="application/json" id="mt-global-settings">{"articleType":"topic","attachFileMax":1000,"baseHref":"https:\/\/math.libretexts.org","cacheFingerprint":"c7437db715ec311e13ed6012fc856b62f237e74b:site_4425","canFileBeAttached":false,"cdnHostname":"a.mtstatic.com","clientSideWarnings":false,"dntEditorConfig":false,"draftEditable":false,"followRedirects":1,"idfHideTemplateTags":false,"idfVersion":"IDF3","isArticleReviewCommunityMembersEnabled":false,"isDraftAllowed":false,"isDraftRequest":false,"isGoogleAnalyticsEnabled":true,"isGuideTabMultipleClassificationsEnabled":false,"isHawthornThemeEnabled":false,"isInteractionAnalyticsDebugEnabled":false,"isInteractionAnalyticsEnabled":true,"isKcsEnabledOnPage":false,"isMediaManagerEnabled":false,"isReportDownloadEnabled":false,"isDraftManagerReportDownloadEnabled":false,"isSearchInsightsDownloadEnabled":false,"isTreeArticleIconsEnabled":false,"isSchedulePublishEnabled":false,"isSentimentAnalysisEnabled":true,"isShowMoreChildrenNodesEnabled":false,"isShowTerminalNodesEnabled":false,"isSkinResponsive":true,"isSmoothScrollEnabled":true,"isXhrF1WebWidgetEnabled":true,"isXhrIEMode":false,"kcsEnabled":false,"kcsV2Enabled":false,"kcsV2GuidePrivacySetting":"Semi-Public","learningPathsEnabled":true,"maxFileSize":268435456,"moduleMode":"global","pageEditable":false,"pageId":2562,"pageIsRedirect":false,"pageLanguageCode":"en-US","pageName":"9.1: Sequences","pageNamespace":"","pageOrderLimit":1000,"pagePermissions":["LOGIN","BROWSE","READ","SUBSCRIBE"],"pageRevision":"127","pageSectionEditable":false,"pageTitle":"Bookshelves\/Calculus\/Calculus (OpenStax)\/09: Sequences and Series\/9.01: Sequences","pageViewId":"435282c6-85f2-44e5-bc59-e61d4a3ffb55","pathCommon":"\/@style\/common","pathSkin":"\/@style\/elm","relatedArticlesDetailed":true,"removeBlankTemplate":false,"removeDeleteCheckbox":true,"cidWarningOnDelete":true,"scriptParser":2,"sessionId":"NmVlNWJiNjktZjhjNy00MjEwLTk3NTktNzI0Y2ZkYjNlMGI4fDIwMjMtMDgtMDNUMTc6NDA6MTE=","showAllTemplates":true,"siteAuthoringPageThumbnailManagementEnabled":true,"skinStyle":"columbia.elm","spaceballs2Enabled":false,"strictIdfEnabled":false,"isPinnedPagesEnabled":false,"uiLanguage":"en-us","userId":2,"userIsAdmin":false,"userIsAnonymous":true,"userIsSeated":false,"userName":"Anonymous","userPermissions":["LOGIN","BROWSE","READ","SUBSCRIBE"],"userSystemName":"Anonymous","userTimezone":"-07:00","webFontConfig":{"google":{"families":null}},"supportedTranslationTargetLanguages":["uk"],"translatedLanguage":"","apiToken":"xhr_2_1691091921_1adcc7e820a5ce22eea0c662036496f382c3f53fb6d52025b85e608546eb4f8b"}</script><script type="text/javascript" data-mindtouch-module="true" src="https://a.mtstatic.com/deki/javascript/out/deki.legacy.js?_=c7437db715ec311e13ed6012fc856b62f237e74b:site_4425"></script><script type="text/javascript" data-mindtouch-module="true" src="https://a.mtstatic.com/deki/javascript/out/community.js?_=c7437db715ec311e13ed6012fc856b62f237e74b:site_4425"></script><script type="text/javascript" data-mindtouch-module="true" src="https://a.mtstatic.com/deki/javascript/out/standalone/skin_elm.js?_=c7437db715ec311e13ed6012fc856b62f237e74b:site_4425"></script><script type="text/javascript" data-mindtouch-module="true" src="https://a.mtstatic.com/deki/javascript/out/standalone/pageBootstrap.js?_=c7437db715ec311e13ed6012fc856b62f237e74b:site_4425"></script>
+
+    
+<script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-18086773-1','math.libretexts.org',{allowLinker:true});ga('send','pageview');ga('create','UA-65721316-22','math.libretexts.org',{name:'mtTracker',allowLinker:true});ga('mtTracker.require','linker');ga('mtTracker.set', 'anonymizeIp', true);ga('mtTracker.send','pageview');document.addEventListener('mindtouch-web-widget:f1:loaded',function(e){var t=e.data||{},d=t.widget;d&&''!==t.embedId&&document.addEventListener('mindtouch-web-widget:f1:clicked',function(e){var t=(e.data||{}).href;if(t){var n=document.createElement('a');n.setAttribute('href',t),'success.mindtouch.com'===n.hostname&&(e.preventDefault(),ga('linker:decorate',n),d.open(n.href))}})});</script>
+</head>
+<body class="elm-user-anonymous columbia-page-main columbia-article-topic columbia-browser-chrome columbia-platform-windows columbia-breadcrumb-home-bookshelves-calculus-calculus%28openstax%29-09%3Asequencesandseries-9.01%3Asequences columbia-live no-touch columbia-lang-en-us columbia-skin-elm">
+<a class="elm-skip-link" href="#elm-main-content" title="Press enter to skip to the main content">Skip to main content</a><main class="elm-skin-container" data-ga-category="Anonymous | page">
+    <header class="elm-header">
+        <div class="elm-header-custom">
+
+<div id="readerview_wrapper" style="display:none;"><div class="readerOn" id="readerview">
+<div class="header-left-control">
+<div class="header-menu"><button aria-controls="offcanvas-menu" aria-expanded="false" aria-labelledby="toc-btn-label" data-target="offcanvas-menu" data-type="collapse" id="toggle_ocm"><span hidden="hidden" id="toc-btn-label">Table of Contents</span> <span aria-hidden="true" class="material-symbols-outlined" focusable="false">menu</span></button></div>
+
+<div class="header-branding"><a href="https://math.libretexts.org/" rel="internal"><img alt="Library homepage" class="internal default" src="https://cdn.libretexts.net/Logos/math_full.png" style="width: auto; height: 70px;" /></a></div>
+</div>
+
+<div class="header-title">&nbsp;</div>
+
+<div class="header-end"><button aria-controls="search" aria-expanded="false" class="header-btn" data-target="search" data-type="collapse" id="toogle_search"><span aria-hidden="true" class="material-symbols-outlined" focusable="false">search</span> <span class="visually-hidden">Search</span></button><button aria-controls="toolbar" aria-expanded="false" class="header-btn" data-target="toolbar" data-type="collapse" id="toggle_tools"><span aria-hidden="true" class="material-symbols-outlined" focusable="false">build_circle </span> <span class="visually-hidden">Toolbar</span></button><button class="header-btn hidden" disabled="disabled" id="open_homework"><span aria-hidden="true" class="material-symbols-outlined" focusable="false">fact_check</span> <span class="visually-hidden">Homework</span></button><button class="header-btn" id="exit_reader"><span aria-hidden="true" class="material-symbols-outlined" focusable="false">cancel</span> <span>Exit Reader Mode</span></button></div>
+</div>
+
+<div id="offcanvas-menu">
+<div class="hidden" id="toc">&nbsp;</div>
+
+
+
+<div id="siteMenu">
+<ul>
+    <li><a href="https://math.libretexts.org/Courses" rel="internal"><span aria-hidden="true" class="material-symbols-outlined" focusable="false">school</span> <span class="menu-label">Campus Bookshelves</span></a></li>
+    <li><a href="https://math.libretexts.org/Bookshelves" rel="internal"><span aria-hidden="true" class="material-symbols-outlined" focusable="false">menu_book</span> <span class="menu-label">Bookshelves</span></a></li>
+    <li><a class="mt-disabled" rel="broken"><span aria-hidden="true" class="material-symbols-outlined" focusable="false">perm_media</span> <span class="menu-label">Objetivos de Aprendizagem</span></a></li>
+</ul>
+
+<ul>
+    <li><a href="https://math.libretexts.org/Special:Userlogin?readerView#tab=login" rel="internal"><span aria-hidden="true" class="material-symbols-outlined" focusable="false">login</span> <span class="menu-label">Login</span></a></li>
+    <li><a target="_blank" href="https://register.libretexts.org/" rel="external noopener nofollow" class="link-https"><span aria-hidden="true" class="material-symbols-outlined" focusable="false">how_to_reg</span> <span class="menu-label">Request Instructor Account</span></a></li>
+    <li><a target="_blank" href="https://commons.libretexts.org/" rel="external noopener nofollow" class="link-https"><span aria-hidden="true" class="material-symbols-outlined" focusable="false">hub</span> <span class="menu-label">Instructor Commons</span></a></li>
+</ul>
+</div>
+
+</div>
+
+<div id="search">
+<div mt-section-origin="Template:Custom/Views/Header/Header_Panel" class="mt-section"><h2 class="editable">Search</h2>
+
+<form id="book_search">
+<div class="form-item"><label for="searchBar">Search this book</label> <input id="searchBar" name="searchBar" placeholder="Keyword(s)" type="text"></input></div>
+
+<div class="form-action"><button class="header-btn" id="searchButton">Submit Search</button></div>
+</form>
+
+<div id="search_results">&nbsp;</div>
+</div></div>
+
+<div id="toolbar">
+<ul class="toolbar_menu" id="toolbar_menu">
+    <li class="toolbar-item" id="dl-menu"><a aria-expanded="false" class="toolbar-btn toolbar-top has-submenu" id="download" href="https://math.libretexts.org/?downloads" rel="internal"><span>Downloads</span> <span aria-hidden="true" class="material-symbols-outlined" focusable="false">expand_more</span> </a>
+
+    <div class="sub-nav">
+    <ul class="subnav-group" id="dropdown_downloads">
+        <li><a class="toolbar-btn toolbar-inner" id="download_pdf_page" href="https://math.libretexts.org/?downloadpage" rel="internal"><span>Download Page (PDF)</span> </a></li>
+        <li><a class="toolbar-btn toolbar-inner" id="download_pdf_full" href="https://math.libretexts.org/?downloadfull" rel="internal"><span>Download Full Book (PDF)</span> </a></li>
+    </ul>
+    </div>
+    </li>
+    <li class="toolbar-item" id="res-menu"><a aria-expanded="false" class="toolbar-btn toolbar-top has-submenu" id="resources" href="https://math.libretexts.org/?resources" rel="internal"><span>Resources</span> <span aria-hidden="true" class="material-symbols-outlined" focusable="false">expand_more</span> </a>
+    <div class="sub-nav">
+    <ul class="subnav-group" id="dropdown_resources">
+        <li><a aria-controls="pop" class="toolbar-btn toolbar-inner" data-src="https://pubchem.ncbi.nlm.nih.gov/periodic-table/#view=table&amp;embed=true&amp;hide_all_headings=true" data-title="Periodic Table" data-type="popelement" id="periodicTable" href="https://math.libretexts.org/?pertable" rel="internal"><span>Periodic Table</span> </a></li>
+        <li><a aria-controls="pop" class="toolbar-btn toolbar-inner" data-src="https://chem.libretexts.org/Ancillary_Materials/Reference/Units_and_Conversions/Physical_Constants?adaptView" data-title="Physics Constants" data-type="popelement" id="physicsConstants" href="https://math.libretexts.org/?physconst" rel="internal"><span>Physics Constants</span> </a></li>
+        <li><a class="toolbar-btn toolbar-inner hidden" disabled="disabled" id="scientificCalculator" href="https://math.libretexts.org/?scientificcal" rel="internal">Scientific Calculator</a></li>
+    </ul>
+    </div>
+    </li>
+    <li class="toolbar-item" id="ref-menu"><a aria-expanded="false" class="toolbar-btn toolbar-top has-submenu" id="refmenu" href="https://math.libretexts.org/?references" rel="internal"><span>Reference</span> <span aria-hidden="true" class="material-symbols-outlined" focusable="false">expand_more</span> </a>
+    <div class="sub-nav">
+    <ul class="subnav-group" id="dropdown_ref">
+        <li><a class="toolbar-btn toolbar-inner" data-micromodal-trigger="modal-main" data-modal-src="cite" data-modal-title="Reference &amp; Cite" data-target="modal_readerview" data-type="modal" id="cite" href="https://math.libretexts.org/?refmodal" rel="internal"><span>Reference &amp; Cite</span> </a></li>
+    </ul>
+    </div>
+    </li>
+    <li class="toolbar-item" id="tools-menu"><a aria-expanded="false" class="toolbar-btn toolbar-top has-submenu" id="toolsmenu" href="https://math.libretexts.org/?tools" rel="internal"><span>Tools</span> <span aria-hidden="true" class="material-symbols-outlined" focusable="false">expand_more</span> </a>
+    <div class="sub-nav">
+    <ul class="subnav-group" id="dropdown_tools">
+    </ul>
+    </div>
+    </li>
+    <li class="toolbar-item" id="help-menu"><a aria-expanded="false" class="toolbar-btn toolbar-top has-submenu" id="helpmenu" href="https://math.libretexts.org/?help" rel="internal"><span>Help</span> <span aria-hidden="true" class="material-symbols-outlined" focusable="false">expand_more</span> </a>
+    <div class="sub-nav">
+    <ul class="subnav-group" id="dropdown_feed">
+        <li><a class="toolbar-btn toolbar-inner" data-micromodal-trigger="modal-main" data-modal-src="help" data-modal-title="Help &amp; Documentation" data-target="modal-main" data-type="modal" id="help" href="https://math.libretexts.org/?helpmodal" rel="internal"><span>Get Help</span> </a></li>
+        <li><a aria-disabled="true" class="toolbar-btn toolbar-inner hidden" id="feedback" role="button" href="https://math.libretexts.org/?feedback" rel="internal"><span>Feedback</span> </a></li>
+        <li><a aria-disabled="true" class="toolbar-btn toolbar-inner hidden" id="readability" role="button" href="https://math.libretexts.org/?readability" rel="internal"><span>Readability</span> </a></li>
+    </ul>
+    </div>
+    </li>
+</ul>
+</div>
+
+<div class="modal" id="modal_readerview">
+<div class="modal-content">
+<div class="modal-header">
+<div mt-section-origin="Template:Custom/Views/Header/Header_Panel" class="mt-section"><h2 tabindex="0" class="modal-title editable">&nbsp;</h2>
+<span class="modal-close" tabindex="0">x</span></div></div>
+
+<div class="modal-body">
+<p>selected template will load here</p>
+</div>
+</div>
+</div>
+
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-main">
+<div class="modal__overlay" data-micromodal-close="data-micromodal-close" tabindex="-1">
+<div aria-labelledby="modal-main-title" aria-modal="true" class="modal__container" role="dialog">
+<header class="modal__header">
+<div mt-section-origin="Template:Custom/Views/Header/Header_Panel" class="mt-section"><h2 id="modal-main-title" class="modal__title editable">Error</h2>
+<button aria-label="Close dialog" class="modal__close" data-micromodal-close="data-micromodal-close"></button></div></header>
+
+<main class="modal__content" id="modal-main-body">
+<p>This action is not available.</p>
+</main>
+
+<footer class="modal__footer">&nbsp;</footer>
+</div>
+</div>
+</div>
+
+<script type="module" src="https://cdn.libretexts.net/github/readerview/readerview.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.libretexts.net/github/readerview/readerview.min.css" /><script type="text/javascript" src="https://cdn.libretexts.net/github/readerview/js-loading-overlay.min.js"></script><script type="text/javascript" src="https://cdn.libretexts.net/github/readerview/vendor/jquery-accessibleMegaMenu.js"></script>
+
+<script type="text/javascript">/*<![CDATA[*/
+JsLoadingOverlay.show({
+  'overlayBackgroundColor': '#fff',
+  'overlayOpacity': 0.9,
+  'spinnerIcon': 'ball-atom',
+  'spinnerColor': '#127abf',
+  'spinnerSize': '2x',
+  'overlayIDName': 'overlay',
+  'spinnerIDName': 'spinner',
+});
+
+window.addEventListener('load', function() {
+    JsLoadingOverlay.hide();
+});
+
+$("#toolbar").accessibleMegaMenu({
+    /* prefix for generated unique id attributes, which are required 
+           to indicate aria-owns, aria-controls and aria-labelledby */
+    uuidPrefix: "accessible-megamenu",
+
+    /* css class used to define the megamenu styling */
+    menuClass: "toolbar_menu",
+
+    /* css class for a top-level navigation item in the megamenu */
+    topNavItemClass: "toolbar-item",
+
+    /* css class for a megamenu panel */
+    panelClass: "sub-nav",
+
+    /* css class for a group of items within a megamenu panel */
+    panelGroupClass: "sub-nav-group",
+
+    /* css class for the hover state */
+    hoverClass: "hover",
+
+    /* css class for the focus state */
+    focusClass: "focus",
+
+    /* css class for the open state */
+    openClass: "open"
+});/*]]>*/</script>
+</div>
+
+<div class="mt-container-highlight" style="background-color: #ffffff;">
+<nav class="elm-nav my-custom-class">
+<div class="elm-nav-container">
+
+
+<div class="LTBranding"><a href="https://math.libretexts.org/" rel="internal"><img alt="Library homepage" class="internal default" src="https://cdn.libretexts.net/Logos/math_full.png" style="width: auto; height: 70px;" /></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/Miscellaneous/reuse.js"></script>
+
+
+<div id="header-buttons"><button class="header-btn" id="enter_reader"><span aria-hidden="true" class="material-symbols-outlined" focusable="false">chrome_reader_mode</span> <span>Enter Reader Mode</span></button></div>
+</div>
+
+<script type="text/javascript">/*<![CDATA[*/
+let enterReaderBtn = document.getElementById('enter_reader');
+["click", "keypress"].forEach(ev=>{
+    enterReaderBtn.addEventListener(ev, function(e){
+        e.preventDefault();
+        if (e.keyCode === 13 || ev == 'click') {
+            window.open(window.location.href + '?readerView', '_self');
+        }
+    })
+});
+
+if (window.location.href.indexOf('?readerView')){
+  document.getElementById('readerview_wrapper').style.display = 'block';
+}/*]]>*/</script>
+</nav>
+</div>
+
+
+
+
+
+<div style="display:none"><div style="display:none" id="parentTitleHolder">9: Sequences and Series</div><div style="display:none" id="parentParentTitleHolder">Calculus (OpenStax)</div><div style="display:none" id="subpagesHolder">{ &quot;9.1E:_Exercises_for_Section_9.1&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot; }</div><div style="display:none" id="parentSubpagesHolder">{ &quot;9.00:_Prelude_to_Sequence_and_Series&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;9.01:_Sequences&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;9.02:_Infinite_Series&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;9.03:_The_Divergence_and_Integral_Tests&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;9.04:_Comparison_Tests&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;9.05:_Alternating_Series&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;9.06:_Ratio_and_Root_Tests&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;9.07:_Chapter_9_Review_Exercises&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot; }</div><div style="display:none" id="parentParentSubpagesHolder">{ &quot;00:_Front_Matter&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;01:_Functions_and_Graphs&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;02:_Limits&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;03:_Derivatives&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;04:_Applications_of_Derivatives&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;05:_Integration&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;06:_Applications_of_Integration&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;07:_Techniques_of_Integration&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;08:_Introduction_to_Differential_Equations&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;09:_Sequences_and_Series&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;10:_Power_Series&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;11:_Parametric_Equations_and_Polar_Coordinates&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;12:_Vectors_in_Space&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;13:_Vector-Valued_Functions&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;14:_Differentiation_of_Functions_of_Several_Variables&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;15:_Multiple_Integration&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;16:_Vector_Calculus&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;17:_Second-Order_Differential_Equations&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;18:_Appendices&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot;, &quot;zz:_Back_Matter&quot; : &quot;property get [Map MindTouch.Deki.Logic.ExtensionProcessorQueryProvider+&lt;&gt;c__DisplayClass230_0.&lt;PageSubPageProperty&gt;b__1]()&quot; }</div><div style="display:none" id="modifiedHolder">Wed, 07 Sep 2022 19:55:52 GMT</div><div style="display:none" id="titleHolder">9.1: Sequences</div><div style="display:none" id="IDHolder">2562</div><div style="display:none" id="pageIDHolder">2562</div><div style="display:none" id="pageAuthorHolder">Delmar Larsen</div><div style="display:none" id="groupHolder">{ }</div><div style="display:none" id="usernameHolder">Anonymous</div><div style="display:none" id="displaynameHolder">Anonymous</div><div style="display:none" id="userEmailHolder"></div><div style="display:none" id="emailHolder"></div><div style="display:none" id="userIDHolder">2</div><div style="display:none" id="proHolder">false</div><div style="display:none" id="adminHolder">false</div><div style="display:none" id="pageTagsHolder">[ &quot;article:topic&quot;, &quot;Geometric Sequences&quot;, &quot;sequences&quot;, &quot;Fibonacci Numbers&quot;, &quot;Squeeze Theorem for Sequences&quot;, &quot;Monotone Convergence Theorem&quot;, &quot;recurrence relation&quot;, &quot;arithmetic sequence&quot;, &quot;authorname:openstax&quot;, &quot;convergent sequence&quot;, &quot;divergent sequence&quot;, &quot;index variable&quot;, &quot;limit of a sequence&quot;, &quot;monotone sequence&quot;, &quot;sequence&quot;, &quot;term&quot;, &quot;license:ccbyncsa&quot;, &quot;showtoc:no&quot;, &quot;program:openstax&quot;, &quot;licenseversion:40&quot;, &quot;source@https://openstax.org/details/books/calculus-volume-1&quot;, &quot;author@Gilbert Strang&quot;, &quot;author@Edwin \u201cJed\u201d Herman&quot; ]</div><div style="display:none" id="tagsHolder">[ &quot;article:topic&quot;, &quot;Geometric Sequences&quot;, &quot;sequences&quot;, &quot;Fibonacci Numbers&quot;, &quot;Squeeze Theorem for Sequences&quot;, &quot;Monotone Convergence Theorem&quot;, &quot;recurrence relation&quot;, &quot;arithmetic sequence&quot;, &quot;authorname:openstax&quot;, &quot;convergent sequence&quot;, &quot;divergent sequence&quot;, &quot;index variable&quot;, &quot;limit of a sequence&quot;, &quot;monotone sequence&quot;, &quot;sequence&quot;, &quot;term&quot;, &quot;license:ccbyncsa&quot;, &quot;showtoc:no&quot;, &quot;program:openstax&quot;, &quot;licenseversion:40&quot;, &quot;source@https://openstax.org/details/books/calculus-volume-1&quot;, &quot;author@Gilbert Strang&quot;, &quot;author@Edwin \u201cJed\u201d Herman&quot; ]</div><div style="display:none" id="ssoHolder">https://math.libretexts.org/@app/auth/3/login?returnto=https%3A%2F%2Fmath.libretexts.org%2FBookshelves%2FCalculus%2FCalculus_(OpenStax)%2F09%253A_Sequences_and_Series%2F9.01%253A_Sequences</div></div>
+
+
+<script type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/Miscellaneous/copyNavigation.js"></script>
+
+
+
+
+</div>
+        <div class="elm-nav mt-translate-module" hidden="true">
+            <div class="elm-nav-container mt-translate-container"></div>
+        </div>
+        <div class="elm-header-logo-container">
+            <a href="https://math.libretexts.org" title="Mathematics LibreTexts" aria-label='Link to home'><img src="https://a.mtstatic.com/@public/production/site_4425/1474932834-logo.png" alt="Mathematics LibreTexts" /></a>
+        </div>
+        
+        <nav class="elm-header-user-nav elm-nav" role="navigation">
+            <div class="elm-nav-container">
+                <ol>
+                    <li class="elm-global-search" data-ga-action="Header search"><a class="mt-icon-site-search mt-toggle-form" href="#" title="Search site">Search site</a>
+<div class="mt-quick-search-container mt-toggle-form-container">
+    <form action="/Special:Search">
+        <input name="qid" id="mt-qid-skin" type="hidden" value="" />
+        <input name="fpid" id="mt-search-filter-id" type="hidden" value="230" />
+        <input name="fpth" id="mt-search-filter-path" type="hidden" />
+        <input name="path" id="mt-search-path" type="hidden" value="" />
+
+        <label class="mt-label" for="mt-site-search-input">
+            Search
+        </label>
+        <input class="mt-text mt-search search-field" name="q" id="mt-site-search-input" placeholder="How can we help you?" type="search" />
+        <button class="mt-button ui-button-icon mt-icon-site-search-button search-button" type="submit">
+            Search
+        </button>
+    </form>
+</div>
+<div class="elm-search-back"><a class="mt-icon-browser-back" data-ga-label="Browse back" href="#" id="mt-browser-back" title="Go back to previous article">Go back to previous article</a></div>
+</li>
+                    <li class="elm-user-menu"><ol class="mt-user-menu">
+
+    <li class="mt-user-quick-login">
+        <div class="mt-quick-login-container mt-toggle-form-container">
+            <form action="https://math.libretexts.org/Special:UserLogin?returntotitle=Bookshelves%2FCalculus%2FCalculus_%28OpenStax%29%2F09%3A_Sequences_and_Series%2F9.01%3A_Sequences" class="mt-form" method="POST" id="quick-login">
+                <div class="mt-field">
+                    <input autocomplete="off" class="reset mt-text" id="username" name="username" placeholder="Username" type="text" />
+                    <label class="title login-form-label mt-label" for="username">Username</label>
+                </div>
+                <div class="mt-field">
+                    <input autocomplete="off" class="mt-text" id="password" name="password" placeholder="Password" type="password" />
+                    <label class="title login-form-label mt-label" for="password">Password</label>
+                </div>
+                <div class="mt-field mt-submit">
+                    <button class="ui-button ui-button-primary" type="submit">Sign in</button>
+                </div>
+            </form>
+        </div>
+    </li>
+
+    <li class="mt-user-menu-user">
+        <a class="mt-icon-quick-sign-in mt-dropdown-link mt-toggle-right"
+           href="#"
+           title="Sign in">Sign in</a>
+
+        <ul class="mt-user-menu-container mt-dropdown">
+
+            <li class="mt-login-sign-in">
+                <a class="mt-icon-quick-sign-in" href="https://math.libretexts.org/Special:UserLogin?returntotitle=Bookshelves%2FCalculus%2FCalculus_%28OpenStax%29%2F09%3A_Sequences_and_Series%2F9.01%3A_Sequences" title="Sign in">
+                    Sign in
+                </a>
+            </li>
+
+            <li class="mt-login-forgot-password">
+                <a class="mt-icon-login-forgot-password" href="https://math.libretexts.org/Special:UserPassword" title="Retrieve lost password">
+                    Forgot password
+                </a>
+            </li>
+        </ul>
+    </li>
+</ol>
+</li>
+                </ol>
+            </div>
+        </nav>
+        <nav class="elm-header-global-nav elm-nav" data-ga-action="Elm Navigation">
+            <div class="elm-nav-container">
+                <button class="elm-hierarchy-trigger mt-hierarchy-trigger ui-button-icon mt-icon-hierarchy-trigger-closed" title="Expand/collapse global hierarchy" data-ga-label="Hierarchy Toggle - Tree View">
+                    Expand/collapse global hierarchy
+                </button>
+                <ol class="mt-breadcrumbs" data-ga-action="Breadcrumbs">
+                        <li>
+                            <a href="https://math.libretexts.org/" data-ga-label="Breadcrumb category">
+                                <span class="mt-icon-article-category mt-icon-article-home"></span>
+                                    Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://math.libretexts.org/Bookshelves" data-ga-label="Breadcrumb category">
+                                <span class="mt-icon-article-category"></span>
+                                    Bookshelves
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://math.libretexts.org/Bookshelves/Calculus" data-ga-label="Breadcrumb category">
+                                <span class="mt-icon-article-category"></span>
+                                    Calculus
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)" data-ga-label="Breadcrumb category">
+                                <span class="mt-icon-article-category"></span>
+                                    Calculus (OpenStax)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/09%3A_Sequences_and_Series" data-ga-label="Breadcrumb guide">
+                                <span class="mt-icon-article-guide"></span>
+                                    9: Sequences and Series
+                            </a>
+                        </li>
+                        <li class="mt-breadcrumbs-current-page">
+                            <span class="mt-icon-article-topic"></span>
+                            9.1: Sequences
+                        </li>
+                </ol>
+                <button class="mt-icon-hierarchy-mobile-view-trigger ui-button-icon mt-icon-hierarchy-mobile-trigger-closed" title="Expand/collapse global location" data-ga-label="Hierarchy Toggle - Breadcrumb Expand/Collapse">
+                    Expand/collapse global location
+                </button>
+            </div>
+        </nav>
+        <nav class="elm-nav elm-header-hierarchy">
+            <div class="elm-nav-container">
+                <div class="elm-hierarchy mt-hierarchy"></div>
+            </div>
+        </nav>    </header>
+    <article class="elm-content-container" id="elm-main-content" tabindex="-1">
+        <header>
+            <div id="flash-messages"><div class="dekiFlash"></div></div>
+            
+                
+<h1 id="title" data-title-editor-available="false">
+        9.1: Sequências
+</h1>
+
+                
+
+                
+                    <ol class="elm-meta-data elm-meta-top" data-ga-action="Page actions">
+                        <li class="elm-last-modified"><dl class="mt-last-updated-container">
+    <dt class="mt-last-updated-label">Last updated</dt>
+    <dd>
+        <span class="mt-last-updated" data-timestamp="2022-09-07T19:55:52Z"></span>
+    </dd>
+</dl>
+</li>
+                        <li class="elm-pdf-export"><a data-ga-label="PDF" href="https://math.libretexts.org/@api/deki/pages/2562/pdf/9.1%253A%2bSequences.pdf?stylesheet=default" rel="nofollow" target="_blank" title="Export page as a PDF">
+    <span class="mt-icon-article-pdf"></span>Save as PDF
+</a></li>
+                        <li class="elm-social-share"></li>
+                    </ol>
+                
+            
+        </header>
+                <header class="mt-content-header">
+
+<script type="text/javascript">/*<![CDATA[*/
+window.hypothesisConfig = function () {
+  return {
+    "showHighlights": false
+  };
+};
+//localStorage.setItem('darkMode', 'false');
+window.beelineEnabled = true;
+
+document.getElementsByTagName('head')[0].prepend(document.getElementById('mt-screen-css'),document.getElementById('mt-print-css'));
+//$('head').prepend($('#mt-print-css'));
+//$('head').prepend($('#mt-screen-css'));/*]]>*/</script>
+
+
+
+<li id="pageNumberHolder" class="pageInfo"><dl class="mt-page-restriction-container"><dt class="mt-page-restriction-label">Page ID</dt><dd>2562</dd></dl></li><script defer="true" src="https://unpkg.com/@popperjs/core@2"></script><script defer="true" src="https://unpkg.com/tippy.js@6"></script><script defer="true" src="https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/10.0.5/jsrsasign-all-min.min.js" integrity="sha512-idoo8Z+CmSse+nKqmN47DKVshl7zT5scjpgdmS7D15jIfcLUl9mNVLlsNZyYCiSvLE5qjHmTnv4vAoxEPqVveg==" crossorigin="anonymous"></script><script defer="true" src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.libretexts.net/github/Beeline/beeline.min.js"></script><script defer="true" src="https://cdn.libretexts.net/github/LibreTextsMain/Miscellaneous/qrcode.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.fancytree/2.30.0/jquery.fancytree-all-deps.min.js"></script><script defer="true" src="https://cdn.libretexts.net/github/LibreTextsMain/Miscellaneous/printYoutube.js"></script><link href="https://cdn.libretexts.net/github/LibreTextsMain/Miscellaneous/printYoutube.css" rel="stylesheet" type="text/css" /><script defer="true" src="https://cdn.libretexts.net/github/ableplayer/build/ableplayer.min.js"></script><link href="https://cdn.libretexts.net/github/ableplayer/build/ableplayer.min.css" rel="stylesheet" type="text/css" />
+
+
+
+<script async="true" type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/NavButtons/libreNavButtons.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.libretexts.net/github/LibreTextsMain/NavButtons/libreNavButtons.min.css" /><script defer="true" type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/ExportButtons/libreExportButtons.min.js"></script><script async="true" type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/Binh Nguyen/ReactSidebar/build/sidebar.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.libretexts.net/github/LibreTextsMain/Binh Nguyen/ReactSidebar/src/Sidebar.css" /><script defer="true" type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/LicenseControl/licensecontrol.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.libretexts.net/github/LibreTextsMain/LicenseControl/licensecontrol.min.css" /><script defer="true" src="https://cdn.libretexts.net/github/LibreTextsMain/Henry%20Agnew/API/cas-bridge.js"></script><script defer="true" type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/Leo%20Jayachandran/Glossarizer/libretextsGlossarizer.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.libretexts.net/github/LibreTextsMain/Leo%20Jayachandran/Glossarizer/libretextsGlossarizer.css" /><script>/*<![CDATA[*/window.addEventListener('load', ()=>LibreTexts.TOC(undefined, undefined, true));/*]]>*/</script><script defer="true" type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/Henry%20Agnew/LibreLens.js"></script><script defer="true" type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/Aryan Suri/Citation/citationjs.js"></script><script defer="true" type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/Aryan Suri/Citation/citation.js"></script><script defer="true" type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/Aryan Suri/Citation/attribution.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.libretexts.net/github/LibreTextsMain/Aryan Suri/Citation/citation.css" />
+
+
+
+<script async="true" src="https://hypothes.is/embed.js"></script><script type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/Miscellaneous/Molecules/GLmol/js/Three49custom.js"></script><script type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/Miscellaneous/Molecules/GLmol/js/GLmol.js"></script><script type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/Miscellaneous/Molecules/JSmol/JSmol.full.nojq.js"></script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet" /><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&amp;display=swap" rel="stylesheet" /><link href="https://cdnjs.cloudflare.com/ajax/libs/cc-icons/1.2.1/css/cc-icons.min.css" rel="stylesheet" />
+
+<script type="text/javascript">/*<![CDATA[*/
+//CORS override
+LibreTexts.getKeys().then(()=>{
+    if(!$.ajaxOld){
+        $.ajaxOld = $.ajax;
+        $.ajax = (url, options)=> {
+   
+            if(url.url && url.url.includes('.libretexts.org/@api/deki/files')) {
+                let [subdomain, path] = LibreTexts.parseURL();
+                let token = LibreTexts.getKeys.keys[subdomain];
+                url.headers = Object.assign(url.headers || {}, {'x-deki-token':token});
+            }
+            else if (typeof url === 'string' && url.includes('.libretexts.org/@api/deki/files')){
+            let [subdomain, path] = LibreTexts.parseURL();
+            let token = LibreTexts.getKeys.keys[subdomain];
+               options.headers = Object.assign(options.headers || {}, {'x-deki-token':token});
+            }
+            return $.ajaxOld(url, options);
+    }
+    }
+});/*]]>*/</script>
+
+
+
+<p>
+
+<div class="mt-author-container"><ul><li class="mt-author-image mt-author-image-crop"><img src="https://biz.libretexts.org/@api/deki/files/5084/girl-160172__340.png" alt=" " title="OpenStax" /></li><li class="mt-author-information"><span>Gilbert Strang &amp; Edwin &ldquo;Jed&rdquo; Herman</span></li><li class="mt-author-programname"><a rel="external" target="_blank" href="https://openstax.org">OpenStax</a></li></ul></div>
+
+<script type="text/javascript" src="https://use.fontawesome.com/84b10e0f37.js"></script>
+
+
+
+
+
+<div class="Headertext">\( \newcommand{\vecs}[1]{\overset { \scriptstyle \rightharpoonup} {\mathbf{#1}}&nbsp;}&nbsp;\) \( \newcommand{\vecd}[1]{\overset{-\!-\!\rightharpoonup}{\vphantom{a}\smash&nbsp;{#1}}} \)\(\newcommand{\id}{\mathrm{id}}\) \( \newcommand{\Span}{\mathrm{span}}\) \( \newcommand{\kernel}{\mathrm{null}\,}\) \( \newcommand{\range}{\mathrm{range}\,}\) \( \newcommand{\RealPart}{\mathrm{Re}}\) \( \newcommand{\ImaginaryPart}{\mathrm{Im}}\) \( \newcommand{\Argument}{\mathrm{Arg}}\) \( \newcommand{\norm}[1]{\| #1 \|}\) \( \newcommand{\inner}[2]{\langle #1, #2 \rangle}\) \( \newcommand{\Span}{\mathrm{span}}\) \(\newcommand{\id}{\mathrm{id}}\) \( \newcommand{\Span}{\mathrm{span}}\) \( \newcommand{\kernel}{\mathrm{null}\,}\) \( \newcommand{\range}{\mathrm{range}\,}\) \( \newcommand{\RealPart}{\mathrm{Re}}\) \( \newcommand{\ImaginaryPart}{\mathrm{Im}}\) \( \newcommand{\Argument}{\mathrm{Arg}}\) \( \newcommand{\norm}[1]{\| #1 \|}\) \( \newcommand{\inner}[2]{\langle #1, #2 \rangle}\) \( \newcommand{\Span}{\mathrm{span}}\)\(\newcommand{\AA}{\unicode[.8,0]{x212B}}\)</div>
+</p>
+<link href="https://pro.fontawesome.com/releases/v5.10.1/css/all.css" rel="stylesheet" />
+<p>
+</p>
+</header>
+                <aside class="mt-content-side"></aside>
+            <aside id="mt-toc-container" data-title="Table of contents" data-collapsed="true">
+                <nav class="mt-toc-content mt-collapsible-section">
+                    <ol><li><a href="#Learning_Objectives" rel="internal">Objetivos de Aprendizagem</a></li><li><a href="#Terminology_of_Sequences" rel="internal">Terminologia de Sequências</a><ol><li><a href="#Definition:_infinite_sequence" rel="internal">Definition: infinite sequence</a></li><li><a href="#Example_.5C(.5CPageIndex.7B1.7D.5C):_Finding_Explicit_Formulas" rel="internal">Example \(\PageIndex{1}\): Finding Explicit Formulas</a></li><li><a href="#Exercise_.5C(.5CPageIndex.7B1.7D.5C)" rel="internal">Exercise \(\PageIndex{1}\)</a></li><li><a href="#Example_.5C(.5CPageIndex.7B2.7D.5C):_Defined_by_Recurrence_Relations" rel="internal">Example \(\PageIndex{2}\): Defined by Recurrence Relations</a></li><li><a href="#Exercise_.5C(.5CPageIndex.7B2.7D.5C)" rel="internal">Exercise \(\PageIndex{2}\)</a></li></ol></li><li><a href="#Limit_of_a_Sequence" rel="internal">Limit of a Sequence</a><ol><li><a href="#Definition:_convergent_and_divergent_sequences" rel="internal">Definition: convergent and divergent sequences</a></li><li><a href="#Definition:_Convergence" rel="internal">Definition: Convergence</a></li><li><a href="#Limit_of_a_Sequence_Defined_by_a_Function" rel="internal">Limit of a Sequence Defined by a Function</a></li><li><a href="#Algebraic_Limit_Laws" rel="internal">Algebraic Limit Laws</a></li><li><a href="#Proof" rel="internal">Proof</a></li><li><a href="#Example_.5C(.5CPageIndex.7B3.7D.5C):_Determining_Convergence_and_Finding_Limits" rel="internal">Example \(\PageIndex{3}\): Determining Convergence and Finding Limits</a></li><li><a href="#Exercise_.5C(.5CPageIndex.7B3.7D.5C)" rel="internal">Exercise \(\PageIndex{3}\)</a></li><li><a href="#Continuous_Functions_Defined_on_Convergent_Sequences" rel="internal">Continuous Functions Defined on Convergent Sequences</a></li><li><a href="#Proof_2" rel="internal">Proof</a></li><li><a href="#Example_.5C(.5CPageIndex.7B4.7D.5C):_Limits_Involving_Continuous_Functions_Defined_on_Convergent_Sequences" rel="internal">Example \(\PageIndex{4}\): Limits Involving Continuous Functions Defined on Convergent Sequences</a></li><li><a href="#Exercise_.5C(.5CPageIndex.7B4.7D.5C)" rel="internal">Exercise \(\PageIndex{4}\)</a></li><li><a href="#Squeeze_Theorem_for_Sequences" rel="internal">Squeeze Theorem for Sequences</a></li><li><a href="#Proof_3" rel="internal">Proof</a></li><li><a href="#Example_.5C(.5CPageIndex.7B5.7D.5C):_Using_the_Squeeze_Theorem" rel="internal">Example \(\PageIndex{5}\): Using the Squeeze Theorem</a></li><li><a href="#Exercise_.5C(.5CPageIndex.7B5.7D.5C)" rel="internal">Exercise \(\PageIndex{5}\)</a></li></ol></li><li><a href="#Bounded_Sequences" rel="internal">Bounded Sequences</a><ol><li><a href="#Definition:_Bound_Sequences" rel="internal">Definition: Bound Sequences</a></li><li><a href="#Convergent_Sequences_Are_Bounded" rel="internal">Convergent Sequences Are Bounded</a></li><li><a href="#Definition" rel="internal">Definition</a></li><li><a href="#Definition:_Monotone_Convergence_Theorem" rel="internal">Definition: Monotone Convergence Theorem</a></li><li><a href="#Example_.5C(.5CPageIndex.7B6.7D.5C):_Using_the_Monotone_Convergence_Theorem" rel="internal">Example \(\PageIndex{6}\): Using the Monotone Convergence Theorem</a></li><li><a href="#Exercise_.5C(.5CPageIndex.7B6.7D.5C)" rel="internal">Exercise \(\PageIndex{6}\)</a></li><li><a href="#Definition:_Fibonacci_Numbers" rel="internal">Definição: Números de Fibonacci</a></li></ol></li><li><a href="#Key_Concepts" rel="internal">Conceitos Chaves</a></li><li><a href="#Glossary" rel="internal">Glossário</a></li></ol>
+                </nav>
+            </aside>
+            <section class="mt-content-container">
+                <div class="box-objectives"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Learning_Objectives"></span><h5 class="box-legend editable"><span class="lt-icon-default">Objetivos de Aprendizagem</span></h5>
+
+<ul>
+    <li class="lt-math-2562">Encontrar a fórmula do termo geral de uma sequência.</li>
+    <li class="lt-math-2562">Calcular o limite de uma sequência, se ele existir.</li>
+    <li class="lt-math-2562">Determinar a convergência ou divergência de uma sequência dada.</li>
+</ul>
+</div></div>
+
+<p class="lt-math-2562">Nesta seção introduzimos sequências e definimos o significado de convergência ou divergência. 
+Mostramos como encontrar o limite de uma sequência convergente, usando propriedades de limites de funções discutidas anteriormente. 
+Fechamos esta seção com o Teorema da Convergência Monótona, uma ferramenta útil para mostrar que certos tipos de sequências convergem.</p>
+
+<div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section" id="section_1"><span id="Terminology_of_Sequences"></span><h2 class="lt-math-2562 editable">Terminologia de Sequências</h2>
+
+<p class="lt-math-2562">Inicialmente, precisamos alguns novos termos e novas definições. Primeiro, uma sequência infinita é uma lista ordenada de números na forma</p>
+
+<p class="mt-align-center lt-math-2562">\[a_1,a_2,a_3,&hellip;,a_n,&hellip;.\nonumber \]</p>
+
+<p class="lt-math-2562">Cada um dos números é chamado de um termo. O símbolo \(n\) é chamado de índice para a sequência. Usamos a notação</p>
+
+<p class="mt-align-center lt-math-2562">\[\{a_n\}^&infin;_{n=1},\nonumber \]</p>
+
+<p class="lt-math-2562">ou simplesmente \(\{a_n\}\), para denotar a sequência. Uma notação similiar é usada para conjuntos, mas uma sequência é uma lista ordenada, enquanto um conjunto não é ordenado. 
+Como um número particular \(a_n\) existe para termo número inteiro positivo \(n\), também podemos definir uma sequência como uma função cujo domínio é o conjunto dos números inteiros positivos.</p>
+
+<p class="lt-math-2562">Vamos agora considerar a lista ordenada infinita</p>
+
+<p class="mt-align-center lt-math-2562">\[2,4,8,16,32,&hellip;.\nonumber \]</p>
+
+<p class="lt-math-2562">Esta é uma sequência em que o primeiro, segundo e terceiro termos são dados por This is a sequence in which the first, \(a_1=2, a_2=4,\) e \(a_3=8.\) Provavelmente, você pode ver que os termos nesta sequência seguem o seguinte padrão:</p>
+
+<p class="mt-align-center lt-math-2562">\[a_1=2^1,\,a_2=2^2,\,a_3=2^3,\,a_4=2^4 \text{ and } a_5=2^5.\nonumber \]</p>
+
+<p class="lt-math-2562">Assumindo que este padrão continue, podemos escrever o \(n-\)ésimo termo da sequência pela fórmula explícita \(a_n=2^n.\) Usando esta notação, podemos escrever esta sequência como</p>
+
+<p class="mt-align-center lt-math-2562">\[\{2^n\}^&infin;_{n=1}\nonumber \]</p>
+
+<p class="lt-math-2562">or</p>
+
+<p class="mt-align-center lt-math-2562">\[\{2^n\}.\nonumber \]</p>
+
+<p class="lt-math-2562">Alternativamente, podemos descrever esta sequência de uma forma diferente. Como cada termo é o termo anterior multiplicado por dois, a sequência pode ser definida recursivamente expressando o 
+\(n-\)ésimo termo \(a_n\) usando o termo anterior \(a_{n&minus;1}\). Em particular, podemos definí-la como a sequência \(\{a_n\}\) onde \(a_1=2\) e para todo \(n&ge;2\), cada termo é definido 
+como a <strong>relação de </strong><strong>recorrência</strong></p>
+
+<p class="mt-align-center lt-math-2562">\[a_n=2a_{n&minus;1}. \nonumber \]</p>
+
+<div class="box-definition"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Definition:_infinite_sequence"></span><h5 class="box-legend editable"><span class="lt-icon-default">Definição: sequência infinita</span></h5>
+
+<p class="lt-math-2562">Uma <strong>sequência infinita</strong> \(\{a_n\}\) é uma lista ordenada de números na forma</p>
+
+<p class="mt-align-center lt-math-2562">\(a_1,\,a_2,\,&hellip;,\,a_n,\,&hellip;\)</p>
+
+<p class="lt-math-2562">onde \(n\) é chamado de <strong>índice</strong> da sequência. Cada número \(a_n\) é um termo da sequência. Algumas vezes as sequências são definidas por <strong>fórmulas explícitas</strong>, 
+isto é, \(a_n=f(n)\) para alguma função \(f(n)\) definida sobre os inteiros positivos. Em outros casos, sequências são definidas usando uma <strong>relação de recorrência</strong>. 
+Em uma relação de recorrência, um termo (ou mais) da sequência é dado explicitamente, e os termos seguintes são definidos em termos dos anteriores.</p>
+</div></div>
+
+<p class="lt-math-2562">Note que o índice não precisa começar com \(n=1\). Poderia começar com outros números inteiros. Por exemplo, uma sequência dada pela fórmula \(a_n=f(n)\) poderia começar em \(n=0\), e neste caso a sequência seria</p>
+
+<p class="mt-align-center lt-math-2562">\[a_0,\,a_1,\,a_2,&hellip;.\nonumber \]</p>
+
+<p class="lt-math-2562">Similarmente, para uma sequência definida por uma relação de recorrência, o termo \(a_0\) poderia se dado explicitamente, e os termos \(a_n\) for \(n&ge;1\) definidos em termos de \(a_{n&minus;1}\). Como uma sequência \(\{a_n\}\) 
+tem exatamente um valor para cada inteiro positivo \(n\), ela pode ser definida como uma função cujo domínio é o conjunto dos números inteiros positivos. Como resultado, faz sentido falar em gráfico de uma sequência. 
+O gráfico de uma sequência \(\{a_n\}\) consiste de todos os pontos \((n,a_n)\) para todos os inteiros positivos \(n\). A figura mostra o gráfico de \({2^n}\).</p>
+
+<figure><img alt="A graph in quadrant one containing the following points: (1, 2), (2, 4), (3, 8), (4, 16)." style="width: 487px; height: 388px;" width="487px" height="388px" class="internal" loading="lazy" src="https://math.libretexts.org/@api/deki/files/2964/CNX_Calc_Figure_09_01_001.jpeg?revision=1&amp;size=bestfit&amp;width=487&amp;height=388" />
+<figcaption>Figura \(\PageIndex{1}\): Os pontos plorados são o gráfico da sequência {\(2^n\)}.</figcaption>
+</figure>
+
+<p class="lt-math-2562">Dois tipos de sequências ocorrem com frequência e possuem nomes especiais: sequências aritméticas e sequências geométricas. Em uma sequência aritmética, 
+a diferença entre qualquer par de termos consecutivos é a mesma. Por exemplo, considere a sequência</p>
+
+<p class="mt-align-center lt-math-2562">\[3,\,7,\,11,\,15,1\,9, \,\ldots\nonumber \]</p>
+
+<p class="lt-math-2562">Você pode ver que a diferença entre cada par consecutivo de termos é 4. Supondo que esse padrão continue, essa sequência é uma sequência aritmética. Pode ser descrita usando a relação de recorrência</p>
+
+<p class="mt-align-center lt-math-2562">\[\begin{cases}a_1=3\\a_n=a_{n&minus;1}+4, \text{ for }\ n&ge;2\end{cases}.\nonumber \]</p>
+
+<p class="lt-math-2562">Note que</p>
+
+<p class="mt-align-center lt-math-2562">\[a_2=3+4\nonumber \]</p>
+
+<p class="mt-align-center lt-math-2562">\[a_3=3+4+4=3+2&sdot;4\nonumber \]</p>
+
+<p class="mt-align-center lt-math-2562">\[a_4=3+4+4+4=3+3&sdot;4.\nonumber \]</p>
+
+<p class="lt-math-2562">Assim, a sequência também pode ser descrita usando a fórmula explícita</p>
+
+<p class="mt-align-center lt-math-2562">\[a_n=3+4(n&minus;1)=4n&minus;1.\nonumber \]</p>
+
+<p class="lt-math-2562">Em geral, uma sequência aritmética é qualquer sequência da forma \(a_n=cn+b.\)</p>
+
+<p class="lt-math-2562">Já em uma sequência geométrica<strong>,</strong> A razão entre cada par de termos consecutivos é a mesma. Por exemplo, considere a sequência</p>
+
+<p class="mt-align-center lt-math-2562">\[2,\,&minus;\dfrac{2}{3},\,\dfrac{2}{9},\,&minus;\dfrac{2}{27},\,\dfrac{2}{81},&hellip;.\nonumber \]</p>
+
+<p class="lt-math-2562">Vemos que a razão de qualquer termo para o termo anterior é \(&minus;\dfrac{1}{3}\). Supondo que esse padrão continue, essa sequência é uma sequência geométrica. Ela pode ser definida recursivamente como</p>
+
+<p class="mt-align-center lt-math-2562">\[ a_1=2\nonumber \]</p>
+
+<p class="mt-align-center lt-math-2562">\[a_n=&minus;\dfrac{1}{3}&sdot;a_{n&minus;1}, \text{ for }\ n&ge;2.\nonumber \]</p>
+
+<p class="lt-math-2562">Alternativamente, como</p>
+
+<p class="mt-align-center lt-math-2562">\[ \begin{align*} a_2 &amp;=&minus;\dfrac{1}{3}&sdot;2 \\[4pt] a_3 &amp;=\left(&minus;\dfrac{1}{3}\right)\left(&minus;\dfrac{1}{3}\right)(2)=\left(&minus;\dfrac{1}{3}\right)^2&sdot;2 \\[4pt] a_4 &amp;= \left(&minus;\dfrac{1}{3}\right)\left(&minus;\dfrac{1}{3}\right)\left(&minus;\dfrac{1}{3}\right)(2)=\left(&minus;\dfrac{1}{3}\right)^3&sdot;2,\end{align*}  \nonumber \]</p>
+
+<p class="lt-math-2562">vemos que a sequência pode ser descrita usando a fórmula explícita</p>
+
+<p class="mt-align-center lt-math-2562">\[a_n=2 \left(&minus;\dfrac{1}{3}\right)^{n&minus;1}.\nonumber \]</p>
+
+<p class="lt-math-2562">A sequência \(\{2^n\}\) que discutimos anteriormente é uma sequência geométrica, em que a razão de qualquer termo para o termo anterior é \(2\). 
+Em geral, uma sequência geométrica é qualquer sequência na forma \(a_n=cr^n\).</p>
+
+<div class="box-example"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Example_.5C(.5CPageIndex.7B1.7D.5C):_Finding_Explicit_Formulas"></span><h5 class="box-legend editable"><span class="lt-icon-default">Exemplo \(\PageIndex{1}\): Encontrando Fórmulas Explícitas</span></h5>
+
+<p class="lt-math-2562">Para cada uma das sequências a seguir, encontre uma fórmula explícita para o \(n\)-ésimo termo da sequência.</p>
+
+<ol start="1" style="list-style-type: lower-alpha;">
+    <li class="lt-math-2562">\(&minus;\dfrac{1}{2},\dfrac{2}{3},&minus;\dfrac{3}{4},\dfrac{4}{5},&minus;\dfrac{5}{6},&hellip;\)</li>
+    <li class="lt-math-2562">\(\dfrac{3}{4},\dfrac{9}{7},\dfrac{27}{10},\dfrac{81}{13},\dfrac{243}{16},&hellip;\).</li>
+</ol>
+
+<p class="lt-math-2562"><strong>Solução</strong></p>
+
+<p class="lt-math-2562">a. Primeiro, observe que a sequência está alternando de negativo para positivo. Os termos ímpares na sequência são negativos e os termos pares são positivos. Portanto, 
+o \(n\)-ésimo inclui um fator \((&minus;1)^n\). Em seguida, considere a sequência de numeradores \({1,2,3,&hellip;}\) e a sequência de denominadores \({2,3,4,&hellip;}\). 
+Podemos ver que ambas as sequências são sequências aritméticas. O \(n\)-ésimo termo da sequência de numeradores é \(n\), e o \(n\)-ésimo termo da sequência de denominadores é \(n+1\). Portanto, a sequência pode ser descrita pela fórmula explícita</p>
+
+<p class="mt-align-center lt-math-2562">\[a_n=\dfrac{(&minus;1)^nn}{n+1}. \nonumber \]</p>
+
+<p class="lt-math-2562">b. A sequência de numeradores \(3,9,27,81,243,&hellip;\) é uma sequência geométrica. O numerador do \(n\)-ésimo termo é \(3^n\) A sequência de denominadores \(4,7,10,13,16,&hellip;\) é uma sequência aritmética. O denominador do (n\)-ésimo termo é \(4+3(n&minus;1)=3n+1.\) Portanto, podemos descrever a sequência pela fórmula explícita \(a_n =\dfrac{3^n}{3n+1.}\)</p>
+</div></div>
+
+<div class="box-exercise"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Exercise_ .5C(.5CPageIndex.7B1.7D.5C)"></span><h5 class="box-legend editable"><span class="lt-icon-default">Exercício \(\PageIndex{1}\)</span></h5>
+
+<p class="lt-math-2562">Encontre uma fórmula explícita para o \(n\)-ésimo termo da sequência \(\left\{\dfrac{1}{5}, &minus;\dfrac{1}{7},\dfrac{1}{9},&minus;\dfrac{1}{11},&hellip;\right\}.\)</p>
+
+<dl>
+     <dt><strong class="emphasis bold">Dica</strong></dt>
+     <dd>
+     <p class="lt-math-2562">Os denominadores formam uma sequência aritmética.</p>
+     </dd>
+</dl>
+
+<dl>
+     <dt><strong class="emphasis bold">Resposta</strong></dt>
+     <dd>
+     <p class="lt-math-2562">\(a_n=\dfrac{(&minus;1)^{n+1}}{3+2n}\)</p>
+     </dd>
+</dl>
+</div></div>
+
+<div class="box-example"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Example_.5C(.5CPageIndex.7B2.7D.5C):_Defined_by_Recurrence_Relations"></span><h5 class="box-legend editable"><span class="lt-icon-default">Exemplo \(\PageIndex{2}\): Definição por Relações de Recorrências</span></h5>
+
+<p class="lt-math-2562">Para cada uma das seguintes sequências definidas recursivamente, encontre uma fórmula explícita para a sequência.</p>
+
+<ol start="1" style="list-style-type: lower-alpha;">
+    <li class="lt-math-2562">\(a_1=2, a_n=&minus;3a_{n&minus;1}\) for \(n&ge;2\)</li>
+    <li class="lt-math-2562">\(a_1=\left(\dfrac{1}{2}\right), a_n=a_{n&minus;1}+\left(\dfrac{1}{2}\right)^n\) for \(n&ge;2\)</li>
+</ol>
+
+<p class="lt-math-2562"><strong>Solução</strong></p>
+
+<p class="lt-math-2562">a. Escrevendo os primeiros termos, temos</p>
+
+<p class="mt-align-center lt-math-2562">\[ \begin{align*} a_1 &amp;=2 \\[4pt] a_2 &amp;=&minus;3a_1=&minus;3(2)\\[4pt] a_3 &amp;=&minus;3a_2=(&minus;3)^22\\[4pt] a_4 &amp;=&minus;3a_3=(&minus;3)^32.\end{align*}\]</p>
+
+<p class="lt-math-2562">Em geral,</p>
+
+<p class="mt-align-center lt-math-2562">\(a_n=2(&minus;3)^{n&minus;1}.\)</p>
+
+<p class="lt-math-2562">b. Escrevendo os primeiros termos:</p>
+
+<p class="mt-align-center lt-math-2562">\(a_1=\dfrac{1}{2}\)</p>
+
+<p class="mt-align-center lt-math-2562">\(a_2=a_1+\left(\dfrac{1}{2}\right)^2=\dfrac{1}{2}+\dfrac{1}{4}=\dfrac{3}{4}\)</p>
+
+<p class="mt-align-center lt-math-2562">\(a_3=a_2+\left(\dfrac{1}{2}\right)^3=\dfrac{3}{4}+\dfrac{1}{8}=\dfrac{7}{8}\)</p>
+
+<p class="mt-align-center lt-math-2562">\(a_4=a_3+\left(\dfrac{1}{2}\right)^4=\dfrac{7}{8}+\dfrac{1}{16}=\dfrac{15}{16}\).</p>
+
+<p class="lt-math-2562">Deste padrão, encontramos a fórmula explícita</p>
+
+<p class="mt-align-center lt-math-2562">\(a_n=\dfrac{2^n&minus;1}{2^n}=1&minus;\dfrac{1}{2^n}\).</p>
+</div></div>
+
+<div class="box-exercise"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Exercise_.5C(.5CPageIndex.7B2.7D.5C)"></span><h5 class="box-legend editable"><span class="lt-icon-default">Exercício \(\PageIndex{2}\):</span></h5>
+
+<p class="lt-math-2562">Encontre uma fórmula explícita para a sequência definida recursivamente tal que \(a_1=&minus;4\) e \(a_n=a_{n&minus;1}+6\).</p>
+
+<dl>
+    <dt><strong class="emphasis bold">Dica</strong></dt>
+    <dd>
+    <p class="lt-math-2562">Esta é uma sequência aritmética.</p>
+    </dd>
+</dl>
+
+<dl>
+    <dt><strong class="emphasis bold">Resposta</strong></dt>
+    <dd>
+    <p class="lt-math-2562">\(a_n=6n&minus;10\)</p>
+    </dd>
+</dl>
+</div></div>
+
+</div><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section" id="section_2"><span id="Limit_of_a_Sequence"></span><h2 class="lt-math-2562 editable">Limite de uma Sequência</h2>
+
+<p class="lt-math-2562">Uma questão fundamental que surge em relação às sequências infinitas é o comportamento dos termos à medida que \(n\) aumenta. Como uma sequência é uma função definida nos inteiros positivos, faz sentido discutir o limite dos termos quando \(n&rarr;&infin;\). Por exemplo, considere as quatro sequências a seguir e seus diferentes comportamentos quando \(n&rarr;&infin;\) (Figura \(\PageIndex{2}\)):</p>
+
+<ol start="1" style="list-style-type: lower-alpha;">
+     <li class="lt-math-2562">\(\{1+3n\}=\{4,7,10,13,&hellip;\}.\) Os termos \(1+3n\) tornam-se arbitrariamente grande quando \(n&rarr;&infin;\). Neste caso, dizemos que \(1+3n&rarr;&infin;\) quando \(n&rarr;&infin;.\)</li>
+     <li class="lt-math-2562">\(\left\{1&minus; \left(\dfrac{1}{2}\right) ^n\right\}=\left\{ \dfrac{1} {2} ,\dfrac{3}{4},\dfrac{7}{8},\dfrac{15}{16}\,&hellip;\right\}.\) Os termos \(1&minus;\left( \dfrac{1}{2}\right)^n&rarr;1\) quando \(n&rarr;&infin;.\)</li>
+     <li class="lt-math-2562">\(\{(&minus;1)^n\}=\{&minus;1,1,&minus;1,1,&hellip;\}.\) Os termos se alternam mas não se aproximam de um único valor quando \(n&rarr;&infin;.\)</li>
+     <li class="lt-math-2562">\(\left\{\dfrac{(&minus;1)^n}{n}\right\}=\left\{&minus;1,\dfrac{1} {2},&minus;\dfrac{1}{3},\dfrac{1}{4},&hellip;\right\}.\) 
+	 Os termos se alternam para esta sequência também, mas \(\dfrac{(&minus;1)^n}{n}&rarr;	0\) quando \(n&rarr;&infin;.\)</li>
+</ol>
+
+<figure><img alt="Quatro gráficos nos quadrantes 1 e 4, rotulados de a a d. O eixo horizontal é para o valor de n e o eixo vertical é para o valor do termo a _n. O gráfico a tem pontos (1 , 4), (2, 7), (3, 10), (4, 13) e (5, 16). O gráfico b tem pontos (1, 1/2), (2, 3/4), ( 3, 7/8) e (4, 15/16). O gráfico c tem pontos (1, -1), (2, 1), (3, -1), (4, 1) e (5, -1) O gráfico d tem pontos (1, -1), (2, 1/2), (3, -1/3), (4, 1/4) e (5, -1/5). " estilo="largura: 721px; altura: 713px;" width="721px" height="713px" class="internal" loading="lazy" src="https://math.libretexts.org/@api/deki/files/2965/CNX_Calc_Figure_09_01_002.jpeg?revision=1&amp; size=bestfit&amp;width=721&amp;height=713" />
+<figcaption>Figura \(\PageIndex{2}\):<strong> </strong>(a) Os termos na sequência tornam-se arbitrariamente grandes quando \(n&rarr;&infin;\). (b) Os termos na sequência aproximam-se de \(1\) quando \(n&rarr;&infin;\). (c) Os termos da sequência alternam entre \(1\) e \(&minus;1\) quando \(n&rarr;&infin;\). 
+(d) Os termos na sequência alternam entre valores positivos e negativos, mas se aproximam de \(0\) quando \(n&rarr;&infin;\).</figcaption>
+</figura>
+
+<p class="lt-math-2562">A partir desses exemplos, vemos diversas possibilidades para o comportamento dos termos de uma sequência como \(n&rarr;&infin;\). Em duas das sequências, os termos se aproximam de um número finito como \(n&rarr;&infin;.\) Nas outras duas sequências, os termos não. Se os termos de uma sequência se aproximam de um número finito \(L\) como \(n&rarr;&infin;\), dizemos que a sequência é uma sequência convergente e que o número real L é o limite da sequência. Podemos dar uma definição informal aqui.</p>
+
+<div class="box-definition"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Definição :_convergent_and_divergent_sequences"></span><h5 class="box-legend editable"><span class="lt-icon-default">Definição: sequências convergentes e divergentes</span></h5>
+
+<p class="lt-math-2562">Dada uma sequência \({a_n},\) se os termos an se tornam arbitrariamente próximos de um número finito \(L\) quando \(n\) se torna suficientemente grande, dizemos \(\{a_n\}\) é uma <strong>sequência convergente</strong> e \(L\) é o <strong>limite da sequência.</strong> Neste caso, escrevemos</p>
+
+<p class="mt-align-center lt-math-2562">\[\lim_{n&rarr;&infin;}a_n=L. \nonumber \]</p>
+
+<p class="lt-math-2562">Se uma sequência \(\{a_n\}\) não é convergente, dizemos que é uma<strong> sequência divergente.</strong></p>
+</div></div>
+
+<p class="lt-math-2562">Na Figura, vemos que os termos na sequência \(\left\{1&minus; \left(\dfrac{1}{2}\right)^n\right\}\) estão se tornando arbitrariamente próximos de \(1\) à medida que \(n\) se torna muito grande. Concluímos que \(\left\{1&minus;\left(\dfrac{1}{2}\right)^n\right\}\) é uma sequência convergente e seu limite é \(1\). Em contraste, na Figura, vemos que os termos na sequência \(1+3n\) não se aproximam de um número finito à medida que \(n\) se torna maior. Dizemos que \(\{1+3n\}\) é uma sequência divergente.</p>
+
+<p class="lt-math-2562">Na definição informal para o limite de uma sequência, usamos os termos &ldquo;arbitrariamente próximos&rdquo; e &ldquo;suficientemente grande&rdquo;. Embora essas expressões ajudem a ilustrar o significado de uma sequência convergente, elas são um tanto vagas. Para ser mais preciso, agora apresentamos a definição formal de limite para uma sequência e mostramos essas ideias graficamente na Figura.</p>
+
+<div class="box-definition"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Definition:_Convergence"></span><h5 class="box-legend editable"><span class="lt-icon-default">Definição: Convergência</span></h5> <p class="lt-math-2562">Uma sequência \(\{a_n\}\) converge para um número real \(L\) se para todo \(&epsilon;&gt;0\), existe um inteiro \(N\) tal que, para todo \(n &ge; N\), tem-se \(|a_n&minus;L| &lt; &epsilon;\). O número \(L\) é o limite da sequência e escrevemos</p>
+
+<p class="mt-align-center lt-math-2562">\[\lim_{n&rarr;&infin;}a_n = L \text{  ou  } a_n&rarr;L. \nonumber \]</p>
+
+<p class="lt-math-2562">Neste caso, dizemos que a sequência \(\{a_n\}\) é uma sequência convergente. Se uma sequência não converge, então é uma sequência divergente e dizemos que o limite não existe.</p>
+</div></div>
+
+<p class="lt-math-2562">Observamos que a convergência ou divergência de uma sequência \(\{a_n\}\) depende apenas do que acontece com os termos \(a_n\) quando \(n&rarr;&infin;\). Portanto, se um número finito de termos \(b_1,b_2,&hellip;,b_N\) for colocado antes de \(a_1\) para criar uma nova sequência</p>
+
+<p class="mt-align-center lt-math-2562">\[b_1,\,b_2,\,&hellip;,\,b_N,\,a_1,\,a_2,\,&hellip;,\nonumber \]</p>
+
+<p class="lt-math-2562">esta nova sequência vai convergir se \(\{a_n\}\) converge e irá divergir se \(\{a_n\}\) diverge. Ainda mais, se a sequência \(\{a_n\}\) converge para \(L\), esta nova sequência também irá convergir para \(L\).</p>
+
+<figure><img alt="A graph in quadrant 1 with axes labeled n and a_n instead of x and y, respectively. A positive point N is marked on the n axis. From smallest to largest, points L &ndash; epsilon, L, and L + epsilon are marked on the a_n axis, with the same interval epsilon between L and the other two. A blue line y = L is drawn, as are red dotted ones for y = L + epsilon and L &ndash; epsilon. Points in quadrant 1 are plotted above and below these lines for x &lt; N. However, past N, the points remain inside the lines y = L + epsilon and L &ndash; epsilon, converging on L." style="width: 731px; height: 425px;" width="731px" height="425px" class="internal" loading="lazy" src="https://math.libretexts.org/@api/deki/files/2966/CNX_Calc_Figure_09_01_003.jpeg?revision=1&amp;size=bestfit&amp;width=731&amp;height=425" />
+<figcaption>Figura \(\PageIndex{3}\): Conforme \(n\) cresce, os termos \(a_n\) ficam mais próximos de \(L\). Para valores \(n&ge;N\), a distância entre cada ponto \((n,a_n)\) e a linha \(y=L\) é menor que \(&epsilon;\).</figcaption>
+</figure>
+
+<p class="lt-math-2562">Conforme definido acima, se uma sequência não converge, diz-se que é uma sequência divergente. Por exemplo, as sequências \(\{1+3n\}\) e \(\left\{(&minus;1)^n\right\}\) mostradas na Figura divergem. 
+No entanto, sequências diferentes podem divergir de maneiras diferentes. A sequência \(\left\{(&minus;1)^n\right\}\) diverge porque os termos alternam entre \(1\) e \(&minus;1\), mas não se aproximam de um valor como \( n&rarr;&infin;\). Por outro lado, a sequência \(\{1+3n\}\) diverge porque os termos \(1+3n&rarr;&infin;\) quando \(n&rarr;&infin;\). Dizemos que a sequência \(\{1+3n\}\) diverge ao infinito e escrevemos \(\displaystyle \lim_{n&rarr;&infin;}(1+3n)=&infin;\). É importante perceber que esta notação não implica que o limite da sequência \(\{1+3n\}\) exista. A sequência é, de fato, divergente. Escrever que o limite é infinito destina-se apenas a fornecer mais informações sobre por que a sequência é divergente. Uma sequência também pode divergir para menos infinito. Por exemplo, a sequência \(\{&minus;5n+2\}\) diverge para menos infinito porque \(&minus;5n+2&rarr;&minus;&infin;\) quando \(n&rarr;&minus;&infin;\). Escrevemos isso como \(\displaystyle \lim_{n&rarr;&infin;}(&minus;5n+2)=&minus;&infin;.\)</p>
+
+<p class="lt-math-2562">Como uma sequência é uma função cujo domínio é o conjunto dos números inteiros positivos, podemos usar propriedades de limites de funções para determinar se uma sequência converge. 
+Por exemplo, considere uma sequência \(\{a_n\}\) e uma função relacionada \(f\) definida em todos os números reais positivos, tal que \(f(n)=a_n\) para todos os inteiros \(n&ge;1 \). 
+Como o domínio da sequência é um subconjunto do domínio de \(f\), se \(\displaystyle \lim_{x&rarr;&infin;}f(x)\) existe, então a sequência converge e tem o mesmo limite. 
+Por exemplo, considere a sequência \(\left\{\dfrac{1}{n}\right\}\) e a função relacionada \(f(x)=\dfrac{1}{x}\). Como a função \(f\) definida em todos os números reais \(x&gt;0\) satisfaz \(f(x)=\dfrac{1}{x}&rarr;0\) 
+quando \(x&rarr;&infin;\), a sequência \(\left\{\dfrac{1}{n}\right\}\) deve satisfazer \(\dfrac{1}{n}&rarr;0\) quando \(n&rarr;&infin;.\) </p>
+
+<div class="box-note"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Limit_of_a_Sequence_Defined_by_a_Function"></span><h5 class="box-legend editable"><span class="lt-icon-default">Limite de uma Sequência Definida por uma Função</span></h5>
+
+<p class="lt-math-2562">Considere a sequência \(\{a_n\}\) tal que \(a_n=f(n)\) para todo \(n&ge;1\). Se existe um número real \(L\) tal que</p>
+
+<p class="mt-align-center lt-math-2562">\[\lim_{x&rarr;&infin;}f(x)=L, \nonumber \]</p>
+
+<p class="lt-math-2562">então \(\{a_n\}\) converge e</p>
+
+<p class="mt-align-center lt-math-2562">\[\lim_{n&rarr;&infin;}a_n=L. \nonumber \]</p>
+</div></div>
+
+<p class="lt-math-2562">Podemos usar este teorema para calcular \(\displaystyle \lim_{n&rarr;&infin;}r^n\) para \(0&le;r&le;1\).
+Por exemplo, considere a sequência \(\left\{(1/2)^n\right\}\) e a função exponencial relacionada \(f(x)=(1/2)^x\). Como \(\displaystyle \lim_{x&rarr;&infin;}(1/2)^x=0\),
+concluímos que a sequência \(\left\{(1/2)^n\right\}\) converge e seu limite é \(0\). Da mesma forma, para qualquer número real \(r\) tal que \(0&le;r&lt;1\), tem-se \(\displaystyle \lim_{x&rarr;&infin;}r^x=0\),
+e portanto a sequência \(\left\{r^n\right\}\) converge. Por outro lado, se \(r=1\), então \(\displaystyle \lim_{x&rarr;&infin;}r^x=1\), e portanto o limite da sequência \(\left\{1^n\right\}\) é \(1\).
+Se \(r&gt;1\), então \(\displaystyle \lim_{x&rarr;&infin;}r^x=&infin;\), e portanto não podemos aplicar este teorema. Porém, neste caso, assim como a função \(r^x\) cresce sem limite quando \(n&rarr;&infin;\),
+os termos \(r^n\) na sequência tornam-se arbitrariamente grandes quando \(n&rarr;&infin;\), e concluímos que a sequência \(\left\{r^n\right\}\) diverge para o infinito se \(r&gt;1\).</p>
+
+<p class="lt-math-2562">Resumindo os resultados envolvendo sequências geométricas \({r^n}\):</p>
+
+<p class="mt-align-center lt-math-2562">\(r^n&rarr;0\) if \(0&lt;r&lt;1\)</p>
+
+<p class="mt-align-center lt-math-2562">\(r^n&rarr;1\) if \(r=1\)</p>
+
+<p class="mt-align-center lt-math-2562">\(r^n&rarr;&infin;\) if \(r&gt;1\).</p>
+
+<p class="lt-math-2562">Posteriormente nesta seção vamos considerar o caso \(r&lt;0\).</p>
+
+<p class="lt-math-2562">Agora consideramos sequências um pouco mais complicadas. Por exemplo, considere a sequência \(\left\{(2/3)^n+(1/4)^n\right\}.\) 
+Os termos dessa sequência são mais complicados do que outras sequências que discutimos, mas, felizmente, o limite dessa sequência é determinado pelos 
+limites das duas sequências \(\left\{(2/3)^n\right\}\) e \(\left\{(1/4)^n\right\}\). Como descrevemos nas seguintes leis algébricas de limite,
+uma vez que \(\left\{(2/3)^n\right\}\) e \(\left\{1/4)^n\right\}\) convergem para \(0\), a sequência \(\left\{(2/3)^n+(1/4)^n\right\}\) converge para \(0+0=0\).
+Assim como fomos capazes de avaliar um limite envolvendo uma combinação algébrica de funções \(f\) e \(g\) observando os limites de \(f\) e \(g\) (consulte Introdução aos limites),
+podemos avaliar o limite de uma sequência cujos termos são combinações algébricas de \(a_n\) e \(b_n\) avaliando os limites de \(\{a_n\}\) e \(\{b_n\}\).</p>
+
+<div class="box-note"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Algebraic_Limit_Laws"></span><h5 class="box-legend editable"><span class="lt-icon-default">Leis Algébricas dos Limites</span></h5>
+
+<p class="lt-math-2562">Dadas as sequências \(\{a_n\}\) e \(\{b_n\}\) e um número real qualquer \(c\), se existem constantes \(A\) e \(B\) tais que \(\displaystyle \lim_{n&rarr;&infin;}a_n=A\) e \(\displaystyle \lim_{n&rarr;&infin;}b_n=B\), então</p>
+
+<ol start="1" style="list-style-type: lower-roman;">
+    <li class="lt-math-2562">\(\displaystyle \lim_{n&rarr;&infin;}c=c\)</li>
+    <li class="lt-math-2562">\(\displaystyle \lim_{n&rarr;&infin;}ca_n=c\lim_{n&rarr;&infin;}a_n=cA\)</li>
+    <li class="lt-math-2562">\(\displaystyle \lim_{n&rarr;&infin;}(a_n&plusmn;b_n)=\lim_{n&rarr;&infin;}a_n&plusmn;\lim_{n&rarr;&infin;}b_n=A&plusmn;B\)</li>
+    <li class="lt-math-2562">\(\displaystyle \lim_{n&rarr;&infin;}(a_n&sdot;b_n)=\big(\lim_{n&rarr;&infin;}a_n\big)&sdot;\big(\lim_{n&rarr;&infin;}b_n\big)=A&sdot;B\)</li>
+    <li class="lt-math-2562">\(\displaystyle \lim_{n&rarr;&infin;}\left(\dfrac{a_n}{b_n}\right)=\dfrac{\lim_{n&rarr;&infin;}a_n}{\lim_{n&rarr;&infin;}b_n}=\dfrac{A}{B}\), desde que \(B&ne;0\) e \(b_n&ne;0\) para todo n.</li>
+</ol>
+</div></div>
+
+<div class="box-note"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Proof"></span><h5 class="box-legend editable"><span class="lt-icon-default">Demonstração</span></h5>
+
+<p class="lt-math-2562">Mostraremos a parte iii.</p>
+
+<p class="lt-math-2562">Seja \(&#1013;&gt;0\). Como \(\displaystyle \lim_{n&rarr;&infin;}a_n=A\), um número inteiro positivo \(N_1\) 
+tal que \(|a_n&minus;A|&lt;&epsilon;/2\) para todo \(n&ge;N_1\). Como \(\displaystyle \lim_{n&rarr;&infin;}b_n=B\), existe \(N_2\) inteiro positivo tal que \(|b_n&minus;B|&lt;&epsilon;/2\) para todo \(n&ge;N_2\). 
+Seja \(N\) o maior número enter \(N_1\) e \(N_2\). Portanto, para todo \(n&ge;N\), \(|(a_n+b_n)&minus;(A+B)|&le;|a_n&minus;A|+|b_n&minus;B|&lt;\dfrac{&epsilon;}{2}+\dfrac{&epsilon;}{2}=&epsilon;\).</p>
+
+<p class="mt-align-right lt-math-2562">&#9633;</p>
+</div></div>
+
+<p class="lt-math-2562">As leis algébricas dos limites nos permitem avaliar limites para muitas sequências. Por exemplo, considere a sequência \(a_n={\dfrac{1}{n^2}}\). 
+Como mostrado anteriormente, \(\displaystyle \lim_{n&rarr;&infin;}\dfrac{1}{n}=0\). Portanto, \(\displaystyle \lim_{n&rarr;&infin;}a_n=0\) Similarmente, para todo inteiro positivo \(k\), podemos concluir que</p>
+<p class="mt-align-center lt-math-2562">\[\lim_{n&rarr;&infin;}\dfrac{1}{n^k}=0. \nonumber \]</p>
+
+<p class="lt-math-2562">No próximo exemplo, utilizamos esse fato juntamente com as leis de limite para calcular limites para outras sequências.</p>
+
+<div class="box-example"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Example_.5C(.5CPageIndex.7B3.7D.5C):_Determining_Convergence_and_Finding_Limits"></span><h5 class="box-legend editable"><span class="lt-icon-default">Exemplo \(\PageIndex{3}\): Determinando Convergência e Encontrando Limites</span></h5>
+
+<p class="lt-math-2562">Para cada uma das seguintes sequências, determine se a sequência converge ou não. Se convergir, encontre seu limite.</p>
+
+<ol start="1" style="list-style-type: lower-alpha;">
+    <li class="lt-math-2562">\(\left\{5&minus;\dfrac{3}{n^2}\right\}\)</li>
+    <li class="lt-math-2562">\(\left\{\dfrac{3n^4&minus;7n^2+5}{6&minus;4n^4}\right\}\)</li>
+    <li class="lt-math-2562">\(\left\{\dfrac{2^n}{n^2}\right\}\)</li>
+    <li class="lt-math-2562">\(\left\{\left(1+\dfrac{4}{n}\right)^n\right\}\)</li>
+</ol>
+
+<p class="lt-math-2562"><strong>Solução</strong></p>
+
+<p class="lt-math-2562">a. Sabemos que \(\displaystyle \lim_{n&rarr;&infin;}\dfrac{1}{n}=0\). Usando este fato, concluímos que</p>
+
+<p class="mt-align-center lt-math-2562">\(\displaystyle \lim_{n&rarr;&infin;}\dfrac{1}{n^2}=\lim_{n&rarr;&infin;}\dfrac{1}{n}.\lim_{n&rarr;&infin;}\dfrac{1}{n}=0.\)</p>
+
+<p class="lt-math-2562">Portanto,</p>
+
+<p class="mt-align-center lt-math-2562">\(\displaystyle \lim_{n&rarr;&infin;}\left(5&minus;\dfrac{3}{n^2}\right)=\lim_{n&rarr;&infin;}5&minus;3\lim_{n&rarr;&infin;}\dfrac{1}{n^2}=5&minus;3.0=5.\)</p>
+
+<p class="lt-math-2562">A sequência converge e seu limite é 5.</p>
+
+<p class="lt-math-2562">b. Dividindo numerador e denominador por \(n^4\) e usando as leis de limite acima, temos</p>
+
+<p class="lt-math-2562">\[\begin{align*} \lim_{n&rarr;&infin;}\dfrac{3n^4&minus;7n^2+5}{6&minus;4n^4}&amp;=\lim_{n&rarr;&infin;}\dfrac{3&minus;\dfrac{7}{n^2}+\dfrac{5}{n^4}}{\dfrac{6}{n^4}&minus;4}\\[5pt]<br />
+&amp;=\dfrac{\lim_{n&rarr;&infin;}(3&minus;\dfrac{7}{n^2}+\dfrac{5}{n^4})}{\lim_{n&rarr;&infin;}(\dfrac{6}{n^4}&minus;4)}\\[5pt]<br />
+&amp;=\dfrac{\lim_{n&rarr;&infin;}(3)&minus;\lim_{n&rarr;&infin;}\dfrac{7}{n^2}+\lim_{n&rarr;&infin;}\dfrac{5}{n^4}}{\lim_{n&rarr;&infin;}\dfrac{6}{n^4}&minus;\lim_{n&rarr;&infin;}(4)}\\[5pt]<br />
+&amp;=\dfrac{\lim_{n&rarr;&infin;}(3)&minus;7&sdot;\lim_{n&rarr;&infin;}\dfrac{1}{n^2}+5&sdot;\lim_{n&rarr;&infin;}\dfrac{1}{n^4}}{6&sdot;\lim_{n&rarr;&infin;}\dfrac{1}{n^4}&minus;\lim_{n&rarr;&infin;}(4)}\\[5pt]<br />
+&amp;=\dfrac{3&minus;7&sdot;0+5&sdot;0}{6&sdot;0&minus;4}=&minus;\dfrac{3}{4}.\end{align*}\]</p>
+
+<p class="lt-math-2562">A sequência converge e seu limite é \(&minus;3/4\).</p>
+
+<p class="lt-math-2562">c. Considere a função correspondente \(f(x)=2^x/x^2\) definida em todos os números reais \(x&gt;0\). 
+Como \(2^x&rarr;&infin;\) e \(x^2&rarr;&infin;\) quando \(x&rarr;&infin;\), aplicamos a Regra de L&rsquo;H&ocirc;pital e obtemos</p>
+
+<p class="lt-math-2562">\[\begin{align*} \lim_{x&rarr;&infin;}\dfrac{2^x}{x^2}&amp;=\lim_{x&rarr;&infin;}\dfrac{2^x \ln2}{2x} &amp; &amp; \text{Derivando numerador e denominador.}\\[5pt]<br />
+&amp;=\lim_{x&rarr;&infin;}\dfrac{2^x(\ln2)^2}{2} &amp; &amp;  \text{Derivando novamente.}\\[5pt]<br />
+&amp;=&infin;.\end{align*}\]</p>
+
+<p class="lt-math-2562">Concluímos que a sequência diverge.</p>
+
+<p class="lt-math-2562">d. Considere a função \(f(x)=\left(1+\dfrac{4}{x}\right)^x\) definida em todos os números reais \(x&gt;0\). Esta função tem a forma indeterminada \(1^&infin;\) quando \(x&rarr;&infin;.\) Seja</p>
+
+<p class="mt-align-center lt-math-2562">\(\displaystyle y=\lim_{x&rarr;&infin;}\left(1+\dfrac{4}{x}\right)^x\).</p>
+
+<p class="lt-math-2562">Agora tomando o logaritmo natural de ambos os lados da equação, obtemos</p>
+
+<p class="mt-align-center lt-math-2562">\(\displaystyle \ln(y)=\ln\left[\lim_{x&rarr;&infin;}\left(1+\dfrac{4}{x}\right)^x\right]\).</p>
+
+<p class="lt-math-2562">Como a função \(f(x)=\ln(x)\) é contínua em seu domínio, podemos trocar de posição o limite e o logaritmo natural. Portanto,</p>
+
+<p class="mt-align-center lt-math-2562">\(\displaystyle \ln(y)=\lim_{x&rarr;&infin;}\left[\ln\left(1+\dfrac{4}{x}\right)^x\right]\).</p>
+
+<p class="lt-math-2562">Usando propriedades de logaritmos, escrevemos</p>
+
+<p class="mt-align-center lt-math-2562">\(\displaystyle \lim_{x&rarr;&infin;}\left[\ln\left(1+\dfrac{4}{x}\right)^x\right]=\lim_{x&rarr;&infin;}x\ln\left(1+\dfrac{4}{x}\right)\).</p>
+
+<p class="lt-math-2562">Como o lado direito dessa equação tem a forma indeterminada \(&infin;&sdot;0\), reescreva-o como uma fração para aplicar a Regra de L&rsquo;H&ocirc;pital. Escreva</p>
+
+<p class="mt-align-center lt-math-2562">\(\displaystyle \lim_{x&rarr;&infin;}x\ln\left(1+\dfrac{4}{x}\right)=\lim_{x&rarr;&infin;}\dfrac{\ln\left(1+4/x\right)}{1/x}\).</p>
+
+<p class="lt-math-2562">Como o lado direito está agora na forma indeterminada 0/0, podemos aplicar novamete a Regra de L&rsquo;H&ocirc;pital. Concluímos que</p>
+
+<p class="mt-align-center lt-math-2562">\(\displaystyle \lim_{x&rarr;&infin;}\dfrac{\ln(1+4/x)}{1/x}=\lim_{x&rarr;&infin;}\dfrac{4}{1+4/x}=4.\)</p>
+
+<p class="lt-math-2562">Portanto, \(\ln(y)=4\) and \(y=e^4\). Assim, como \(\displaystyle \lim_{x&rarr;&infin;}\left(1+\dfrac{4}{x}\right)^x=e^4\), podemos concluir que a sequência \(\left\{\left(1+\dfrac{4}{n}\right)^n\right\}\) converge para \(e^4\).</p>
+</div></div>
+
+<div class="box-exercise"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Exercise_.5C(.5CPageIndex.7B3.7D.5C)"></span><h5 class="box-legend editable"><span class="lt-icon-default">Exercício \(\PageIndex{3}\)</span></h5>
+
+<p class="lt-math-2562">Considere a sequência \(\left\{(5n^2+1)/e^n\right\}.\) Determine se ela é ou não convergente. Se converge, encontre seu limite.</p>
+
+<dl>
+    <dt>Dica</dt>
+    <dd>
+    <p class="lt-math-2562">Use a Regra de L&rsquo;H&ocirc;pital.</p>
+    </dd>
+</dl>
+
+<dl>
+    <dt><strong class="emphasis bold">Resposta</strong></dt>
+    <dd>
+    <p class="lt-math-2562">A sequência converge e seu limite é \(0\)</p>
+    </dd>
+</dl>
+</div></div>
+
+<p class="lt-math-2562">Lembre que se \(f\) é uma função contínua no valor \(L\), então \(f(x)&rarr;f(L)\) quando \(x&rarr;L\). 
+Essa ideia também se aplica a sequências. Considere uma sequência \(a_n&rarr;L\) e uma função \(f\) que seja contínua em \(L\). Então \(f(a_n)&rarr;f(L)\).
+Essa propriedade geralmente nos permite encontrar limites para sequências complicadas. Por exemplo, considere a sequência \(\sqrt{5&minus;\dfrac{3}{n^2}}\).
+Do Exemplo a. conhecemos a sequência \(5&minus;\dfrac{3}{n^2}&rarr;5\). Como \(\sqrt{x}\) é uma função contínua em \(x=5\),</p>
+
+<p class="mt-align-center lt-math-2562">\[\lim_{n&rarr;&infin;}\sqrt{5&minus;\dfrac{3}{n^2}}=\sqrt{\lim_{n&rarr;&infin;}(5&minus;\dfrac{3}{n^2})}=\sqrt{5}.\nonumber \]</p>
+
+<div class="box-note"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Continuous_Functions_Defined_on_Convergent_Sequences"></span><h5 class="box-legend editable"><span class="lt-icon-default">Funções Contínuas Definidas em Sequêncais Convergentes</span></h5>
+
+<p class="lt-math-2562">Considere uma sequência \(\{a_n\}\) e suponha que existe um número real \(L\) tal que a sequência \(\{a_n\}\) converge para \(L\).
+Suponha que \(f\) seja uma função contínua em \(L\). Então existe um inteiro \(N\) tal que \(f\) é definida em todos os valores \(a_n\) para \(n&ge;N\), e a sequência \(\{f(a_n)\}\)
+converge para \(f(L)\) (Figura \(\PageIndex{4}\)).</p>
+
+<figure><img alt="A graph in quadrant 1 with points (a_1, f(a_1)), (a_3, f(a_3)), (L, f(L)), (a_4, f(a_4)), and (a_2, f(a_2)) connected by smooth curves." class="internal" loading="lazy" src="https://math.libretexts.org/@api/deki/files/13049/9.1.1.png?revision=1" />
+<figcaption>Figura \(\PageIndex{4}\): Como \(f\) é uma função contínua, quando as entradas \(a_1,\,a_2,\,a_3,\,&hellip;\) se aproximam de \(L\), as saídas \(f(a_1),\,f(a_2),\,f(a_3),\,&hellip;\) se aproximam de \(f(L)\).</figcaption>
+</figure>
+</div></div>
+
+<div class="box-note"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Proof_2"></span><h5 class="box-legend editable"><span class="lt-icon-default">Demonstração</span></h5>
+
+<p class="lt-math-2562">Seja \(&#1013;&gt;0.\) Como \(f\) é contínua em \(L\), existe \(&delta;&gt;0\) tal que \(|f(x)&minus;f(L)|&lt;&epsilon;\) se \(|x&minus;L|&lt;&delta;\). 
+Como a sequência \(\{a_n\}\) converge para \(L\), existe \(N\) tal que \(|a_n&minus;L|&lt;&delta;\) para todo \(n&ge;N\). Portanto, para todo \(n&ge;N\), \(|a_n&minus;L|&lt;&delta;\), 
+o que implica em \(|f(a_n)&minus;f(L)|&lt;&epsilon;\). Concluímos que a sequência \(\{f(a_n)\}\) converge para \(f(L)\).</p>
+
+<p class="mt-align-right lt-math-2562">&#9633;</p>
+</div></div>
+
+<div class="box-example"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Example_.5C(.5CPageIndex.7B4.7D.5C):_Limits_Involving_Continuous_Functions_Defined_on_Convergent_Sequences"></span><h5 class="box-legend editable"><span class="lt-icon-default">Exemplo \(\PageIndex{4}\): Limites Envolvendo Funções Contínuas Definidas sobre Sequências Convergentes</span></h5>
+
+<p class="lt-math-2562">Determine quando a sequência \(\left\{\cos(3/n^2)\right\}\) converge. Se convergir, encontre seu limite.</p>
+
+<p class="lt-math-2562"><strong>Solução: </strong></p>
+
+<p class="lt-math-2562">Como a sequência \(\left\{3/n^2\right\}\) converge para \(0\) e \(\cos x\) é contínua em \(x=0\), podemos concluir que a sequência \(\left\{\cos(3/n^2)\right\}\) converge e</p>
+
+<p class="mt-align-center lt-math-2562">\(\displaystyle \lim_{n&rarr;&infin;}\cos\left(\dfrac{3}{n^2}\right)=\cos 0=1.\)</p>
+</div></div>
+
+<div class="box-exercise"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Exercise_.5C(.5CPageIndex.7B4.7D.5C)"></span><h5 class="box-legend editable"><span class="lt-icon-default">Exercício \(\PageIndex{4}\)</span></h5>
+
+<p class="lt-math-2562">Determine se a sequência \(\left\{\sqrt{\dfrac{2n+1}{3n+5}}\right\}\) converge. Se convergir, encontre seu limite..</p>
+
+<dl>
+    <dt><strong class="emphasis bold">Dica</strong></dt>
+    <dd>
+    <p class="lt-math-2562">Considere a sequência \(\left\{\dfrac{2n+1}{3n+5}\right\}.\)</p>
+    </dd>
+</dl>
+
+<dl>
+    <dt><strong class="emphasis bold">Resposta</strong></dt>
+    <dd>
+    <p class="lt-math-2562">A sequência converge e seu limite é \(\sqrt{2/3}\).</p>
+    </dd>
+</dl>
+</div></div>
+
+<p class="lt-math-2562">Outro teorema envolvendo limites de sequências é uma extensão do Teorema do Confronto para limites discutido em Introdução aos Limites.</p>
+
+<div class="box-note"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Squeeze_Theorem_for_Sequences"></span><h5 class="box-legend editable"><span class="lt-icon-default">Teorema do Confronto para Sequências</span></h5>
+
+<p class="lt-math-2562">Consider sequences \(\{a_n\}, \, \{b_n\},\) and \(\{c_n\}\). Suppose there exists an integer \(N\) such that</p>
+
+<p class="mt-align-center lt-math-2562">\(a_n&le;b_n&le;c_n\) for all \(n&ge;N.\)</p>
+
+<p class="lt-math-2562">If there exists a real number \(L\) such that</p>
+
+<p class="mt-align-center lt-math-2562">\[\lim_{n&rarr;&infin;}a_n=L=\lim_{n&rarr;&infin;}c_n, \nonumber \]</p>
+
+<p class="lt-math-2562">then \(\{b_n\}\) converges and \(\displaystyle \lim_{n&rarr;&infin;}b_n=L\) (Figure \(\PageIndex{5}\)).</p>
+
+<figure><img alt="A graph in quadrant 1 with the line y = L and the x axis labeled as the n axis. Points are plotted above and below the line, converging to L as n goes to infinity. Points a_n, b_n, and c_n are plotted at the same n-value. A_n and b_n are above y = L, and c_n is below it." class="internal" loading="lazy" src="https://math.libretexts.org/@api/deki/files/13050/9.1.2.png?revision=1" />
+<figcaption>Figure \(\PageIndex{5}\): Each term bn satisfies \(a_n&le;b_n&le;c_n\) and the sequences \(\{a_n\}\) and \(\{c_n\}\) converge to the same limit, so the sequence \(\{b_n\}\) must converge to the same limit as well.</figcaption>
+</figure>
+</div></div>
+
+<div class="box-note"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Proof_3"></span><h5 class="box-legend editable"><span class="lt-icon-default">Proof</span></h5>
+
+<p class="lt-math-2562">Let \(&epsilon;&gt;0.\) Since the sequence \(\{a_n\}\) converges to \(L\), there exists an integer \(N_1\) such that \(|a_n&minus;L|&lt;&epsilon;\) for all \(n&ge;N_1\). Similarly, since \(\{c_n\}\) converges to \(L\), there exists an integer \(N_2\) such that \(|c_n&minus;L|&lt;&epsilon;\) for all \(n&ge;N_2\). By assumption, there exists an integer \(N\) such that \(a_n&le;b_n&le;c_n\) for all \(n&ge;N\). Let \(M\) be the largest of \(N_1,\, N_2\), and \(N\). We must show that \(|b_n&minus;L|&lt;&epsilon;\) for all \(n&ge;M\). For all \(n&ge;M\),</p>
+
+<p class="mt-align-center lt-math-2562">\[&minus;&epsilon;&lt;&minus;|a_n&minus;L|&le;a_n&minus;L&le;b_n&minus;L&le;c_n&minus;L&le;|c_n&minus;L|&lt;&epsilon;\nonumber \]</p>
+
+<p class="lt-math-2562">Therefore, \(&minus;&epsilon;&lt;b_n&minus;L&lt;&epsilon;,\) and we conclude that \(|b_n&minus;L|&lt;&epsilon;\) for all \(n&ge;M\), and we conclude that the sequence \({b_n}\) converges to \(L\).</p>
+
+<p class="mt-align-right lt-math-2562">&#9633;</p>
+</div></div>
+
+<div class="box-example"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Example_.5C(.5CPageIndex.7B5.7D.5C):_Using_the_Squeeze_Theorem"></span><h5 class="box-legend editable"><span class="lt-icon-default">Example \(\PageIndex{5}\): Using the Squeeze Theorem</span></h5>
+
+<p class="lt-math-2562">Use the Squeeze Theorem to find the limit of each of the following sequences.</p>
+
+<ol start="1" style="list-style-type: lower-alpha;">
+    <li class="lt-math-2562">\(\left\{\dfrac{\cos\, n}{n^2}\right\}\)</li>
+    <li class="lt-math-2562">\(\left\{\left(&minus;\dfrac{1}{2}\right)^n\right\}\)</li>
+</ol>
+
+<p class="lt-math-2562"><strong>Solution</strong></p>
+
+<p class="lt-math-2562">a. Since \(&minus;1&le;\cos n&le;1\) for all integers \(n\), we have</p>
+
+<p class="mt-align-center lt-math-2562">\(&minus;\dfrac{1}{n^2} &le; \dfrac{\cos n}{n^2}&le;\dfrac{1}{n^2}.\)</p>
+
+<p class="lt-math-2562">Since \(&minus;1/n^2&rarr;0\) and \(1/n^2&rarr;0\), we conclude that \(\cos n/n^2&rarr;0\) as well.</p>
+
+<p class="lt-math-2562">b. Since</p>
+
+<p class="mt-align-center lt-math-2562">\(&minus;\dfrac{1}{2^n} &le; \left(&minus;\dfrac{1}{2}\right)^n &le; \dfrac{1}{2^n}\)</p>
+
+<p class="lt-math-2562">for all positive integers \(n, \, &minus;1/2^n&rarr;0\) and \(1/2^n&rarr;0,\) we can conclude that \((&minus;1/2)^n&rarr;0.\)</p>
+</div></div>
+
+<div class="box-exercise"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Exercise_.5C(.5CPageIndex.7B5.7D.5C)"></span><h5 class="box-legend editable"><span class="lt-icon-default">Exercise \(\PageIndex{5}\)</span></h5>
+
+<p class="lt-math-2562">Find \(\displaystyle \lim_{n&rarr;&infin;}\dfrac{2n&minus;\sin\, n}{n}.\)</p>
+
+<dl>
+    <dt><strong class="emphasis bold">Hint</strong></dt>
+    <dd>
+    <p class="lt-math-2562">Use the fact that \(&minus;1&le;\sin n&le;1.\)</p>
+    </dd>
+</dl>
+
+<dl>
+    <dt><strong class="emphasis bold">Answer</strong></dt>
+    <dd>
+    <p class="lt-math-2562">\(2\)</p>
+    </dd>
+</dl>
+</div></div>
+
+<p class="lt-math-2562">Using the idea from Example <span>\(\PageIndex{5}\) b</span> we conclude that \(r^n&rarr;0\) for any real number r such that \(&minus;1&lt;r&lt;0.\) If \(r&lt;&minus;1\), the sequence \({r^n}\) diverges because the terms oscillate and become arbitrarily large in magnitude. If \(r=&minus;1\), the sequence \({r^n}={(&minus;1)^n}\) diverges, as discussed earlier. Here is a summary of the properties for geometric sequences.</p>
+
+<p class="mt-align-center lt-math-2562">\(r^n&rarr;0 \text{ if } |r|&lt;1\)</p>
+
+<p class="mt-align-center lt-math-2562">\(r^n&rarr;1\text{ if }  r=1\)</p>
+
+<p class="mt-align-center lt-math-2562">\(r^n&rarr;&infin;\text{ if } r&gt;1\)</p>
+
+<p class="mt-align-center lt-math-2562">\(\left\{r^n\right\} \text{ diverges if }  r&le;&minus;1\)</p>
+
+</div><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section" id="section_3"><span id="Bounded_Sequences"></span><h2 class="lt-math-2562 editable">Bounded Sequences</h2>
+
+<p class="lt-math-2562">We now turn our attention to one of the most important theorems involving sequences: the Monotone Convergence Theorem. Before stating the theorem, we need to introduce some terminology and motivation. We begin by defining what it means for a sequence to be bounded.</p>
+
+<div class="box-definition"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Definition:_Bound_Sequences"></span><h5 class="box-legend editable"><span class="lt-icon-default">Definition: Bound Sequences</span></h5>
+
+<p class="lt-math-2562">A sequence \(\{a_n\}\) is <strong>bounded above </strong>if there exists a real number \(M\) such that</p>
+
+<p class="mt-align-center lt-math-2562">\(a_n&le;M\)</p>
+
+<p class="lt-math-2562">for all positive integers \(n\).</p>
+
+<p class="lt-math-2562">A sequence \(\{a_n\}\) is <strong>bounded below</strong> if there exists a real number \(m\) such that</p>
+
+<p class="mt-align-center lt-math-2562">\(m&le;a_n\)</p>
+
+<p class="lt-math-2562">for all positive integers \(n\).</p>
+
+<p class="lt-math-2562">A sequence \(\{a_n\}\) is a <strong>bounded sequence</strong> if it is bounded above and bounded below.</p>
+
+<p class="lt-math-2562">If a sequence is not bounded, it is an <strong>unbounded sequence.</strong></p>
+</div></div>
+
+<p class="lt-math-2562">For example, the sequence \(\{1/n\}\) is bounded above because \(1/n&le;1\) for all positive integers \(n\). It is also bounded below because \(1/n&ge;0\) for all positive integers \(n\). Therefore, \(\{1/n\}\) is a bounded sequence. On the other hand, consider the sequence \(\left\{2^n\right\}\). Because \(2^n&ge;2\) for all \(n&ge;1\), the sequence is bounded below. However, the sequence is not bounded above. Therefore, \(\left\{2^n\right\}\) is an unbounded sequence.</p>
+
+<p class="lt-math-2562">We now discuss the relationship between boundedness and convergence. Suppose a sequence \(\{a_n\}\) is unbounded. Then it is not bounded above, or not bounded below, or both. In either case, there are terms an that are arbitrarily large in magnitude as \(n\) gets larger. As a result, the sequence \(\{a_n\}\) cannot converge. Therefore, being bounded is a necessary condition for a sequence to converge.</p>
+
+<div class="box-note"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Convergent_Sequences_Are_Bounded"></span><h5 class="box-legend editable"><span class="lt-icon-default">Convergent Sequences Are Bounded</span></h5>
+
+<p class="lt-math-2562">If a sequence \(\{a_n\}\) converges, then it is bounded.</p>
+</div></div>
+
+<p class="lt-math-2562">Note that a sequence being bounded is not a sufficient condition for a sequence to converge. For example, the sequence \(\left\{(&minus;1)^n\right\}\) is bounded, but the sequence diverges because the sequence oscillates between \(1\) and \(&minus;1\) and never approaches a finite number. We now discuss a sufficient (but not necessary) condition for a bounded sequence to converge.</p>
+
+<p class="lt-math-2562">Consider a bounded sequence \(\{a_n\}\). Suppose the sequence \(\{a_n\}\) is increasing. That is, \(a_1&le;a_2&le;a_3&hellip;.\) Since the sequence is increasing, the terms are not oscillating. Therefore, there are two possibilities. The sequence could diverge to infinity, or it could converge. However, since the sequence is bounded, it is bounded above and the sequence cannot diverge to infinity. We conclude that \(\{a_n\}\) converges. For example, consider the sequence</p>
+
+<p class="mt-align-center lt-math-2562">\[\left\{\dfrac{1}{2},\,\dfrac{2}{3},\,\dfrac{3}{4},\,\dfrac{4}{5},\,&hellip;\right\}. \nonumber \]</p>
+
+<p class="lt-math-2562">Since this sequence is increasing and bounded above, it converges. Next, consider the sequence</p>
+
+<p class="mt-align-center lt-math-2562">\[\left\{2,\,0,\,3,\,0,\,4,\,0,\,1,\,&minus;\dfrac{1}{2},\,&minus;\dfrac{1}{3},\,&minus;\dfrac{1}{4},\,&hellip;\right\}. \nonumber \]</p>
+
+<p class="lt-math-2562">Even though the sequence is not increasing for all values of \(n\), we see that \(&minus;1/2&lt;&minus;1/3&lt;&minus;1/4&lt;&#8943;\). Therefore, starting with the eighth term, \(a_8=&minus;1/2\), the sequence is increasing. In this case, we say the sequence is eventually increasing. Since the sequence is bounded above, it converges. It is also true that if a sequence is decreasing (or eventually decreasing) and bounded below, it also converges.</p>
+
+<div class="box-definition"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Definition"></span><h5 class="box-legend editable"><span class="lt-icon-default">Definition</span></h5>
+
+<p class="lt-math-2562">A sequence \(\{a_n\}\) is increasing for all \(n&ge;n_0\) if</p>
+
+<p class="mt-align-center lt-math-2562">\(a_n&le;a_{n+1}\) for all \(n&ge;n_0\).</p>
+
+<p class="lt-math-2562">A sequence \(\{a_n\}\) is decreasing for all \(n&ge;n_0\) if</p>
+
+<p class="mt-align-center lt-math-2562">\(a_n &ge; a_{n+1}\) for all \(n&ge;n_0\).</p>
+
+<p class="lt-math-2562">A sequence \(\{a_n\}\) is a<strong> </strong><em>monotone sequence<strong> </strong></em>for all \(n&ge;n_0\) if it is increasing for all \(n&ge;n_0\) or decreasing for all \(n&ge;n_0\).</p>
+</div></div>
+
+<p class="lt-math-2562">We now have the necessary definitions to state the Monotone Convergence Theorem, which gives a sufficient condition for convergence of a sequence.</p>
+
+<div class="box-definition"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Definition:_Monotone_Convergence_Theorem"></span><h5 class="box-legend editable"><span class="lt-icon-default">Definition: Monotone Convergence Theorem</span></h5>
+
+<p class="lt-math-2562">If \(\{a_n\}\) is a bounded sequence and there exists a positive integer \(n_0\) such that \(\{a_n\}\) is monotone for all \(n&ge;n_0\), then \(\{a_n\}\) converges.</p>
+</div></div>
+
+<p class="lt-math-2562">The proof of this theorem is beyond the scope of this text. Instead, we provide a graph to show intuitively why this theorem makes sense (Figure \(\PageIndex{6}\)).</p>
+
+<figure><img alt="A graph in quadrant 1 with the x and y axes labeled n and a_n, respectively. A dotted horizontal is drawn from the a_n axis into quadrant 1. Many points are plotted under the dotted line, increasing in a_n value and converging to the dotted line." style="width: 456px; height: 233px;" width="456px" height="233px" class="internal" loading="lazy" src="https://math.libretexts.org/@api/deki/files/2969/CNX_Calc_Figure_09_01_008.jpeg?revision=1&amp;size=bestfit&amp;width=456&amp;height=233" />
+<figcaption>Figure \(\PageIndex{6}\): Since the sequence \(\{a_n\}\) is increasing and bounded above, it must converge.</figcaption>
+</figure>
+
+<p class="lt-math-2562">In the following example, we show how the Monotone Convergence Theorem can be used to prove convergence of a sequence.</p>
+
+<div class="box-example"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Example_.5C(.5CPageIndex.7B6.7D.5C):_Using_the_Monotone_Convergence_Theorem"></span><h5 class="box-legend editable"><span class="lt-icon-default">Example \(\PageIndex{6}\): Using the Monotone Convergence Theorem</span></h5>
+
+<p class="lt-math-2562">For each of the following sequences, use the Monotone Convergence Theorem to show the sequence converges and find its limit.</p>
+
+<ol start="1" style="list-style-type: lower-alpha;">
+    <li class="lt-math-2562">\(\left\{\dfrac{4^n}{n!}\right\}\)</li>
+    <li class="lt-math-2562">\(\{a_n\}\) defined recursively such that<br />
+    <br />
+    \(a_1=2\) and \(a_{n+1}=\dfrac{a_n}{2}+\dfrac{1}{2a_n}\) for all \(n&ge;2.\)</li>
+</ol>
+
+<p class="lt-math-2562"><strong>Solution</strong></p>
+
+<p class="lt-math-2562">a. Writing out the first few terms, we see that</p>
+
+<p class="mt-align-center lt-math-2562">\(\left\{\dfrac{4^n}{n!}\right\}=\left\{4,\,8,\,\dfrac{32}{3},\,\dfrac{32}{3},\,\dfrac{128}{15},\,&hellip;\right\}.\)</p>
+
+<p class="lt-math-2562">At first, the terms increase. However, after the third term, the terms decrease. In fact, the terms decrease for all \(n&ge;3\). We can show this as follows.</p>
+
+<p class="mt-align-center lt-math-2562">\(a_{n+1}=\dfrac{4^{n+1}}{(n+1)!}=\dfrac{4}{n+1}&sdot;\dfrac{4^n}{n!}=\dfrac{4}{n+1}&sdot;a_n&le;a_n\) if \(n&ge;3.\)</p>
+
+<p class="lt-math-2562">Therefore, the sequence is decreasing for all \(n&ge;3\). Further, the sequence is bounded below by \(0\) because \(4n/n!&ge;0\) for all positive integers \(n\). Therefore, by the Monotone Convergence Theorem, the sequence converges.</p>
+
+<p class="lt-math-2562">To find the limit, we use the fact that the sequence converges and let \(\displaystyle L=\lim_{n&rarr;&infin;}a_n\). Now note this important observation. Consider \(\displaystyle \lim_{n&rarr;&infin;}a_{n+1}\). Since</p>
+
+<p class="mt-align-center lt-math-2562">\(\{a_{n+1}\}=\{a_2,\,a_3,\,a_4,\,&hellip;\},\)</p>
+
+<p class="lt-math-2562">the only difference between the sequences \(\{a_{n+1}\}\) and \(\{a_n\}\) is that \(\{a_{n+1}\}\) omits the first term. Since a finite number of terms does not affect the convergence of a sequence,</p>
+
+<p class="mt-align-center lt-math-2562">\(\displaystyle \lim_{n&rarr;&infin;}a_{n+1}=\lim_{n&rarr;&infin;}a_n=L.\)</p>
+
+<p class="lt-math-2562">Combining this fact with the equation</p>
+
+<p class="mt-align-center lt-math-2562">\(a_{n+1}=\dfrac{4}{n+1}a_n\)</p>
+
+<p class="lt-math-2562">and taking the limit of both sides of the equation</p>
+
+<p class="mt-align-center lt-math-2562">\(\displaystyle \lim_{n&rarr;&infin;}a_{n+1}=\lim_{n&rarr;&infin;}\dfrac{4}{n+1}a_n\),</p>
+
+<p class="lt-math-2562">we can conclude that</p>
+
+<p class="mt-align-center lt-math-2562">\(L=0&sdot;L=0.\)</p>
+
+<p class="lt-math-2562">b. Writing out the first several terms,</p>
+
+<p class="mt-align-center lt-math-2562">\(\left\{2,\,\dfrac{5}{4},\,\dfrac{41}{40},\,\dfrac{3281}{3280},\,&hellip;\right\}.\)</p>
+
+<p class="lt-math-2562">we can conjecture that the sequence is decreasing and bounded below by \(1\). To show that the sequence is bounded below by \(1\), we can show that</p>
+
+<p class="mt-align-center lt-math-2562">\(\dfrac{a_n}{2}+\dfrac{1}{2a_n}&ge;1.\)</p>
+
+<p class="lt-math-2562">To show this, first rewrite</p>
+
+<p class="mt-align-center lt-math-2562">\(\dfrac{a_n}{2}+\dfrac{1}{2a_n}=\dfrac{a^2_n+1}{2a_n}\).</p>
+
+<p class="lt-math-2562">Since \(a_1&gt;0\) and \(a_2\) is defined as a sum of positive terms, \(a_2&gt;0.\) Similarly, all terms \(a_n&gt;0\). Therefore,</p>
+
+<p class="mt-align-center lt-math-2562">\(\dfrac{a^2n+1}{2a_n}&ge;1\)</p>
+
+<p class="lt-math-2562">if and only if</p>
+
+<p class="mt-align-center lt-math-2562">\(a^2_n+1&ge;2a_n\).</p>
+
+<p class="lt-math-2562">Rewriting the inequality \(a^2_n+1&ge;2a_n\) as \(a^2_n&minus;2a_n+1&ge;0\), and using the fact that</p>
+
+<p class="mt-align-center lt-math-2562">\(a^2_n&minus;2a_n+1=(a_n&minus;1)^2&ge;0\)</p>
+
+<p class="lt-math-2562">because the square of any real number is nonnegative, we can conclude that</p>
+
+<p class="mt-align-center lt-math-2562">\(\dfrac{a^n}{2}+\dfrac{1}{2a_n}&ge;1.\)</p>
+
+<p class="lt-math-2562">To show that the sequence is decreasing, we must show that \(a_{n+1}&le;a_n\) for all \(n&ge;1\). Since \(1&le;a^2_n\), it follows that</p>
+
+<p class="mt-align-center lt-math-2562">\(a^2_n+1&le;2a^2_n\).</p>
+
+<p class="lt-math-2562">Dividing both sides by \(2a_n\), we obtain</p>
+
+<p class="mt-align-center lt-math-2562">\(\dfrac{a_n}{2}+\dfrac{1}{2a_n}&le;a_n.\)</p>
+
+<p class="lt-math-2562">Using the definition of \(a_{n+1}\), we conclude that</p>
+
+<p class="mt-align-center lt-math-2562">\(a_{n+1}=\dfrac{a_n}{2}+\dfrac{1}{2a_n}&le;a_n\).</p>
+
+<p class="lt-math-2562">Since \(\{a_n\}\) is bounded below and decreasing, by the Monotone Convergence Theorem, it converges.</p>
+
+<p class="lt-math-2562">To find the limit, let \(\displaystyle L=\lim_{n&rarr;&infin;}a_n\). Then using the recurrence relation and the fact that \(\displaystyle \lim_{n&rarr;&infin;}a_n=\lim_{n&rarr;&infin;}a_{n+1}\), we have</p>
+
+<p class="mt-align-center lt-math-2562">\(\displaystyle \lim_{n&rarr;&infin;}a_{n+1}=\lim_{n&rarr;&infin;}(\dfrac{a_n}{2}+\dfrac{1}{2a_n})\),</p>
+
+<p class="lt-math-2562">and therefore</p>
+
+<p class="mt-align-center lt-math-2562">\(L=\dfrac{L}{2}+\dfrac{1}{2L}\).</p>
+
+<p class="lt-math-2562">Multiplying both sides of this equation by \(2L\), we arrive at the equation</p>
+
+<p class="mt-align-center lt-math-2562">\(2L^2=L^2+1\).</p>
+
+<p class="lt-math-2562">Solving this equation for \(L,\) we conclude that \(L^2=1\), which implies \(L=&plusmn;1\). Since all the terms are positive, the limit \(L=1\).</p>
+</div></div>
+
+<div class="box-exercise"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Exercise_.5C(.5CPageIndex.7B6.7D.5C)"></span><h5 class="box-legend editable"><span class="lt-icon-default">Exercise \(\PageIndex{6}\)</span></h5>
+
+<p class="lt-math-2562">Consider the sequence \(\{a_n\}\) defined recursively such that \(a_1=1\), \(a_n=a_{n&minus;1}/2\). Use the Monotone Convergence Theorem to show that this sequence converges and find its limit.</p>
+
+<dl>
+    <dt><strong class="emphasis bold">Hint</strong></dt>
+    <dd>
+    <p class="lt-math-2562">Show the sequence is decreasing and bounded below.</p>
+    </dd>
+</dl>
+
+<dl>
+    <dt><strong class="emphasis bold">Answer</strong></dt>
+    <dd>
+    <p class="lt-math-2562">\(0\).</p>
+    </dd>
+</dl>
+</div></div>
+
+<div class="box-definition"><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section"><span id="Definition:_Fibonacci_Numbers"></span><h5 class="box-legend editable"><span class="lt-icon-default">Definition: Fibonacci Numbers</span></h5>
+
+<p class="lt-math-2562">The <em>Fibonacci numbers</em> are defined recursively by the sequence \(\left\{F_n\right\}\) where \(F_0=0, \, F_1=1\) and for \(n&ge;2,\)</p>
+
+<p class="mt-align-center lt-math-2562">\(F_n=F_{n&minus;1}+F_{n&minus;2}.\)</p>
+
+<p class="lt-math-2562">Here we look at properties of the Fibonacci numbers.</p>
+
+<p class="lt-math-2562">1. Write out the first twenty Fibonacci numbers.</p>
+
+<p class="lt-math-2562">2. Find a closed formula for the Fibonacci sequence by using the following steps.</p>
+
+<p class="mt-indent-1 lt-math-2562">a. Consider the recursively defined sequence \({x_n}\) where \(x_0=c\) and \(x_{n+1}=ax_n\). Show that this sequence can be described by the closed formula \(x_n=ca^n\) for all \(n&ge;0.\)</p>
+
+<p class="mt-indent-1 lt-math-2562">b. Using the result from part a. as motivation, look for a solution of the equation</p>
+
+<p class="mt-indent-1 lt-math-2562">\(F_n=F_{n&minus;1}+F_{n&minus;2}\)</p>
+
+<p class="mt-indent-1 lt-math-2562">of the form \(F_n=c&lambda;^n\). Determine what two values for \(&lambda;\) will allow \(F_n\) to satisfy this equation.</p>
+
+<p class="mt-indent-1 lt-math-2562">c. Consider the two solutions from part b.: \(&lambda;_1\) and \(&lambda;_2\). Let \(F_n=c_1&lambda;_1^n+c_2&lambda;_2^n\). Use the initial conditions \(F_0\) and \(F_1\) to determine the values for the constants \(c_1\) and \(c_2\) and write the closed formula \(F_n\).</p>
+
+<p class="lt-math-2562">3. Use the answer in 2 c. to show that</p>
+
+<p class="mt-align-center lt-math-2562">\[\lim_{n&rarr;&infin;}\dfrac{F_{n+1}}{F_n}=\dfrac{1+\sqrt{5}}{2}.\nonumber \]</p>
+
+<p class="lt-math-2562">The number \(&#981;=(1+\sqrt{5})/2\) is known as the <strong>golden ratio</strong> (Figure and Figure).</p>
+
+<figure><img alt="This is a photo of a sunflower, particularly the curves of the seeds at its middle. The number of spirals in each direction is always a Fibonacci number." style="width: 325px; height: 244px;" width="325px" height="244px" class="internal" loading="lazy" src="https://math.libretexts.org/@api/deki/files/2970/CNX_Calc_Figure_09_01_004.jpeg?revision=1&amp;size=bestfit&amp;width=325&amp;height=244" />
+<figcaption>Figure \(\PageIndex{7}\): The seeds in a sunflower exhibit spiral patterns curving to the left and to the right. The number of spirals in each direction is always a Fibonacci number&mdash;always. (credit: modification of work by Esdras Calderan, Wikimedia Commons)</figcaption>
+</figure>
+
+<figure><img alt="This is a photo of the Parthenon, an ancient Greek temple that was designed with the proportions of the Golden Rule. The entire temple&rsquo;s front side fits perfectly into a rectangle with those proportions, as do the columns, the level between the columns and the roof, and a portion of the trim below the roof." style="width: 488px; height: 300px;" width="488px" height="300px" class="internal" loading="lazy" src="https://math.libretexts.org/@api/deki/files/2971/CNX_Calc_Figure_09_01_005.jpeg?revision=1&amp;size=bestfit&amp;width=488&amp;height=300" />
+<figcaption>Figure \(\PageIndex{8}\): The proportion of the golden ratio appears in many famous examples of art and architecture. The ancient Greek temple known as the Parthenon was designed with these proportions, and the ratio appears again in many of the smaller details. (credit: modification of work by TravelingOtter, Flickr).</figcaption>
+</figure>
+</div></div>
+
+</div><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section" id="section_4"><span id="Key_Concepts"></span><h2 class="lt-math-2562 editable">Key Concepts</h2>
+
+<ul>
+    <li class="lt-math-2562">To determine the convergence of a sequence given by an explicit formula \(a_n=f(n)\), we use the properties of limits for functions.</li>
+    <li class="lt-math-2562">If \(\{a_n\}\) and \(\{b_n\}\) are convergent sequences that converge to \(A\) and \(B,\) respectively, and \(c\) is any real number, then the sequence \(\{ca_n\} \)converges to \(c\cdot A,\) the sequences \(\{a_n&plusmn;b_n\}\) converge to \(A&plusmn;B,\) the sequence \(\{a_n\cdot b_n\}\) converges to \(A&sdot;B,\) and the sequence \(\{a_n/b_n\}\) converges to \(A/B,\) provided \(B&ne;0.\)</li>
+    <li class="lt-math-2562">If a sequence is bounded and monotone, then it converges, but not all convergent sequences are monotone.</li>
+    <li class="lt-math-2562">If a sequence is unbounded, it diverges, but not all divergent sequences are unbounded.</li>
+    <li class="lt-math-2562">The geometric sequence \(\left\{r^n\right\}\) converges if and only if \(|r|&lt;1\) or \(r=1\).</li>
+</ul>
+
+</div><div mt-section-origin="Bookshelves/Calculus/Calculus_(OpenStax)/09:_Sequences_and_Series/9.01:_Sequences" class="mt-section" id="section_5"><span id="Glossary"></span><h2 class="lt-math-2562 editable">Glossary</h2>
+
+<dl>
+    <dt><strong>arithmetic sequence</strong></dt>
+    <dd>a sequence in which the difference between every pair of consecutive terms is the same is called an arithmetic sequence</dd>
+</dl>
+
+<dl>
+    <dt><strong>bounded above</strong></dt>
+    <dd>a sequence \(\{a_n\}\) is bounded above if there exists a constant \(M\) such that \(a_n&le;M\) for all positive integers \(n\)</dd>
+</dl>
+
+<dl>
+    <dt><strong>bounded below</strong></dt>
+    <dd>a sequence \(\{a_n\}\) is bounded below if there exists a constant \(M\) such that \(M&le;a_n\) for all positive integers \(n\)</dd>
+</dl>
+
+<dl>
+    <dt><strong>bounded sequence</strong></dt>
+    <dd>a sequence \(\{a_n\}\) is bounded if there exists a constant \(M\) such that \(|a_n|&le;M\) for all positive integers \(n\)</dd>
+</dl>
+
+<dl>
+    <dt><strong>convergent sequence</strong></dt>
+    <dd>a convergent sequence is a sequence \(\{a_n\}\) for which there exists a real number \(L\) such that \(a_n\) is arbitrarily close to \(L\) as long as \(n\) is sufficiently large</dd>
+</dl>
+
+<dl>
+    <dt><strong>divergent sequence</strong></dt>
+    <dd>a sequence that is not convergent is divergent</dd>
+</dl>
+
+<dl>
+    <dt><strong>explicit formula</strong></dt>
+    <dd>a sequence may be defined by an explicit formula such that \(a_n=f(n)\)</dd>
+</dl>
+
+<dl>
+    <dt><strong>geometric sequence</strong></dt>
+    <dd>a sequence \(\{a_n\}\) in which the ratio \(a_{n+1}/a_n\) is the same for all positive integers \(n\) is called a geometric sequence</dd>
+</dl>
+
+<dl>
+    <dt><strong>index variable</strong></dt>
+    <dd>the subscript used to define the terms in a sequence is called the index</dd>
+</dl>
+
+<dl>
+    <dt><strong>limit of a sequence</strong></dt>
+    <dd>the real number \(L\) to which a sequence converges is called the limit of the sequence</dd>
+</dl>
+
+<dl>
+    <dt><strong>monotone sequence</strong></dt>
+    <dd>an increasing or decreasing sequence</dd>
+</dl>
+
+<dl>
+    <dt><strong>recurrence relation</strong></dt>
+    <dd>a recurrence relation is a relationship in which a term \(a_n\) in a sequence is defined in terms of earlier terms in the sequence</dd>
+</dl>
+
+<dl>
+    <dt><strong>sequence</strong></dt>
+    <dd>an ordered list of numbers of the form \(a_1,\,a_2,\,a_3,\,&hellip;\) is a sequence</dd>
+</dl>
+
+<dl>
+    <dt><strong>term</strong></dt>
+    <dd>the number \(a_n\) in the sequence \(\{a_n\}\) is called the \(n^{\text{th}}\) term of the sequence</dd>
+</dl>
+
+<dl>
+    <dt><strong>unbounded sequence</strong></dt>
+    <dd>a sequence that is not bounded is called unbounded</dd>
+</dl>
+</div>
+
+                    <footer class="mt-content-footer">
+<hr class="autoattribution-divider" /><div class="autoattribution"><p>This page titled <a target="_blank" class="internal mt-self-link" href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/09%3A_Sequences_and_Series/9.01%3A_Sequences" rel="internal">9.1: Sequences</a> is shared under a <a rel="nofollow" href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank">CC BY-NC-SA  4.0</a>  license and was authored, remixed, and/or curated by <a rel="nofollow" target="_blank" href="https://openstax.org/">Gilbert Strang &amp; Edwin &ldquo;Jed&rdquo; Herman</a> (<a rel="nofollow" target="_blank" href="https://openstax.org">OpenStax</a>)  via <a rel="nofollow" href="https://openstax.org/details/books/calculus-volume-1" target="_blank">source content</a> that was edited to the style and standards of the LibreTexts platform; a detailed edit history is available upon request.</p></div>
+
+
+
+<script type="text/javascript">/*<![CDATA[*/
+try {
+  const pageTagsHolder = document.getElementById('pageTagsHolder');
+  if (pageTagsHolder) {
+    const pageTagsRaw = pageTagsHolder.innerText;
+    if (pageTagsRaw.includes('transcluded:yes')) {
+      const attrSections = document.querySelectorAll('.autoattribution');
+      const attrDividers = document.querySelectorAll('.autoattribution-divider');
+      if (attrSections.length > 1 && attrDividers.length > 1) {
+        /* Hide first AutoAttribution from transcluded page */
+        attrSections[0].style.display = 'none';
+        attrDividers[0].style.display = 'none';
+      }
+    }
+  }
+} catch (e) {
+  console.error('[AutoAttribution Transclusion Removal] Error encountered!');
+  console.error(e);
+}/*]]>*/</script>
+<script type="text/javascript">/*<![CDATA[*/
+$(function() {
+    if(!window['autoDefinitionList']){
+        window['autoDefinitionList'] = true;
+       
+        $('dl').find('dt').on('click', function() {
+            $(this).next().toggle('350');   
+         });
+    }
+});/*]]>*/</script>
+
+
+
+
+<script type="text/x-mathjax-config">/*<![CDATA[*/
+var front = "auto";
+if(front=="auto"){
+    front = "9.1: Sequences";
+     if(front.includes(":")){
+         front = front.split(":")[0];
+         if(front.includes(".")){
+             front = front.split(".");
+             front = front.map((int)=>int.includes("0")?parseInt(int,10):int).join(".");
+         }
+         front+=".";
+     }
+     else {
+     front = "";
+     }
+}
+front = front.replace(/_/g," ");
+MathJaxConfig = {
+  TeX: {
+     equationNumbers: {
+        autoNumber: "all",
+        formatNumber: function (n) {
+            if(false){
+                return front + (Number(n)+false);
+            }
+            else{return front + n;
+            }
+        }
+     },
+     macros: {
+        PageIndex: ["{"+front+" #1}",1],
+        test: ["{"+front+" #1}",1]
+     },
+     Macros: {
+        PageIndex: ["{"+front+" #1}",1],
+        test: ["{"+front+" #1}",1]
+     },
+     SVG: {
+        linebreaks: { automatic: true }
+     }
+  }
+};
+MathJax.Hub.Config(MathJaxConfig);
+MathJax.Hub.Register.StartupHook("End", ()=>{if(activateBeeLine)activateBeeLine()});
+/*]]>*/</script>
+
+
+<script defer="true" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;483ec2414e274209a7e93c253192df0b&quot;}"></script><script src="https://cdn.libretexts.net/github/LibreTextsMain/Miscellaneous/h5p-resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.11/iframeResizer.contentWindow.min.js" integrity="sha512-FOf4suFgz7OrWmBiyyWW48u/+6GaaAFSDHagh2EBu/GH/1+OQSYc0NFGeGeZK0gZ3vuU1ovmzVzD6bxmT4vayg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.11/iframeResizer.min.js" integrity="sha512-HY1lApSG7xxx8mYzs/lxRs+c5AaDThRaa3pvQB6puiswvf2lWqMJVf+8qSGiL4ZXfHQoPIqbd1TlpqfycPo3cQ==" crossorigin="anonymous"></script><script>/*<![CDATA[*/window.addEventListener('DOMContentLoaded', function () { $('iframe').on('load', function () { $(this).iFrameResize({ warningTimeout: 0, scrolling: 'omit' }); }) })/*]]>*/</script>
+</footer>
+            </section>
+
+        
+            <footer class="elm-content-footer">
+                <ol class="elm-meta-data elm-meta-article-navigation">
+                    <li class="elm-back-to-top"><a class="mt-icon-back-to-top" href="#title" id="mt-back-to-top" title="Jump back to top of this article">Back to top</a></li>
+                    <li class="elm-article-pagination"><ul class="mt-article-pagination" data-ga-action="Article pagination bottom">
+    <li class="mt-pagination-previous">
+
+            <a class="mt-icon-previous-article" data-ga-label="Previous page" href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/09%3A_Sequences_and_Series/9.00%3A_Prelude_to_Sequence_and_Series" title="9.0: Prelude to Sequence and Series"><span>9.0: Prelude to Sequence and Series</span></a>
+    </li>
+        <li class="mt-pagination-next">
+                <a class="mt-icon-next-article" data-ga-label="Next page" href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/09%3A_Sequences_and_Series/9.01%3A_Sequences/9.1E%3A_Exercises_for_Section_9.1" title="9.1E: Exercises for Section 9.1"><span>9.1E: Exercises for Section 9.1</span></a>
+        </li>
+</ul>
+</li>
+                </ol>
+                    <div class="elm-article-feedback"><div class="mt-feedback-rating-container" data-ga-action="Page rating" data-page-revision="127" data-use-local-storage="true"><ul class="mt-feedback-rating-controls"><li class="mt-feedback-rating-message mt-feedback-rating-item">Was this article helpful?</li><li class="mt-rating-yes mt-feedback-rating-item"><button class="mt-rating-button-yes mt-feedback-rating-button ui-button-icon mt-icon-rating-yes" data-ga-label="Rate">Yes</button></li><li class="mt-rating-no mt-feedback-rating-item"><button class="mt-rating-button-no mt-feedback-rating-button ui-button-icon mt-icon-rating-no" data-ga-label="Rate">No</button></li><li class="mt-last-rating-date mt-feedback-rating-item"></li></ul><div id="mt-feedback-flash-message"></div></div><script type="application/json" id="mt-localizations-feedback-rating">/*<![CDATA[*/{"Page.FeedbackRating.label.last-rated":"-- You last rated this article on {0}","Page.FeedbackRating.message.contact.no":"No","Page.FeedbackRating.message.contact.yes":"Yes","Page.FeedbackRating.message.submit.error":"An error occurred while attempting to send your feedback.  Please try again at a later time.","Page.FeedbackRating.message.submit.success":"Your feedback has been successfully submitted.  You can submit more feedback at any time."}/*]]>*/</script></div>
+                <div class="elm-related-articles-container"><h2 class="mt-related-articles-header">Recommended articles</h2>
+<ol class="mt-related-listings-container"
+    data-ga-action="related"
+    >
+</ol>
+<script type="application/json" id="mt-localizations-related-pages">
+{"Skin.Columbia.label.no-recommended-articles":"There are no recommended articles."}</script></div>
+                <ol class="elm-meta-data elm-meta-bottom">
+                    <li class="elm-classifications">        <dl class="mt-classification mt-classification-article-section or page" data-ga-action="Tag navigation">
+            <dt class="mt-classification-label">Article type</dt>
+            <dd class="mt-classification-value"><a href="https://math.libretexts.org/Special:Search?tags=article%3Atopic" data-ga-label="Classification">Section or Page</a></dd>
+        </dl>
+        <dl class="mt-classification mt-classification-authorname-openstax" data-ga-action="Tag navigation">
+            <dt class="mt-classification-label">Author</dt>
+            <dd class="mt-classification-value"><a href="https://math.libretexts.org/Special:Search?tags=authorname%3Aopenstax" data-ga-label="Classification">OpenStax</a></dd>
+        </dl>
+        <dl class="mt-classification mt-classification-license-cc by-nc-sa" data-ga-action="Tag navigation">
+            <dt class="mt-classification-label">License</dt>
+            <dd class="mt-classification-value"><a href="https://math.libretexts.org/Special:Search?tags=license%3Accbyncsa" data-ga-label="Classification">CC BY-NC-SA</a></dd>
+        </dl>
+        <dl class="mt-classification mt-classification-licenseversion-4.0" data-ga-action="Tag navigation">
+            <dt class="mt-classification-label">License Version</dt>
+            <dd class="mt-classification-value"><a href="https://math.libretexts.org/Special:Search?tags=licenseversion%3A40" data-ga-label="Classification">4.0</a></dd>
+        </dl>
+        <dl class="mt-classification mt-classification-program-openstax" data-ga-action="Tag navigation">
+            <dt class="mt-classification-label">OER program or Publisher</dt>
+            <dd class="mt-classification-value"><a href="https://math.libretexts.org/Special:Search?tags=program%3Aopenstax" data-ga-label="Classification">OpenStax</a></dd>
+        </dl>
+        <dl class="mt-classification mt-classification-showtoc-no" data-ga-action="Tag navigation">
+            <dt class="mt-classification-label">Show Page TOC</dt>
+            <dd class="mt-classification-value"><a href="https://math.libretexts.org/Special:Search?tags=showtoc%3Ano" data-ga-label="Classification">no</a></dd>
+        </dl>
+</li>
+                    <li class="elm-tags"><dl class="mt-tags">
+    <dt class="mt-tag-label">Tags</dt>
+    <dd class="mt-tag-value">
+        <ol class="mt-tags-list" data-ga-action="Tag navigation">
+                <li class="mt-tag-link mt-tag-arithmetic-sequence" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=arithmetic+sequence" data-ga-label="Free tag"> arithmetic sequence</a></li>
+                <li class="mt-tag-link mt-tag-author@edwin-“jed”-herman" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=author%40Edwin+%E2%80%9CJed%E2%80%9D+Herman" data-ga-label="Free tag"> author@Edwin “Jed” Herman</a></li>
+                <li class="mt-tag-link mt-tag-author@gilbert-strang" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=author%40Gilbert+Strang" data-ga-label="Free tag"> author@Gilbert Strang</a></li>
+                <li class="mt-tag-link mt-tag-convergent-sequence" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=convergent+sequence" data-ga-label="Free tag"> convergent sequence</a></li>
+                <li class="mt-tag-link mt-tag-divergent-sequence" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=divergent+sequence" data-ga-label="Free tag"> divergent sequence</a></li>
+                <li class="mt-tag-link mt-tag-fibonacci-numbers" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=Fibonacci+Numbers" data-ga-label="Free tag"> Fibonacci Numbers</a></li>
+                <li class="mt-tag-link mt-tag-geometric-sequences" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=Geometric+Sequences" data-ga-label="Free tag"> Geometric Sequences</a></li>
+                <li class="mt-tag-link mt-tag-index-variable" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=index+variable" data-ga-label="Free tag"> index variable</a></li>
+                <li class="mt-tag-link mt-tag-limit-of-a-sequence" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=limit+of+a+sequence" data-ga-label="Free tag"> limit of a sequence</a></li>
+                <li class="mt-tag-link mt-tag-monotone-convergence-theorem" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=Monotone+Convergence+Theorem" data-ga-label="Free tag"> Monotone Convergence Theorem</a></li>
+                <li class="mt-tag-link mt-tag-monotone-sequence" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=monotone+sequence" data-ga-label="Free tag"> monotone sequence</a></li>
+                <li class="mt-tag-link mt-tag-recurrence-relation" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=recurrence+relation" data-ga-label="Free tag"> recurrence relation</a></li>
+                <li class="mt-tag-link mt-tag-sequence" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=sequence" data-ga-label="Free tag"> sequence</a></li>
+                <li class="mt-tag-link mt-tag-sequences" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=sequences" data-ga-label="Free tag"> sequences</a></li>
+                <li class="mt-tag-link mt-tag-source@https://openstax.org/details/books/calculus-volume-1" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=source%40https%3A%2F%2Fopenstax.org%2Fdetails%2Fbooks%2Fcalculus-volume-1" data-ga-label="Free tag"> source@https://openstax.org/details/books/calculus-volume-1</a></li>
+                <li class="mt-tag-link mt-tag-squeeze-theorem-for-sequences" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=Squeeze+Theorem+for+Sequences" data-ga-label="Free tag"> Squeeze Theorem for Sequences</a></li>
+                <li class="mt-tag-link mt-tag-term" rel="nofollow"><a href="https://math.libretexts.org/Special:Search?tags=term" data-ga-label="Free tag"> term</a></li>
+        </ol>
+    </dd>
+</dl></li>
+                </ol>
+            </footer>
+        
+    </article>
+    <footer class="elm-footer">
+        <nav class="elm-footer-siteinfo-nav elm-nav">
+            <div class="elm-nav-container">
+                <ol>
+                    <li class="elm-footer-copyright">&copy; Copyright 2023 Mathematics LibreTexts</li>
+                    <li class="elm-footer-powered-by"><a href="https://mindtouch.com/demo" class="mt-poweredby product " title="MindTouch" target="_blank">
+   Powered by CXone Expert
+   <span class="mt-registered">&reg;</span>
+</a></li>
+                </ol>
+            </div>
+        </nav>
+        <div class="elm-footer-custom"><div class="mt-container-highlight">
+<nav class="elm-nav my-custom-class">
+<div class="elm-nav-container" id="bottomFooter">
+<p>The LibreTexts libraries are&nbsp;<a href="https://www.nice.com/resources/cxone-expert-knowledge-management" rel="external nofollow" target="_blank">Powered by NICE CXone Expert&nbsp;</a>and are supported by the Department of Education Open Textbook Pilot Project, the UC Davis Office of the Provost, the UC Davis Library, the California State University Affordable Learning Solutions Program, and Merlot. We also acknowledge previous National Science Foundation support under grant numbers 1246120, 1525057, and 1413739. <a href="https://libretexts.org/legal/index.html" target="_blank" rel="external noopener nofollow" class="F1 link-https">Legal</a>. <a href="https://commons.libretexts.org/accessibility" target="_blank" rel="external noopener nofollow" class="link-https">Accessibility Statement</a>&nbsp;For more information contact us at<a href="mailto:info@libretexts.org" target="_blank" rel="external noopener nofollow" class="link-mailto">&nbsp;info@libretexts.org</a>.</p>
+</div>
+</nav>
+</div>
+
+
+
+<script defer="true" type="text/javascript" src="https://cdn.libretexts.net/github/ckeditor-binder-plugin/js/registerPlugin.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.libretexts.net/github/ckeditor-query-plugin/queryPlugin.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/EditorPlugins/dist/libreFormatPlugin.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/EditorPlugins/dist/libreBoxesPlugin.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.libretexts.net/github/LibreTextsMain/EditorPlugins/dist/libreQueryPlugin.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.libretexts.net/github/ckeditor-a11ychecker-plugin/a11yPlugin.min.js"></script><script async="true" src="https://cdn.libretexts.net/github/LibreTextsMain/Miscellaneous/headerfooter.js"></script>
+
+
+
+<script type="text/javascript">/*<![CDATA[*/
+$(window).on('load', function() {
+    let hypothesisElements = document.getElementsByTagName('hypothesis-sidebar');
+    if (hypothesisElements && hypothesisElements.length > 0) {
+        let hypothesis = hypothesisElements[0];
+        try {
+            hypothesis.shadowRoot.children[1].children[1].remove();
+        } catch (e) {
+            console.error('Error removing Hypothes.is shadow');
+            console.error(e);
+        }
+    }
+});/*]]>*/</script>
+
+
+
+
+</div>
+    </footer>
+</main>
+<div id="mt-modal-container"></div>
+    <script type="text/javascript" async="async" src="https://math.libretexts.org/@embed/f1.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-W54GSR4LTG"></script>
+<script>/*<![CDATA[*/
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W54GSR4LTG');
+/*]]>*/</script>
+<script type="text/x-mathjax-config">/*<![CDATA[*/
+  MathJax.Ajax.config.path["mhchem"] =
+  "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
+  MathJax.Hub.Config({ jax: ["input/TeX","input/MathML","output/SVG"],
+  extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+  TeX: {
+    extensions: ["autobold.js","mhchem.js","color.js","cancel.js", "AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+  },
+    "HTML-CSS": { linebreaks: { automatic: true , width: "90%"}, scale: 85, mtextFontInherit: false},
+menuSettings: { zscale: "150%", zoom: "Double-Click" },
+         SVG: { linebreaks: { automatic: true } }});
+/*]]>*/</script>
+
+<script type="text/javascript" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script><script type="text/javascript" data-mindtouch-module="true" src="https://a.mtstatic.com/deki/javascript/out/standalone/serviceworker-unregister.js?_=c7437db715ec311e13ed6012fc856b62f237e74b:site_4425"></script><script type="text/javascript" data-mindtouch-module="true" src="https://a.mtstatic.com/deki/javascript/out/standalone/pageLoaded.js?_=c7437db715ec311e13ed6012fc856b62f237e74b:site_4425"></script>
+
+
+
+
+<script type="application/json" id="mt-localizations-translate-wrapper">
+{"Component.Translate.label.update-failed":"Translation Incomplete","Component.Translate.label.english":"English","Component.Translate.label.choose-language":"Choose Language","Component.Translate.language.spanish":"Espa\u00f1ol","Component.Translate.language.german":"Deutsch","Component.Translate.language.japanese":"\u65e5\u672c\u8a9e","Component.Translate.language.chinese":"\u7b80\u4f53\u4e2d\u6587","Component.Translate.language.chinese-traditional":"\u7e41\u9ad4\u4e2d\u6587","Component.Translate.language.french":"Fran\u00e7ais","Component.Translate.language.portuguese":"Portuguesa","Component.Translate.language.dutch":"Nederlands","Component.Translate.language.korean":"\ud55c\uad6d\uc5b4","Component.Translate.language.swedish":"Svenska","Component.Translate.language.danish":"Dansk","Component.Translate.language.finnish":"Suomalainen","Component.Translate.language.italian":"Italiano","Component.Translate.language.afrikaans":"Afrikaanse","Component.Translate.language.albanian":"Shqiptar","Component.Translate.language.amharic":"\u12a0\u121b\u122d\u129b","Component.Translate.language.arabic":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","Component.Translate.language.armenian":"\u0540\u0561\u0575\u056f\u0561\u056f\u0561\u0576","Component.Translate.language.azerbaijani":"Az\u0259rbaycan","Component.Translate.language.bengali":"\u09ac\u09be\u0999\u09be\u09b2\u09bf","Component.Translate.language.bosnian":"Bosanski","Component.Translate.language.bulgarian":"\u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438","Component.Translate.language.catalan":"Catal\u00e0","Component.Translate.language.croatian":"Hrvatski","Component.Translate.language.czech":"\u010de\u0161tina","Component.Translate.language.dari":"\u0627\u0632","Component.Translate.language.estonian":"Eesti","Component.Translate.language.farsi":"\u0641\u0627\u0631\u0633\u06cc","Component.Translate.language.french.canada":"Canada fran\u00e7ais","Component.Translate.language.georgian":"\u10e5\u10d0\u10e0\u10d7\u10e3\u10da\u10d8","Component.Translate.language.greek":"\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac","Component.Translate.language.gujarati":"\u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0","Component.Translate.language.haitian-creole":"Krey\u00f2l ayisyen","Component.Translate.language.hausa":"yaren Hausa","Component.Translate.language.hebrew":"\u05e2\u05d1\u05e8\u05d9\u05ea","Component.Translate.language.hindi":"\u0939\u093f\u0902\u0926\u0940","Component.Translate.language.hungarian":"Magyar","Component.Translate.language.icelandic":"\u00cdslensku","Component.Translate.language.indonesian":"orang Indonesia","Component.Translate.language.kannada":"\u0c95\u0ca8\u0ccd\u0ca8\u0ca1","Component.Translate.language.kazakh":"\u049a\u0430\u0437\u0430\u049b","Component.Translate.language.latvian":"Latvietis","Component.Translate.language.lithuanian":"Lietuvis","Component.Translate.language.macedonian":"\u041c\u0430\u043a\u0435\u0434\u043e\u043d\u0441\u043a\u0438","Component.Translate.language.malay":"Melayu","Component.Translate.language.malayalam":"\u0d2e\u0d32\u0d2f\u0d3e\u0d33\u0d02","Component.Translate.language.maltese":"Malti","Component.Translate.language.mongolian":"\u041c\u043e\u043d\u0433\u043e\u043b","Component.Translate.language.norwegian":"Norsk","Component.Translate.language.pashto":"\u067e\u069a\u062a\u0648","Component.Translate.language.polish":"Polskie","Component.Translate.language.romanian":"Rom\u00e2n\u0103","Component.Translate.language.russian":"\u0420\u0443\u0441\u0441\u043a\u0438\u0439","Component.Translate.language.serbian":"Srpski","Component.Translate.language.sinhala":"\u0dc3\u0dd2\u0d82\u0dc4\u0dbd","Component.Translate.language.slovak":"Slovak","Component.Translate.language.slovenian":"Slovensk\u00e9","Component.Translate.language.somali":"Soomaali","Component.Translate.language.spanish-mexico":"Espa\u00f1ol M\u00e9xico","Component.Translate.language.swahili":"Swahili","Component.Translate.language.tagalog":"Tagalog","Component.Translate.language.tamil":"\u0ba4\u0bae\u0bbf\u0bb4\u0bcd","Component.Translate.language.telugu":"\u0c24\u0c46\u0c32\u0c41\u0c17\u0c41","Component.Translate.language.thai":"\u0c25\u0c3e\u0c2f\u0c4d","Component.Translate.language.turkish":"T\u00fcrk","Component.Translate.language.ukrainian":"\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430","Component.Translate.language.urdu":"\u0627\u0631\u062f\u0648","Component.Translate.language.uzbek":"O'zbek","Component.Translate.language.vietnamese":"Ti\u1ebfng Vi\u1ec7t","Component.Translate.language.welsh":"Cymraeg","Component.Translate.dialog.translated-mindtouch":"Machine Translated by CXone Expert"}</script>
+<script type="text/javascript" data-mindtouch-module="true" src="https://a.mtstatic.com/deki/javascript/out/standalone/ui.translateWrapper.js?_=c7437db715ec311e13ed6012fc856b62f237e74b:site_4425"></script>
+
+</body>
+</html>
